@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="GLS Smoke">
+
+    <test name="Smoke">
+        <classes>
+            <class name="com.business.Tests.Actions_mouse"></class>
+            <class name="com.business.Tests.ErrorMessageValidating"></class>
+
+        </classes>
+    </test>
+
+
+
+
+</suite>

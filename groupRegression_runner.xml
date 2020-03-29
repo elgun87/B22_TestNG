@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name=" GLS Regressin By Group" verbose="1">
+    <test name="Regression groups">
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="com.business.Tests.Grouping_tests"></class>
+        </classes>
+
+
+    </test>
+</suite>
