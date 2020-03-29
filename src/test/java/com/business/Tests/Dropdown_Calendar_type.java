@@ -17,6 +17,7 @@ public class Dropdown_Calendar_type extends Base {
     @Test
     //I want to select day 14 May in the calendar
     public void calendarElementSelecting() throws InterruptedException {
+        extentLogger=report.createTest("ClendarDropdownTest");
         driver.get("https://www.path2usa.com/travel-companions");
         // try to pick date 14
         // 1. locate from date edit-box
@@ -46,6 +47,7 @@ public class Dropdown_Calendar_type extends Base {
             }
         }
         // verify edit-box value changed
+        extentLogger.info("Verify the result");
         Assert.assertTrue(fromEditbox.getAttribute("value").contains("14"));
 
 

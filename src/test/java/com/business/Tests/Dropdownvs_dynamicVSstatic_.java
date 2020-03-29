@@ -41,6 +41,7 @@ public class Dropdownvs_dynamicVSstatic_ extends Base {
      */
     @Test
     public void dynamicDropdownCalendarType() {
+        extentLogger=report.createTest("DynamicDropDownCalendarType Tesing");
         try {
             driver.get("https://www.spicejet.com/");
             driver.findElement(By.cssSelector("input[value='RoundTrip']")).click();
@@ -55,6 +56,7 @@ public class Dropdownvs_dynamicVSstatic_ extends Base {
             WebElement toCity = driver.findElement(By.xpath("(//a[@value='DEL'])[2]"));
             toCity.click();
             System.out.println(to.getAttribute("value"));
+            extentLogger.info("Verify the data");
             Assert.assertTrue(to.getAttribute("value").equalsIgnoreCase("Delhi (DEL)"));
             WebElement currentDay = driver.findElement(By.xpath("//a[contains(@class,'ui-state-default ui-state-highlight ui-state-active')]"));
             actions.moveToElement(currentDay).click().build().perform();

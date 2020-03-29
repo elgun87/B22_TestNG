@@ -29,6 +29,7 @@ public class DataDrivenTest extends Base {
     @Test()
 
     public void singleData() {
+        extentLogger=report.createTest("DataDrivenTest");
         // step 3
         try {
             for (Map<String, String> calcData : testData) {
@@ -47,6 +48,7 @@ public class DataDrivenTest extends Base {
                 pages.salaryCalculator.vacationDays.sendKeys(calcData.get("vacations"));
                 Assert.assertEquals(pages.salaryCalculator.vacationDays.getAttribute("value"), calcData.get("vacations"));
                 WebElement tableCell = driver.findElement(By.xpath("//table[@class='cinfoT']/tbody/tr[9]/td[2]"));
+                extentLogger.info("Verify the result");
                 Assert.assertEquals(tableCell.getText(), calcData.get("Annual"));
             }
         } catch (Exception e) {

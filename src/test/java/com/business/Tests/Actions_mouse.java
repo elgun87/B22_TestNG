@@ -25,6 +25,7 @@ public class Actions_mouse extends Base {
         WebElement customerService = driver.findElement(By.xpath("//a[contains(text(),'Customer Service')]"));
         actions.moveToElement(customerService).click().build().perform();
         String cstmrTitle = driver.getTitle();
+        extentLogger.info("Verifying th result");
         Assert.assertFalse(maintTitle.equalsIgnoreCase(cstmrTitle));
 
     }
@@ -39,6 +40,7 @@ public class Actions_mouse extends Base {
         extentLogger = report.createTest("Mouse hover test");
         driver.get("https://www.amazon.com/");
         WebElement prime = driver.findElement(By.xpath("//span[contains(text(),'Try Prime')]"));
+        extentLogger.info("Verifying the result");
         actions.moveToElement(prime).build().perform();
     }
 
@@ -66,6 +68,7 @@ public class Actions_mouse extends Base {
         driver.get("https://jqueryui.com/droppable/");
         WebElement mainFrame = driver.findElement(By.xpath("//iframe[@class='demo-frame']"));
         driver.switchTo().frame(mainFrame);
+        extentLogger.info("Verifying the result");
         WebElement draggable = driver.findElement(By.id("draggable"));
         WebElement droppable = driver.findElement(By.id("droppable"));
 

@@ -14,6 +14,7 @@ public class Dropdown_NoSelectTag extends Base {
     @Test
 
     public void noSelectTagDropdown() throws InterruptedException {
+        extentLogger=report.createTest("NoSelectTagDropDown");
         driver.get("http://practice.cybertekschool.com/dropdown");
         Thread.sleep(3000);
         driver.findElement(By.id("dropdownMenuLink")).click();//to expand dropdown
@@ -25,8 +26,9 @@ public class Dropdown_NoSelectTag extends Base {
         for (WebElement link : allLinks) {
             System.out.println(link.getText() + " : " + link.getAttribute("href"));
         }
+        extentLogger.info("Verify the links");
         driver.findElement(By.linkText("Etsy")).click();//click on option
-        Thread.sleep(3000);
+        Thread.sleep(1000);
 
 
     }
