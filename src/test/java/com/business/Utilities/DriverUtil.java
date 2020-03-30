@@ -13,7 +13,6 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
  * getDriver() method in DriverUtil class will initialize value driver object.
  */
 
-
 public class DriverUtil {
 
     private static WebDriver driver;
@@ -22,7 +21,7 @@ public class DriverUtil {
     }
 
 
-    public static WebDriver getDriver() {   //static method
+    public static WebDriver getDriver() {
         if (driver == null) {
             if (ConfigurationReader.getProperty("browser").equalsIgnoreCase("chrome")) {
                 WebDriverManager.chromedriver().setup();

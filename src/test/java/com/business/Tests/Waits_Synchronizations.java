@@ -41,7 +41,7 @@ public class Waits_Synchronizations extends Base {
         WebElement startBbtn = driver.findElement(By.xpath("//button[contains(text(),'Start')]"));
         startBbtn.click();
         WebElement helloWorld = driver.findElement(By.xpath("//h4[contains(text(),'Hello World!')]"));
-        BrowserUtils.waitUntilElementVisible(helloWorld);
+        BrowserUtils.waitFor_Visibility(helloWorld);
         Assert.assertTrue(helloWorld.isDisplayed());
     }
 
@@ -51,7 +51,7 @@ public class Waits_Synchronizations extends Base {
         WebElement startBbtn = driver.findElement(By.xpath("//button[contains(text(),'Start')]"));
         startBbtn.click();
         WebElement loading = driver.findElement(By.xpath("//div[@id='loading']"));
-        BrowserUtils.waitUntilElement_InVisible(loading);
+        BrowserUtils.waitFor_In_Visible(loading);
         Assert.assertFalse(loading.isDisplayed());
 
     }

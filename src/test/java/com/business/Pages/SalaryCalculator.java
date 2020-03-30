@@ -12,7 +12,7 @@ public class SalaryCalculator {
         PageFactory.initElements(DriverUtil.getDriver(), this);
     }
 
-    @FindBy(id = "camount")
+    @FindBy(xpath = "//input[@id='camount']")
     public WebElement salaryAmount;
     @FindBy(xpath = "//select[@name='cunit']")
     public WebElement hourDropdown;
@@ -20,7 +20,7 @@ public class SalaryCalculator {
     public WebElement hoursPerWeek;
     @FindBy(id = "cdays")
     public WebElement daysPerWeek;
-    @FindBy(id = "cdays")
+    @FindBy(xpath = "//input[@id='cholidays']")
     public WebElement holidaysPerYear;
     @FindBy(id = "cvacation")
     public WebElement vacationDays;

@@ -25,6 +25,7 @@ public class ExcelUtil {
             // Access the required test data sheet
             workBook = WorkbookFactory.create(ExcelFile);
             workSheet = workBook.getSheet(sheetName);
+
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -37,6 +38,7 @@ public class ExcelUtil {
             // Access the required test data sheet
             workBook = WorkbookFactory.create(ExcelFile);
             workSheet = workBook.getSheetAt(sheetIndex);
+
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -55,7 +57,9 @@ public class ExcelUtil {
     }
 
     public String[][] getDataArray() {
+
         String[][] data = new String[rowCount()][columnCount()];
+
         for (int i = 0; i <rowCount(); i++) {
             for (int j = 0; j < columnCount(); j++) {
                 String value = getCellData(i, j);
@@ -63,18 +67,21 @@ public class ExcelUtil {
             }
         }
         return data;
+
     }
+
+
 
     public List<Map<String, String>> getDataList() {
         // get all columns
         List<String> columns = getColumnsNames();
         // this will be returned
         List<Map<String, String>> data = new ArrayList<>();
-        for (int i = 1; i <= rowCount()-1; i++) {
+        for (int i = 0; i <rowCount(); i++) {
             // get each row
             Row row = workSheet.getRow(0);
             // create map of the row using the column and value
-            // column map key, cell value --> map value
+            // column is key, cell value --> map value
             Map<String, String> rowMap = new HashMap<>();
             for (Cell cell : row) {
                 int columnIndex = cell.getColumnIndex();
@@ -82,6 +89,7 @@ public class ExcelUtil {
             }
             data.add(rowMap);
         }
+
         return data;
     }
 
@@ -108,6 +116,7 @@ public class ExcelUtil {
                 row = workSheet.createRow(rowNum);
                 cell= row.getCell(colNum);
             }
+
             if (cell == null) {
                 cell = row.createCell(colNum);
                 cell.setCellValue(value);
@@ -116,6 +125,7 @@ public class ExcelUtil {
             }
             FileOutputStream fileOut = new FileOutputStream(path);
             workBook.write(fileOut);
+
             fileOut.close();
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -128,7 +138,6 @@ public class ExcelUtil {
     }
 
     public int columnCount() {
-
         return workSheet.getRow(0).getLastCellNum();
     }
 
@@ -137,6 +146,10 @@ public class ExcelUtil {
     }
 
 }
+
+
+
+
 
 
 

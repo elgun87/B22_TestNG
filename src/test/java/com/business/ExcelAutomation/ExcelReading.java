@@ -14,7 +14,7 @@ public class ExcelReading {
     public void readExcel() throws Exception {
         String path = "./src/test/resources/Countries.xlsx";
         FileInputStream fis = new FileInputStream(path);
-        //Open the Workbook interface -  We don't have to mention XSSF,HSSF or any type pf WorkBook
+        //Open the Workbook interface -  We don't have to mention XSSF, HSSF or any type pf WorkBook
         Workbook workbook = WorkbookFactory.create(fis);
         // Go to the 1st WorkSheet (1st sheet in excel file)
         Sheet worksheet = workbook.getSheetAt(0);
