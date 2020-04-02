@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class Static_Tables extends Base {
+public class Tables_Static extends Base {
     /**
      * TABLES
      * Table in Website has a tag --> table
