@@ -30,14 +30,14 @@ public class Tables_Static extends Base {
 
 
     @Test
-    public void findWholeTable() {
+    public void locate_Whole_Table() {
         driver.get("https://the-internet.herokuapp.com/tables");
         WebElement table1 = driver.findElement(By.id("table1"));
         System.out.println(table1.getText());
     }
 
     @Test
-    public void findAllHeaders() {
+    public void find_All_Headers() {
         driver.get("https://the-internet.herokuapp.com/tables");
         // (wholeTableXpath //th )
         List<WebElement> allHeaders = driver.findElements(By.xpath("//table[@id='table1']//th"));
@@ -50,7 +50,7 @@ public class Tables_Static extends Base {
     }
 
     @Test
-    public void findCertainHeader() {
+    public void find_Certain_Header() {
         driver.get("https://the-internet.herokuapp.com/tables");
         // Find 3rd header in table direct !
         WebElement header3 = driver.findElement(By.xpath("//table[@id='table1']//th[3]"));
@@ -60,7 +60,7 @@ public class Tables_Static extends Base {
 
 
     @Test
-    public void FindRows() {
+    public void find_All_Rows() {
         driver.get("https://the-internet.herokuapp.com/tables");
         //  Find  ALL ROWS IN TABLE
         List<WebElement> allRows = driver.findElements(By.xpath("//table[@id='table1']/tbody/tr"));
@@ -79,7 +79,7 @@ public class Tables_Static extends Base {
     }
 
     @Test
-    public void findAllCellsOfCertainRow() {
+    public void find_All_Cells_in_Certain_Row() {
         driver.get("https://the-internet.herokuapp.com/tables");
         // Find 3rd Row
         WebElement row3 = driver.findElement(By.xpath("//table[@id='table1']/tbody/tr[3]"));
@@ -90,10 +90,12 @@ public class Tables_Static extends Base {
 
     @Test
     /** Print the element in c0ordinates:
-     * row= 2 ; column =4; verify value is = "$51.00"
+     * row= 2 ;
+     * column =4;
+     * verify value is = "$51.00"
      */
 
-    public void findCertainCell_WithRowAndColumnCoordinates() {
+    public void find_CertainCell_With_Row_And_Column_Coordinates() {
         driver.get("http://the-internet.herokuapp.com/tables");
         // find all rows
         List<WebElement> allRows = driver.findElements(By.xpath("//table[@id='table1']/tbody/tr"));
@@ -108,7 +110,7 @@ public class Tables_Static extends Base {
 
 
     @Test
-    public void findCertainCell_withRowAndColumnCoordinates() {
+    public void find_Certain_Cell_with_Row_And_Column_Coordinates() {
         driver.get("https://the-internet.herokuapp.com/tables");
         // Find cell at row 2 column 4
         WebElement row3column4 =driver.findElement(By.xpath("//table[@id='table1']/tbody/tr[2]/td[4]"));
@@ -116,7 +118,7 @@ public class Tables_Static extends Base {
     }
 
     @Test
-    public void findCells_InCertainColumn () {
+    public void find_All_Cells_In_Certain_Column () {
         driver.get("https://the-internet.herokuapp.com/tables");
         //FInd all cells of Column 2 in table
         List <WebElement> column3 = driver.findElements(By.xpath("//table[@id='table1']/tbody/tr/td[2]"));

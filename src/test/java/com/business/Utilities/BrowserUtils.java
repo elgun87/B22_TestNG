@@ -21,7 +21,7 @@ public class BrowserUtils {
         String time = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
         TakesScreenshot takesScreenshot = (TakesScreenshot) DriverUtil.getDriver();
         File source = takesScreenshot.getScreenshotAs(OutputType.FILE);
-        String target = System.getProperty("user.dir") + "\\target\\Screenshots" + name + time + ".png";
+        String target = System.getProperty("user.dir") + "\\target\\Screenshot" + "_" + name + "_" + time + ".png";
         File finalDestination = new File(target);
         try {
             FileUtils.copyFile(source, finalDestination);
