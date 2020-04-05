@@ -9,9 +9,9 @@ import org.testng.annotations.Test;
 
 public class Grouping_tests extends Base {
 
-    @Test(groups = "regression")
+    @Test(groups = {"regression", "smoke"})
     public void verifyWrongLogin() {
-        // create a new test in the report and give name : Wrong email and assword testing
+        // create a new test in the report and give name : Wrong email and password testing
         extentLogger = report.createTest("Wrong email and Password testing");
         // use the logger to log the steps
         extentLogger.info("Navigating The website");
@@ -31,8 +31,9 @@ public class Grouping_tests extends Base {
         extentLogger.pass("Wrong email and password");
     }
 
-    @Test(groups = "regression")
+    @Test(groups = {"regression", "smoke"})
     public void doubleClick_RightClick() {
+        extentLogger = report.createTest("Double Click testing");
         driver.get("https://www.amazon.com/");
         String maintTitle = driver.getTitle();
         // Do double click to element
@@ -47,15 +48,18 @@ public class Grouping_tests extends Base {
         actions.moveToElement(customerService).click().build().perform();
         String cstmrTitle = driver.getTitle();
         Assert.assertFalse(maintTitle.equalsIgnoreCase(cstmrTitle));
+        extentLogger.pass("Test pass");
     }
 
 
-    @Test(groups = "smoke")
+    @Test(groups = {"regression"})
     public void verifyBlankUsrNamme() {
+        extentLogger = report.createTest("Verify Blank user");
         driver.get("http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/login.aspx");
         pages.homepage.login("", "xosemi");
         String errorMessage = driver.findElement(By.id("ctl00_MainContent_status")).getText();
         Assert.assertEquals(errorMessage, "Invalid Login or Password.");
+        extentLogger.pass("Test pass");
     }
 
 
