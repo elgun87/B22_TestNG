@@ -1,8 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name=" GLS Regression" verbose="1" parallel="classes">
-<test  thread-count="4" name="Regression">
-    <packages>
-        <package name=".*"></package>
-    </packages>
-</test>
+<suite name=" GLS Regression" verbose="1">
+    <test name="Regression">
+        <packages>
+            <package name=".*"></package>
+        </packages>
+    </test>
 </suite>
