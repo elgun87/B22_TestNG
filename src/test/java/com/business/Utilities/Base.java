@@ -29,7 +29,7 @@ public abstract class Base {
     @BeforeTest(alwaysRun = true)
     public void setupTest() {
         report = new ExtentReports();
-        String filePath = System.getProperty("user.dir") + "\\target\\ExtentReport.html";
+        String filePath = System.getProperty("user.dir") + "\\test-output\\ExtentReport.html";
         htmlReporter = new ExtentHtmlReporter(filePath);
         report.attachReporter(htmlReporter);
         report.setSystemInfo("Environment", "Staging");

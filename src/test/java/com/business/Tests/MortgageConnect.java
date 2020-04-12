@@ -23,17 +23,11 @@ public class MortgageConnect extends Base {
         extentLogger.info("Clicking the item :Document Generation");
         WebElement menuBar = driver.findElement(By.xpath("//li[4]//ul[1]"));
         List<WebElement> allLinks = menuBar.findElements(By.tagName("a"));
-        WebElement docGeneratemyLink = null;
         for (WebElement link : allLinks) {
-            if (link.getText().contains("Document Generation")) {
-                docGeneratemyLink = link;
-            }
+            System.out.println(link.getAttribute("href"));
         }
-        BrowserUtils.waitForStaleElement(docGeneratemyLink);
-        docGeneratemyLink.click();
-        System.out.println(driver.getTitle());
         extentLogger.info("Verifying the title of new page");
-        Assert.assertTrue(driver.getTitle().contains("Document Generation"));
+        Assert.assertEquals(allLinks.size(), 4);
 
     }
 

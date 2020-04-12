@@ -21,7 +21,7 @@ public class BrowserUtils {
         String time = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
         TakesScreenshot takesScreenshot = (TakesScreenshot) DriverUtil.getDriver();
         File source = takesScreenshot.getScreenshotAs(OutputType.FILE);
-        String target = System.getProperty("user.dir") + "\\target\\Screenshot" + "_" + name + "_" + time + ".png";
+        String target = System.getProperty("user.dir") + "\\test-output\\screenshot_" + name + time + ".png";
         File finalDestination = new File(target);
         try {
             FileUtils.copyFile(source, finalDestination);
@@ -31,9 +31,9 @@ public class BrowserUtils {
     }
 
 
-    public static WebElement waitFor_Visibility(WebElement element) {
+    public static void waitFor_Visibility(WebElement element) {
         WebDriverWait wait = new WebDriverWait(DriverUtil.getDriver(), 10);
-        return wait.until(ExpectedConditions.visibilityOf(element));
+        wait.until(ExpectedConditions.visibilityOf(element));
     }
 
     public static void waitFor_In_Visible(WebElement element) {
@@ -59,7 +59,7 @@ public class BrowserUtils {
         }
     }
 
-    public static void flueatWait(WebElement webElement) {
+    public static void fluentWait(WebElement webElement) {
         Wait wait = new FluentWait<>(DriverUtil.getDriver())
                 .withTimeout(Duration.ofSeconds(15))
                 .pollingEvery(Duration.ofMillis(800))
