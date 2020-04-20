@@ -14,7 +14,7 @@ import java.time.Duration;
 import java.util.Date;
 import java.util.function.Function;
 
-public class BrowserUtils {
+public class Library {
 
 
     public static String getScreenshot(String name) {

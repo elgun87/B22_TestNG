@@ -1,7 +1,7 @@
 package com.business.Tests;
 
 import com.business.Utilities.Base;
-import com.business.Utilities.ConfigurationReader;
+import com.business.Utilities.ConfigReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -18,9 +18,9 @@ public class Grouping_tests extends Base {
         driver.get("http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/login.aspx");
         //using page objects
         extentLogger.info("entering username");
-        pages.homepage.username.sendKeys(ConfigurationReader.getProperty("username"));
+        pages.homepage.username.sendKeys(ConfigReader.getProperty("username"));
         extentLogger.info("entering password");
-        pages.homepage.passWord.sendKeys(ConfigurationReader.getProperty("password"));
+        pages.homepage.passWord.sendKeys(ConfigReader.getProperty("password"));
         extentLogger.info("clicking submit button");
         pages.homepage.submitBtn.click();
         // using the method which created from  page objects

@@ -1,8 +1,7 @@
 package com.business.Tests;
 
-import com.business.Pages.HomePage;
 import com.business.Utilities.Base;
-import com.business.Utilities.ConfigurationReader;
+import com.business.Utilities.ConfigReader;
 import org.testng.annotations.Test;
 
 
@@ -10,8 +9,8 @@ public class PropertyFileTesting extends Base {
 
     @Test
     public void testPropertyFile() {
-        driver.get(ConfigurationReader.getProperty("url"));
-        pages.homepage.login(ConfigurationReader.getProperty("username"), ConfigurationReader.getProperty("password"));
+        driver.get(ConfigReader.getProperty("url"));
+        pages.homepage.login(ConfigReader.getProperty("username"), ConfigReader.getProperty("password"));
 
 
     }
