@@ -33,11 +33,11 @@ public abstract class Base {
         htmlReporter = new ExtentHtmlReporter(filePath);
         report.attachReporter(htmlReporter);
         report.setSystemInfo("Environment", "Staging");
-        report.setSystemInfo("Browser", ConfigurationReader.getProperty("browser"));
+        report.setSystemInfo("Browser", ConfigReader.getProperty("browser"));
         report.setSystemInfo("OS", System.getProperty("os.name"));
         report.setSystemInfo("QA Engineer", "Anar Salmanov");
-        htmlReporter.config().setDocumentTitle("ProjectName Reports");
-        htmlReporter.config().setReportName("ProjectName Automated Test Reports");
+        htmlReporter.config().setDocumentTitle("Test Results");
+        htmlReporter.config().setReportName("Automated Test Reports");
     }
 
 
@@ -63,7 +63,7 @@ public abstract class Base {
     public void teardown(ITestResult result) throws IOException {
         softAssert.assertAll();
         if (result.getStatus() == ITestResult.FAILURE) {
-            String screenshotLocation = BrowserUtils.getScreenshot(result.getName());
+            String screenshotLocation = Library.getScreenshot(result.getName());
             extentLogger.fail(result.getName());
             extentLogger.addScreenCaptureFromPath(screenshotLocation);
             extentLogger.fail(result.getThrowable());
