@@ -11,7 +11,7 @@ public class JSExecutor_functions extends Base {
 
     @Test
     public void flashingTheElement() throws InterruptedException {
-        extentLogger = report.createTest("Checking JS executor interface feztures");
+        extentLogger = report.createTest("JSExecutor functions testing");
         driver.get("https://the-internet.herokuapp.com/");
         WebElement dropDown = driver.findElement(By.linkText("Dropdown"));
         extentLogger.info("Flashing the element");
