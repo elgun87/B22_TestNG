@@ -24,7 +24,7 @@
                             <artifactId>maven-surefire-plugin</artifactId>
                             <version>3.0.0-M3</version>
                             <configuration>
-                                <testFailureIgnore> true</testFailureIgnore>
+                                <testFailureIgnore>true</testFailureIgnore>
                                 <suiteXmlFiles>
                                     <suiteXmlFile>Regression_runner.xml</suiteXmlFile>
                                 </suiteXmlFiles>
@@ -44,7 +44,7 @@
                             <artifactId>maven-surefire-plugin</artifactId>
                             <version>3.0.0-M3</version>
                             <configuration>
-                                <testFailureIgnore> true</testFailureIgnore>
+                                <testFailureIgnore>true</testFailureIgnore>
                                 <suiteXmlFiles>
                                     <suiteXmlFile>Smoke_runner.xml</suiteXmlFile>
                                 </suiteXmlFiles>
@@ -64,7 +64,7 @@
                             <artifactId>maven-surefire-plugin</artifactId>
                             <version>3.0.0-M3</version>
                             <configuration>
-                                <testFailureIgnore> true</testFailureIgnore>
+                                <testFailureIgnore>true</testFailureIgnore>
                                 <suiteXmlFiles>
                                     <suiteXmlFile>groupRegression_runner.xml</suiteXmlFile>
                                 </suiteXmlFiles>
@@ -84,7 +84,7 @@
                             <artifactId>maven-surefire-plugin</artifactId>
                             <version>3.0.0-M3</version>
                             <configuration>
-                                <testFailureIgnore> true</testFailureIgnore>
+                                <testFailureIgnore>true</testFailureIgnore>
                                 <suiteXmlFiles>
                                     <suiteXmlFile>groupSmoke_runner.xml</suiteXmlFile>
                                 </suiteXmlFiles>
@@ -94,20 +94,15 @@
                 </pluginManagement>
             </build>
         </profile>
-
     </profiles>
 
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
-
-
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>3.7.1</version>
         </dependency>
-
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -142,24 +137,33 @@
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <version>42.2.10</version>
+            <version>42.2.12</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/junit/junit -->
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13</version>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>RELEASE</version>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
-
+    <!-- https://mvnrepository.com/artifact/oracle/ojdbc6 -->
+    <dependency>
+        <groupId>oracle</groupId>
+        <artifactId>ojdbc6</artifactId>
+        <version>11.2.0.3</version>
+    </dependency>
+    <repositories>
+        <repository>
+            <id>oracle </id>
+            <url>http://www.datanucleus.org/downloads/maven2/</url>
+        </repository>
+    </repositories>
 
 </project>

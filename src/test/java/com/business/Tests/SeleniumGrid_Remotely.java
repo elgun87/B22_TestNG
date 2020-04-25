@@ -25,7 +25,7 @@ public class SeleniumGrid_Remotely {
     private WebDriver driver;
 
     @Test
-    public void buttonClicking() throws Exception {
+    public void buttonClicking() throws MalformedURLException {
         ChromeOptions options = new ChromeOptions();
         options.setCapability(CapabilityType.PLATFORM_NAME, Platform.WINDOWS);
         options.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.ACCEPT);
