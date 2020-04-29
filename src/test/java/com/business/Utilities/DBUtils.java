@@ -116,7 +116,7 @@ public class DBUtils {
      * Store returned date into List<String>columnNames
      * Accepts query as String as method parameter
      */
-    public static List<String> executeQueryAndGetColumnsNames(String query) {
+    public static List<String> executeQueryAndGetColumnsNamesAsList(String query) {
         List<String> columns = new ArrayList<>();
         try {
             executeQuery(query);
@@ -136,11 +136,12 @@ public class DBUtils {
      * Store returned data as  List <String>.
      * Accepts: query as parameter and columnName
      */
-    public static List<String> executeQueryAndGetColumnValues(String query, String columnName) {
-        executeQuery(query);
+    public static List<String> executeQueryAndGetColumnValuesAsList(String query, String columnName) {
         List<String> values = new ArrayList<>();
+        ResultSetMetaData rsmd;
         try {
-            ResultSetMetaData rsmd = resultSet.getMetaData();
+            executeQuery(query);
+            rsmd = resultSet.getMetaData();
             while (resultSet.next()) {
                 values.add(resultSet.getString(columnName));
             }
@@ -156,11 +157,11 @@ public class DBUtils {
      * Will return each row as list
      * Accept query String as a parameter.
      */
-    public static List<List<Object>> executeQueryAndGetResultAsList(String query) {
-        executeQuery(query);
+    public static List<List<Object>> executeQueryAndGetResultAsListOfLists(String query) {
         List<List<Object>> rowList = new ArrayList<>();
         ResultSetMetaData rsmd;
         try {
+            executeQuery(query);
             rsmd = resultSet.getMetaData();
             while (resultSet.next()) {
                 List<Object> row = new ArrayList<>();
@@ -181,11 +182,11 @@ public class DBUtils {
      * Accepts: query String as parameter
      */
 
-    public static List<Map<String, Object>> executeQueryAndGetResultMap(String query) {
-        executeQuery(query);
+    public static List<Map<String, Object>> executeQueryAndGetResultAsListOfMaps(String query) {
         List<Map<String, Object>> rowList = new ArrayList<>();
         ResultSetMetaData rsmd;
         try {
+            executeQuery(query);
             rsmd = resultSet.getMetaData();
             while (resultSet.next()) {
                 Map<String, Object> colNameValueMap = new HashMap<>();
@@ -217,16 +218,16 @@ public class DBUtils {
 
 
     public static Object getCellValue(String query) {
-        return executeQueryAndGetResultAsList(query).get(0).get(0);
+        return executeQueryAndGetResultAsListOfLists(query).get(0).get(0);
     }
 
 
     public static List<Object> getRowList(String query) {
-        return executeQueryAndGetResultAsList(query).get(0);
+        return executeQueryAndGetResultAsListOfLists(query).get(0);
     }
 
 
     public static Map<String, Object> getRowMap(String query) {
-        return executeQueryAndGetResultMap(query).get(0);
+        return executeQueryAndGetResultAsListOfMaps(query).get(0);
     }
 }
