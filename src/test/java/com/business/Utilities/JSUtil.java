@@ -1,6 +1,7 @@
 package com.business.Utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -48,6 +49,11 @@ public class JSUtil {
     public static void refreshPageByJS(WebDriver driver) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("history.go(0)");
+    }
+
+    public static void selectDateWithJS(WebDriver driver, WebElement element, String date) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].setAttribute('value','" + date + "');", element);
     }
 
 
