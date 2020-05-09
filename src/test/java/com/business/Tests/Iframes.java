@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class iFrames extends Base {
+public class Iframes extends Base {
 
     @Test
     public void iFrameTesting() throws InterruptedException {

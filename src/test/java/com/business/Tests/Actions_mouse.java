@@ -11,7 +11,7 @@ public class Actions_mouse extends Base {
 
     @Test
     public void doubleClick_RightClick() {
-        extentLogger = report.createTest("Dpuble click on element");
+        extentLogger = report.createTest("Double click on element");
         driver.get("https://www.amazon.com/");
         String maintTitle = driver.getTitle();
         // Do double click to element

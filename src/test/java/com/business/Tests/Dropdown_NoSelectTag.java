@@ -9,12 +9,17 @@ import org.testng.annotations.Test;
 import java.security.Key;
 import java.util.List;
 
+/**
+ * Here we combine WebElements based on their common class name,
+ * then iterate and click whatever we want click.
+ */
+
 public class Dropdown_NoSelectTag extends Base {
 
     @Test
 
     public void noSelectTagDropdown() throws InterruptedException {
-        extentLogger=report.createTest("NoSelectTagDropDown");
+        extentLogger = report.createTest("NoSelectTagDropDown");
         driver.get("http://practice.cybertekschool.com/dropdown");
         Thread.sleep(3000);
         driver.findElement(By.id("dropdownMenuLink")).click();//to expand dropdown

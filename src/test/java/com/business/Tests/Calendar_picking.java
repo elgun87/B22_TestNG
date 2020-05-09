@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class Dropdown_Calendar_type extends Base {
+public class Calendar_picking extends Base {
 
 
     @Test
@@ -36,8 +36,8 @@ public class Dropdown_Calendar_type extends Base {
         int count = days.size();
         // Loop all days and click which contains 14
         for (WebElement day : days) {
-            String dayText = day.getText();
-            if (dayText.equalsIgnoreCase("14")) {
+            //String dayText = day.getText();
+            if (day.getText().equalsIgnoreCase("14")) {
                 day.click();
                 // wait until edit-box value changed after clicking
                 wait.until(ExpectedConditions.attributeContains(fromEditbox, "value", "14"));
