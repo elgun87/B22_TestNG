@@ -21,7 +21,7 @@ public class JSExecutor_functions extends Base {
         JSUtil.drawBorder(dynamicContent, driver);
         Thread.sleep(2000);
         extentLogger.info("Getting title with JS executor");
-        String title = JSUtil.getTitleByJS(driver);
+        String title = JSUtil.getTitleOfPageByJS(driver);
         System.out.println(title);
         extentLogger.info("Clicking element with JS executor");
         JSUtil.clickElementByJS(dynamicContent, driver);

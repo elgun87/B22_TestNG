@@ -30,7 +30,7 @@ public class JSUtil {
         js.executeScript("arguments[0].style.border='3px solid red'", element);
     }
 
-    public static String getTitleByJS(WebDriver driver) {
+    public static String getTitleOfPageByJS(WebDriver driver) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         String title = js.executeScript("return document.title;").toString();
         return title;
@@ -51,10 +51,6 @@ public class JSUtil {
         js.executeScript("history.go(0)");
     }
 
-    public static void selectDateWithJS(WebDriver driver, WebElement element, String date) {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].setAttribute('value','" + date + "');", element);
-    }
 
 
 }
