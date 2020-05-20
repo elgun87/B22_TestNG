@@ -9,7 +9,7 @@ public class Excel_intro {
      * Excel data comparison are popular automation scenarios.
      *                      We will learn
      *  Excel files structure
-     *  How to read and write Excel files using Apache POI - Apache PooXml Library
+     *  How to read and write Excel files using Apache POI - Apache PooXml BrowserUtil
      *  Selenium + Excel file data driven test
      *
      *              In Excel file we have:

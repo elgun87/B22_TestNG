@@ -17,7 +17,7 @@ import java.util.Set;
 
 import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
 
-public class Selenium4_InvokeMultipleWindows extends Base {
+public class Selenium4_Invoke_Multiple_Tabs extends Base {
 
     /*
     Scenario ; Go to https://rahulshettyacademy.com/angularpractice/"

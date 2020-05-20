@@ -1,7 +1,7 @@
 package com.business.Tests;
 
 import com.business.Utilities.Base;
-import com.business.Utilities.Library;
+import com.business.Utilities.BrowserUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -41,7 +41,7 @@ public class Waits_Synchronizations extends Base {
         WebElement startBbtn = driver.findElement(By.xpath("//button[contains(text(),'Start')]"));
         startBbtn.click();
         WebElement helloWorld = driver.findElement(By.xpath("//h4[contains(text(),'Hello World!')]"));
-        Library.waitFor_Visibility(helloWorld);
+        BrowserUtil.waitFor_Visibility(helloWorld);
         Assert.assertTrue(helloWorld.isDisplayed());
     }
 
@@ -51,7 +51,7 @@ public class Waits_Synchronizations extends Base {
         WebElement startBbtn = driver.findElement(By.xpath("//button[contains(text(),'Start')]"));
         startBbtn.click();
         WebElement loading = driver.findElement(By.xpath("//div[@id='loading']"));
-        Library.waitFor_In_Visible(loading);
+        BrowserUtil.waitFor_In_Visible(loading);
         Assert.assertFalse(loading.isDisplayed());
 
     }

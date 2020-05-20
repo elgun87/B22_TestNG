@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class Calendar_picking extends Base {
+public class Calendar_Picking extends Base {
 
 
     @Test

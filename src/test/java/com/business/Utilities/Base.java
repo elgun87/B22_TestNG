@@ -63,7 +63,7 @@ public abstract class Base {
     public void teardown(ITestResult result) throws IOException {
         softAssert.assertAll();
         if (result.getStatus() == ITestResult.FAILURE) {
-            String screenshotLocation = Library.getScreenshot(result.getName());
+            String screenshotLocation = BrowserUtil.getScreenshot(result.getName());
             extentLogger.fail(result.getName());
             extentLogger.addScreenCaptureFromPath(screenshotLocation);
             extentLogger.fail(result.getThrowable());

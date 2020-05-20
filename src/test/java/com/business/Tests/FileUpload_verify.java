@@ -22,7 +22,6 @@ public class FileUpload_verify extends Base {
      */
 
 
-
     @Test
     public void file_Uploaded_Verify() {
         driver.get("https://the-internet.herokuapp.com/upload");
@@ -43,7 +42,6 @@ public class FileUpload_verify extends Base {
         String path = "C:\\Users\\salma\\OneDrive\\Desktop\\" + fileName;
         WebElement target = driver.findElement(By.id("drag-drop-upload"));
         DropFile(new File(path), target, 0, 0);
-
         driver.findElement(By.xpath("//input[@id='file-submit']")).click();
         Assert.assertTrue(driver.findElement(By.xpath("//h1[contains(text(),'Internal Server Error')]")).getText().contains("Internal Server Error"));
 
@@ -51,7 +49,7 @@ public class FileUpload_verify extends Base {
     }
 
 
-    public static void DropFile(File filePath, WebElement target, int offsetX, int offsetY) {
+    private static void DropFile(File filePath, WebElement target, int offsetX, int offsetY) {
         if (!filePath.exists())
             throw new WebDriverException("File not found: " + filePath.toString());
         WebDriver driver = ((RemoteWebElement) target).getWrappedDriver();
@@ -84,7 +82,6 @@ public class FileUpload_verify extends Base {
                         "};" +
                         "document.body.appendChild(input);" +
                         "return input;";
-
         WebElement input = (WebElement) jse.executeScript(JS_DROP_FILE, target, offsetX, offsetY);
         input.sendKeys(filePath.getAbsoluteFile().toString());
         wait.until(ExpectedConditions.stalenessOf(input));

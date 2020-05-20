@@ -14,7 +14,7 @@ import java.time.Duration;
 import java.util.Date;
 import java.util.function.Function;
 
-public class Library {
+public class BrowserUtil {
 
 
     public static String getScreenshot(String name) {
@@ -81,4 +81,12 @@ public class Library {
         }
     }
 
+    public static void sleep(int num) {
+        try {
+            Thread.sleep(num);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+    }
 }

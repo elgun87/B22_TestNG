@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
 
-public class Selenium4_RelativeLocators extends Base {
+public class Selenium4_Relative_Locators extends Base {
 
     @Test
     public void testingSelenium4RelativeLocators() {
