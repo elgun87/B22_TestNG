@@ -16,11 +16,11 @@ public class RobotClass extends Base {
     @Test
     public void downloadWithRobot() throws AWTException {
         driver.get("https://the-internet.herokuapp.com/download");
-        WebElement file = driver.findElement(By.linkText("text.txt"));
+        WebElement file = driver.findElement(By.linkText("test.txt"));
         file.click();
         Robot robot = new Robot();
         robot.keyPress(KeyEvent.VK_ENTER);
-        String fileName = "text.txt";
+        String fileName = "test.txt";
         String path = "C:\\Users\\salma\\Downloads\\" + fileName;
         Assert.assertTrue(Files.exists(Paths.get(path)));
 

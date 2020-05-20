@@ -4,7 +4,7 @@ import com.business.Utilities.Base;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-public class JS_Popup extends Base {
+public class Popup_JS extends Base {
 
     @Test
     public void JS_popupTesting() throws InterruptedException {

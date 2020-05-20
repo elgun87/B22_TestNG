@@ -10,7 +10,7 @@ public class Gettext_VS_getAttribute extends Base {
 
     /**
      * Task:
-     * Go to openxcEll.com
+     * Go to openxcell.com
      * Locate case studies link
      * Printout class attribute
      * Expected : Mega-menu-link
@@ -32,11 +32,10 @@ public class Gettext_VS_getAttribute extends Base {
 
 
     @Test
-    public void searcFunnction(){
-
+    public void searcFunnction() {
         driver.get("https://www.google.com/");
         WebElement editbox = driver.findElement(By.name("q"));
-        editbox.sendKeys("Audi Q7" + Keys.ENTER);  //Enter
+        editbox.sendKeys("Audi Q7" + Keys.ENTER);  //after test clicks enter.
         if (driver.findElement(By.name("q")).getAttribute("value").equals("Audi Q7")) {
             System.out.println("Test passed");
         } else {

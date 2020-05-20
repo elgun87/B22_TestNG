@@ -18,12 +18,12 @@ public class SpiceJet_E2E extends Base {
     public void spiceJetE2E() throws InterruptedException {
         driver.get("https://www.spicejet.com");
         // Select round trip
-        WebElement roundTrip = driver.findElement(By.id("ControlGroupSearchView_AvailabilitySearchInputSearchView_RoundTrip"));
+        WebElement roundTrip = driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_1"));
         Assert.assertFalse(roundTrip.isSelected());
         roundTrip.click();
         // Verify after click radio btn is selected
         Assert.assertTrue(roundTrip.isSelected());
-        WebElement studentCheckBox = driver.findElement(By.id("ControlGroupSearchView_AvailabilitySearchInputSearchView_Student"));
+        WebElement studentCheckBox = driver.findElement(By.id("ctl00_mainContent_chk_StudentDiscount"));
         //Verify Student checkbox not selected
         Assert.assertFalse(studentCheckBox.isSelected());
         studentCheckBox.click();
@@ -33,12 +33,13 @@ public class SpiceJet_E2E extends Base {
         driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT")).click();
         driver.findElement(By.xpath("//a[@text='Kolkata (CCU)']")).click();
         BrowserUtil.sleep(1000);
+        //Dynamically put inside parentises and show [2] -> in table 2
         driver.findElement(By.xpath("(//a[@value='PAT'])[2]")).click();
         //Choose current date as from date
-        WebElement currentDate = driver.findElement(By.cssSelector("ui-state-default.ui-state-highlight.ui-state-active"));
+        WebElement currentDate = driver.findElement(By.cssSelector(".ui-state-default.ui-state-highlight.ui-state-active"));
         currentDate.click();
         //Choose returning date
-        WebElement returnDate = driver.findElement(By.id("custom_date_picker_id_2"));
+        WebElement returnDate = driver.findElement(By.id("cctl00_mainContent_view_date2"));
         returnDate.click();
         // Locate table
         // Locate all days from table_2 in 1 List and choose date 13

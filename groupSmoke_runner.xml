@@ -8,7 +8,7 @@
             </run>
         </groups>
         <classes>
-            <class name="com.business.Tests.Grouping_tests"></class>
+            <class name="com.business.Tests.Group_tests"></class>
         </classes>
     </test>
 </suite>
