@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class Grouping_tests extends Base {
+public class Group_tests extends Base {
 
     @Test(groups = {"regression", "smoke"})
     public void verifyWrongLogin() {

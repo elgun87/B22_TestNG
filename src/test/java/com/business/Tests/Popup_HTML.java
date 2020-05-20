@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 
-public class HTMLPopups extends Base {
+public class Popup_HTML extends Base {
 
     @Test
     public void htmlPopup() throws InterruptedException {
