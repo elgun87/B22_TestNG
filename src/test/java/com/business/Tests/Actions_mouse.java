@@ -1,9 +1,11 @@
 package com.business.Tests;
 
 import com.business.Utilities.Base;
+import org.checkerframework.checker.units.qual.A;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -16,10 +18,10 @@ public class Actions_mouse extends Base {
         String maintTitle = driver.getTitle();
         // Do double click to element
         WebElement nextSign = driver.findElement(By.xpath("//i[@class='a-icon a-icon-next-rounded']"));
-        actions.doubleClick(nextSign).build().perform();
+        actions.moveToElement(nextSign).doubleClick().build().perform();
         // Do right click
         WebElement searchEditbox = driver.findElement(By.id("twotabsearchtextbox"));
-        actions.contextClick(searchEditbox).build().perform();
+        actions.moveToElement(searchEditbox).contextClick().build().perform();
         searchEditbox.click();
         // Move to specific element
         WebElement customerService = driver.findElement(By.xpath("//a[contains(text(),'Customer Service')]"));
@@ -36,7 +38,6 @@ public class Actions_mouse extends Base {
      */
     @Test
     public void mouseHower_MoveToElement() {
-
         extentLogger = report.createTest("Mouse hover test");
         driver.get("https://www.amazon.com/");
         WebElement prime = driver.findElement(By.xpath("//span[contains(text(),'Try Prime')]"));
@@ -45,17 +46,17 @@ public class Actions_mouse extends Base {
     }
 
     @Test
-    public void scroolDown_scroolUP() {
-
-        extentLogger = report.createTest("Scrrol up amd down");
-        driver.get("https://www.youtube.com/");
+    public void scrollDown_scrollUP() throws InterruptedException {
+        extentLogger = report.createTest("Scroll up amd down");
+        driver.get("https://www.airtelxstream.in/");
         int i = 0;
         int j = 0;
-        while (i < 3) {
+        while (i < 300) {
             actions.sendKeys(Keys.PAGE_DOWN).build().perform();
             i++;
         }
-        while (j < 3) {
+        Thread.sleep(2000);
+        while (j < 300) {
             actions.sendKeys(Keys.PAGE_UP).build().perform();
             j++;
         }
@@ -71,6 +72,7 @@ public class Actions_mouse extends Base {
         extentLogger.info("Verifying the result");
         WebElement draggable = driver.findElement(By.id("draggable"));
         WebElement droppable = driver.findElement(By.id("droppable"));
+        actions.dragAndDrop(draggable, draggable).build().perform();
 
     }
 }

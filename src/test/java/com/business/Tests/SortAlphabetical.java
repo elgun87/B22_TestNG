@@ -8,21 +8,25 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class SortAlphabetical extends Base {
 
 
     @Test
     public void verifyOptionsAreAlphaBetichal() {
-        // using the compareTo method, We will compare each element in the list to the next one.
         driver.get("https://www.amazon.com/");
         WebElement dropdown = driver.findElement(By.xpath("//select[@id='searchDropdownBox']"));
         Select selectDropdown = new Select(dropdown);
-        //List<String> list= selectDropdown.getOptions();
-        for (int i = 0; i < selectDropdown.getOptions().size() - 1; i++) {
-            String current = selectDropdown.getOptions().get(i).getText();
-            String next = selectDropdown.getOptions().get(i + 1).getText();
-           // Assert.assertTrue(current.compareTo(next) < 0);
+        List<WebElement> list = selectDropdown.getOptions();
+        String current = "";
+        String next = "";
+        for (int i = 0; i < list.size() - 1; i++) {
+            current = list.get(i).getText();
+            next = list.get(i + 1).getText();
+            System.out.println(list.get(i).getText());
         }
+        Assert.assertTrue(current.compareTo(next) < 0);
 
     }
 }

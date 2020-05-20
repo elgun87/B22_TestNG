@@ -26,7 +26,7 @@ public class SauceLabs_Testing {
     //  @Test(enabled = false)
     //   public void buttonClicking() throws MalformedURLException {
 //        // 1 step -Setting DesiredCapabilities
-//        DesiredCapabilities caps = DesiredCapabilities.chhrome();
+//        DesiredCapabilities caps = DesiredCapabilities.chrome();
 //        caps.setPlatform(Platform.WIN10);
 //        caps.setCapability("version", "latest");
 //        driver = new RemoteWebDriver(new URL(SAUCELABS_URL), caps);

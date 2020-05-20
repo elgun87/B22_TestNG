@@ -60,7 +60,7 @@ public class Tables_Static extends Base {
         List<WebElement> allRows = driver.findElements(By.xpath("//table[@id='table1']/tbody/tr"));
         // find size of All rows in table
         int size = allRows.size();
-        // print all cells of rows
+        // print all cells of rows as columns in row
         for (WebElement row : allRows) {
             System.out.println(row.getText());
         }
@@ -116,4 +116,13 @@ public class Tables_Static extends Base {
         }
     }
 
+    @Test
+    public void find_All_Values_In_All_Columns() {
+        driver.get(homePage);
+        //FInd all cells in all Columns
+        List<WebElement> column2 = driver.findElements(By.xpath("//table[@id='table1']/tbody/tr/td"));
+        for (WebElement value : column2) {
+            System.out.println(value.getText());
+        }
+    }
 }

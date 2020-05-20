@@ -14,7 +14,7 @@ import java.util.List;
  * then iterate and click whatever we want click.
  */
 
-public class Dropdown_NoSelectTag extends Base {
+public class Dropdown_BootStrap extends Base {
 
     @Test
 
@@ -26,7 +26,7 @@ public class Dropdown_NoSelectTag extends Base {
         //<a class="dropdown-item" href="https://www.amazon.com/">Amazon</a>
         Thread.sleep(3000);
         //store all elements of dropdown in 1 list
-        List<WebElement> allLinks = driver.findElements(By.className("dropdown-item"));
+        List<WebElement> allLinks = driver.findElements(By.xpath("a[@class='dropdown-item']"));
         // loop the list , get text and value of attributes from each element
         for (WebElement link : allLinks) {
             System.out.println(link.getText() + " : " + link.getAttribute("href"));
