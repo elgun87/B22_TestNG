@@ -2,12 +2,16 @@ package com.business.Tests;
 
 
 import com.business.Utilities.Base;
+import com.business.Utilities.BrowserUtil;
+import org.checkerframework.checker.units.qual.A;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class SortAlphabetical extends Base {
@@ -15,19 +19,56 @@ public class SortAlphabetical extends Base {
 
     @Test
     public void verifyOptionsAreAlphaBetichal() {
+        extentLogger = report.createTest("Verify dropdown elements are in asc order ");
+        extentLogger.info("navigating the website");
         driver.get("https://www.amazon.com/");
+        extentLogger.info("Locating the dropdown");
         WebElement dropdown = driver.findElement(By.xpath("//select[@id='searchDropdownBox']"));
+        extentLogger.info("Storing all WebElements in the List");
         Select selectDropdown = new Select(dropdown);
-        List<WebElement> list = selectDropdown.getOptions();
-        String current = "";
-        String next = "";
-        for (int i = 0; i < list.size() - 1; i++) {
-            current = list.get(i).getText();
-            next = list.get(i + 1).getText();
-            System.out.println(list.get(i).getText());
+        List<WebElement> optionsList = selectDropdown.getOptions();
+        extentLogger.info("Creating new ArrayList,Iterating WebElements List to get the names of options and " +
+                "storing the names of options in that ArrayList");
+        ArrayList<String> originalList = new ArrayList<>();
+        for (WebElement option : optionsList) {
+            originalList.add(option.getText());
         }
-        Assert.assertTrue(current.compareTo(next) < 0);
+        extentLogger.info("Creating another Arraylist from list of option names");
+        ArrayList<String> copiedList = new ArrayList<>(originalList);
+        extentLogger.info("Sorting second Arraylist");
+        Collections.sort(copiedList);
+        extentLogger.info("Comparing original list with sorted list");
+       Assert.assertEquals(originalList, copiedList); //-> Logic is correct, but the list in website is not
+                                                           // in ascending order
+    }
+
+    @Test
+    public void verifyCellsInTableAreSorted() throws InterruptedException {
+        extentLogger = report.createTest("Testing elements in table column are in asc order");
+        extentLogger.info("Navigating the website");
+        driver.get("https://rahulshettyacademy.com/seleniumPractise/#/offers");
+        WebElement header = driver.findElement(By.xpath("//b[contains(text(),'Veg/fruit name')]"));
+        header.click();
+        Thread.sleep(1000);
+        header.click();
+        Thread.sleep(1000);
+        extentLogger.info("Storing all WebElements of Column2 in the list");
+        List<WebElement> column_1st = driver.findElements(By.xpath("//table[@id='sortableTable']//tbody//tr//td[2]"));
+        extentLogger.info("Creating new ArrayList,Iterating WebElements List to get the names of options and " +
+                "storing the names of options in that ArrayList");
+        ArrayList<String> originalList = new ArrayList<>();
+        for (int i = 0; i < column_1st.size(); i++) {
+            originalList.add(column_1st.get(i).getText());
+        }
+        extentLogger.info("Creating another Arraylist from list of option names");
+        ArrayList<String> copiedList = new ArrayList<>(originalList);
+        extentLogger.info("Sorting second Arraylist");
+        Collections.sort(copiedList);
+        extentLogger.info("Comparing original list with sorted list");
+        Assert.assertEquals(originalList, copiedList);
+        extentLogger.info("Test passed");
 
     }
+
 }
 
