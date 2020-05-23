@@ -21,7 +21,7 @@ public class BrowserUtil {
         String time = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
         TakesScreenshot takesScreenshot = (TakesScreenshot) DriverUtil.getDriver();
         File source = takesScreenshot.getScreenshotAs(OutputType.FILE);
-        String target = System.getProperty("user.dir") + "\\test-output\\screenshot_" + name + time + ".png";
+        String target = System.getProperty("user.dir") + "\\test-output\\screenshots\\screenshot_" + name + time + ".png";
         File finalDestination = new File(target);
         try {
             FileUtils.copyFile(source, finalDestination);
@@ -59,27 +59,26 @@ public class BrowserUtil {
         }
     }
 
-    public static void fluentWait(WebElement webElement) {
-        Wait wait = new FluentWait<>(DriverUtil.getDriver())
-                .withTimeout(Duration.ofSeconds(15))
-                .pollingEvery(Duration.ofMillis(800))
-                .ignoring(NoSuchElementException.class)
-                .ignoring(ElementNotVisibleException.class)
-                .ignoring(ElementClickInterceptedException.class)
-                .ignoring(StaleElementReferenceException.class)
-                .ignoring(WebDriverException.class);
-        WebElement element = (WebElement) wait.until((Function<WebDriver, WebElement>) driver -> webElement);
-        try {
-            element.click();
-        } catch (WebDriverException e) {
-            System.out.println(e.getMessage());
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException ex) {
-                ex.printStackTrace();
+    /**
+     * Wait 15 seconds with polling interval of 200 milliseconds then click
+     */
+    public static WebElement fluentWait(WebElement webElement, WebDriver driver) {
+        Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+                .withTimeout(Duration.ofSeconds(30))
+                .pollingEvery(Duration.ofSeconds(3))
+                .ignoring(NoSuchElementException.class);
+        WebElement element = wait.until(new Function<WebDriver, WebElement>() {
+            public WebElement apply(WebDriver driver) {
+                if (webElement.isDisplayed()) {
+                    return webElement;
+                } else {
+                    return null;
+                }
             }
-        }
+        });
+        return element;
     }
+
 
     public static void sleep(int num) {
         try {

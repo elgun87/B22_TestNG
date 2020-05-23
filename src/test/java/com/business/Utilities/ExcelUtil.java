@@ -12,10 +12,10 @@ import java.util.Map;
 
 public class ExcelUtil {
 
+
     private Sheet workSheet;
     private Workbook workBook;
     private String path;
-
 
     public ExcelUtil(String path, String sheetName) {
         this.path = path;
@@ -27,17 +27,12 @@ public class ExcelUtil {
             workSheet = workBook.getSheet(sheetName);
             // check if sheet is null or not. null means  sheetname was wrong
             Assert.assertNotNull(workSheet, "Sheet: \"" + sheetName + "\" does not exist\n");
+
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
 
-    /**
-     * Get the data of specific cell
-     * @param rowNum starting with 0
-     * @param colNum starting with 0
-     * @return
-     */
     public String getCellData(int rowNum, int colNum) {
         Cell cell;
         try {
@@ -51,20 +46,15 @@ public class ExcelUtil {
 
     public String[][] getDataArray() {
         String[][] data = new String[rowCount()][columnCount()];
-        for (int i = 0; i < rowCount(); i++) {
+        for (int i = 1; i <= rowCount(); i++) {
             for (int j = 0; j < columnCount(); j++) {
                 String value = getCellData(i, j);
-                data[i][j] = value;
+                data[i - 1][j] = value;
             }
         }
         return data;
-
     }
 
-    /**
-     * Get data as a List<Map<<String, String>>, where key name represents column name
-     * @return
-     */
     public List<Map<String, String>> getDataList() {
         // get all columns
         List<String> columns = getColumnsNames();
@@ -97,12 +87,6 @@ public class ExcelUtil {
         return columns;
     }
 
-    /**
-     * Write something into excel file
-     * @param value what should be written
-     * @param rowNum starting with 0
-     * @param colNum starting with 0
-     */
     public void setCellData(String value, int rowNum, int colNum) {
         Cell cell;
         Row row;
@@ -136,6 +120,6 @@ public class ExcelUtil {
     }
 
     public int rowCount() {
-        return workSheet.getPhysicalNumberOfRows();
+        return workSheet.getLastRowNum();
     }
 }
