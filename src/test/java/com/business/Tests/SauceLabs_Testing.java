@@ -19,21 +19,21 @@ public class SauceLabs_Testing {
      * --> 2) Create RemoteWebDriver with HUB url and caps object;
      */
 
+    private WebDriver driver;
+    public static final String SAUCELABS_URL = "https://anar1986:" +
+            "d49bdf28-ea00-4d0d-81fa-ee7be578238e@ondemand.us-west-1.saucelabs.com:443/wd/hub";
 
-//    private WebDriver driver;
-//    public static final String SAUCELABS_URL = "https://Anar013:7d1692a4-3808-4747-96da-2a2d6b18c217@ondemand.saucelabs.com:443/wd/hub";
-
-    //  @Test(enabled = false)
-    //   public void buttonClicking() throws MalformedURLException {
-//        // 1 step -Setting DesiredCapabilities
-//        DesiredCapabilities caps = DesiredCapabilities.chrome();
-//        caps.setPlatform(Platform.WIN10);
-//        caps.setCapability("version", "latest");
-//        driver = new RemoteWebDriver(new URL(SAUCELABS_URL), caps);
-//        // 2  step  -Initializing driver
-//        driver.get("https://www.etsy.com");
-//        WebElement searchbox = driver.findElement(By.id("global-enhancements-search-query"));
-//        searchbox.sendKeys("Wooden spoon" + Keys.ENTER);
-//        Assert.assertTrue(driver.getTitle().toLowerCase().contains("wooden spoon"));
-//    }
+    @Test
+    public void buttonClicking() throws MalformedURLException {
+        //1 step -Setting DesiredCapabilities
+        DesiredCapabilities caps = new DesiredCapabilities();
+        caps.setPlatform(Platform.WINDOWS);
+        caps.setBrowserName("Chrome");
+        // 2. Initialize driver
+        driver = new RemoteWebDriver(new URL(SAUCELABS_URL), caps);
+        driver.get("https://www.etsy.com");
+        WebElement searchBox = driver.findElement(By.id("global-enhancements-search-query"));
+        searchBox.sendKeys("Wooden spoon" + Keys.ENTER);
+        Assert.assertTrue(driver.getTitle().toLowerCase().contains("wooden spoon"));
+    }
 }

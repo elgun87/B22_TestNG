@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 public class DDT_example extends Base {
 
-
+    // create object of ExcelUtil and pass path and sheet name to its constructor.
     String path = "src/test/resources/login.xlsx";
     ExcelUtil excelUtil = new ExcelUtil(path, "details");
 
