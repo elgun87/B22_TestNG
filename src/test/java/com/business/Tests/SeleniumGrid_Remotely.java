@@ -18,10 +18,11 @@ public class SeleniumGrid_Remotely {
 
     /**
      * 2 steps to run our tests in SauceLabs/Any ready Selenium Grid
-     * > 1) Set ChromeOptions
+     * > 1) Set ChromeOptions, DesiredCapabilities
      * > 2) Create RemoteWebDriver with HUB url and caps object;
      */
 
+    String gridHubUrl ="http://localhost:4444/wd/hub";
 
     @Test
     public void buttonClicking() throws MalformedURLException {
@@ -29,11 +30,11 @@ public class SeleniumGrid_Remotely {
 //        options.setCapability(CapabilityType.PLATFORM_NAME, Platform.WINDOWS);
 //        options.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.ACCEPT);
 //        options.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-//        WebDriver driver = new RemoteWebDriver(new URL("http://192.168.0.86:4444/wd/hub"), options);
+//        WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-        desiredCapabilities.setBrowserName("Chrome");
         desiredCapabilities.setPlatform(Platform.WINDOWS);
-        WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), desiredCapabilities);
+        desiredCapabilities.setBrowserName("Chrome");
+        WebDriver driver = new RemoteWebDriver(new URL(gridHubUrl), desiredCapabilities);
         driver.get("https://www.etsy.com");
         WebElement searchBox = driver.findElement(By.id("global-enhancements-search-query"));
         searchBox.sendKeys("Wooden spoon" + Keys.ENTER);
