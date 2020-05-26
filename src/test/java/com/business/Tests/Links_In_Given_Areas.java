@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class Links_Find_Links_In_Given_Area extends Base {
+public class Links_In_Given_Areas extends Base {
 
     /**
      * Note:

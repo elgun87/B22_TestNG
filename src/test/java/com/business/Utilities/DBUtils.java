@@ -12,19 +12,23 @@ public class DBUtils {
      * Only after that we can call other methods from DBUtil class.
      */
 
-    //Connection info:
+    //Connection info for Hr DB -> PostrgreSQL databaase:
     //jdbc:postgresql:(jdbc db driver)//ip where db is : 5432(port) + /hr (dbname)
     private static String hrdbURL = ConfigReader.getProperty("hrdbUrl");
     private static String hrdbUsername = ConfigReader.getProperty("hrdbUser");  //hr
     private static String hrdbPassword = ConfigReader.getProperty("hrdbPassword");  //hr
 
 
-    protected static Connection connection;
-    protected static Statement statement;
-    protected static ResultSet resultSet;
+    private static Connection connection;
+    private static Statement statement;
+    private static ResultSet resultSet;
+
+    private DBUtils() {
+
+    }
 
     /**
-     * This method takes parameters from util class itself
+     * This method takes parameters from util class itself, works for specific DB.
      */
     public static void createConnectionToHrDB() {
         try {

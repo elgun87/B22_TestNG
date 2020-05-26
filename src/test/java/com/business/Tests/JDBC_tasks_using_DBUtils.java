@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 
-public class JDBC_tasks {
+public class JDBC_tasks_using_DBUtils {
     /**
      * Connect to DB
      * Verify employee id 105 belongs to Kamil Austin;
