@@ -15,7 +15,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JDBC_stepByStep {
+public class JDBC_PostgreSQL_beginner {
 
     //Connection info:
     //jdbc:postgresql:(jdbc db driver)//ip where db is : 5432(port) + /hr (dbname)
@@ -24,7 +24,7 @@ public class JDBC_stepByStep {
     private String hrdbPassword = ConfigReader.getProperty("hrdbPassword");  //hr
 
 
-    @Test(enabled = false)
+    @Test
     public void dataBaseTesting() throws SQLException {
         DBUtils.createConnection(hrdbURL, hrdbUsername, hrdbPassword);
         String query = "SELECT first_name from employees ;";

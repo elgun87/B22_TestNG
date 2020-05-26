@@ -18,7 +18,7 @@ import java.sql.SQLException;
         do our analyze. */
 
 
-public class JDBC_ResultSetMetadata_separately_using {
+public class JDBC_ResultSetMetadata_beginner {
 
     //Connection info:
     //jdbc:postgresql:(jdbc db driver)//ip where db is : 5432(port) + /hr (dbname)

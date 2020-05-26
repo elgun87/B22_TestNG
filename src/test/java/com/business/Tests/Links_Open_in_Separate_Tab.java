@@ -12,7 +12,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-public class Links_Open_Links_in_Separate_Tab extends Base {
+public class Links_Open_in_Separate_Tab extends Base {
     /**
      * Find all links in footer area
      * Open each of them in separate tab --> elem.sendKeys(Keys.chord (Keys.CONTROL,Keys.ENTER));
