@@ -6,8 +6,6 @@ import com.business.Utilities.ExcelUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -26,7 +24,7 @@ public class DDT_example extends Base {
 
     @Test(dataProvider = "loginData")
     public void dataDrivenTest(String username, String password, String result) throws InterruptedException {
-        extentLogger = report.createTest("Data Driven Test");
+        extentLogger = extentReports.createTest("Data Driven Test");
         driver.get("https://the-internet.herokuapp.com/login");
         WebElement usernameBox = driver.findElement(By.id("username"));
         extentLogger.info("Passing username");

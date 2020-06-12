@@ -2,8 +2,6 @@ package com.business.Tests;
 
 
 import com.business.Utilities.Base;
-import com.business.Utilities.BrowserUtil;
-import org.checkerframework.checker.units.qual.A;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -19,7 +17,7 @@ public class SortAlphabetical extends Base {
 
     @Test
     public void verifyOptionsAreAlphaBetichal() {
-        extentLogger = report.createTest("Verify dropdown elements are in asc order ");
+        extentLogger = extentReports.createTest("Verify dropdown elements are in asc order ");
         extentLogger.info("navigating the website");
         driver.get("https://www.amazon.com/");
         extentLogger.info("Locating the dropdown");
@@ -44,14 +42,12 @@ public class SortAlphabetical extends Base {
 
     @Test
     public void verifyCellsInTableAreSorted() throws InterruptedException {
-        extentLogger = report.createTest("Testing elements in table column are in asc order");
+        extentLogger = extentReports.createTest("Testing elements in table column are in asc order");
         extentLogger.info("Navigating the website");
         driver.get("https://rahulshettyacademy.com/seleniumPractise/#/offers");
         WebElement header = driver.findElement(By.xpath("//b[contains(text(),'Veg/fruit name')]"));
         header.click();
-        Thread.sleep(1000);
         header.click();
-        Thread.sleep(1000);
         extentLogger.info("Storing all WebElements of Column2 in the list");
         List<WebElement> column_1st = driver.findElements(By.xpath("//table[@id='sortableTable']//tbody//tr//td[2]"));
         extentLogger.info("Creating new ArrayList,Iterating WebElements List to get the names of options and " +

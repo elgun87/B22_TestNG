@@ -1,11 +1,9 @@
 package com.business.Tests;
 
 import com.business.Utilities.Base;
-import org.checkerframework.checker.units.qual.A;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -13,9 +11,9 @@ public class Actions_mouse extends Base {
 
     @Test
     public void doubleClick_RightClick() {
-        extentLogger = report.createTest("Double click on element");
+        extentLogger = extentReports.createTest("Double click on element");
         driver.get("https://www.amazon.com/");
-        String maintTitle = driver.getTitle();
+        String mainTitle = driver.getTitle();
         // Do double click to element
         WebElement nextSign = driver.findElement(By.xpath("//i[@class='a-icon a-icon-next-rounded']"));
         actions.moveToElement(nextSign).doubleClick().build().perform();
@@ -28,7 +26,7 @@ public class Actions_mouse extends Base {
         actions.moveToElement(customerService).click().build().perform();
         String cstmrTitle = driver.getTitle();
         extentLogger.info("Verifying th result");
-        Assert.assertFalse(maintTitle.equalsIgnoreCase(cstmrTitle));
+        Assert.assertFalse(mainTitle.equalsIgnoreCase(cstmrTitle));
 
     }
 
@@ -38,7 +36,7 @@ public class Actions_mouse extends Base {
      */
     @Test
     public void mouseHower_MoveToElement() {
-        extentLogger = report.createTest("Mouse hover test");
+        extentLogger = extentReports.createTest("Mouse hover test");
         driver.get("https://www.amazon.com/");
         WebElement prime = driver.findElement(By.xpath("//span[contains(text(),'Try Prime')]"));
         extentLogger.info("Verifying the result");
@@ -47,7 +45,7 @@ public class Actions_mouse extends Base {
 
     @Test
     public void scrollDown_scrollUP() throws InterruptedException {
-        extentLogger = report.createTest("Scroll up amd down");
+        extentLogger = extentReports.createTest("Scroll up amd down");
         driver.get("https://www.airtelxstream.in/");
         int i = 0;
         int j = 0;
@@ -65,7 +63,7 @@ public class Actions_mouse extends Base {
 
     @Test
     public void dragAndDrop() {
-        extentLogger = report.createTest("Drag and drop testing");
+        extentLogger = extentReports.createTest("Drag and drop testing");
         driver.get("https://jqueryui.com/droppable/");
         WebElement mainFrame = driver.findElement(By.xpath("//iframe[@class='demo-frame']"));
         driver.switchTo().frame(mainFrame);

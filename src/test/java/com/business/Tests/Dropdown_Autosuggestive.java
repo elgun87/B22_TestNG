@@ -1,22 +1,17 @@
 package com.business.Tests;
 
 import com.business.Utilities.Base;
-import com.business.Utilities.JSUtil;
-import org.apache.poi.ss.formula.functions.T;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.security.Key;
-import java.util.concurrent.TimeUnit;
-
 public class Dropdown_Autosuggestive extends Base {
 
     @Test
     public void autoSuggestiveDropdown() throws InterruptedException {
-        extentLogger = report.createTest("Autosuggestive Dropdown");
+        extentLogger = extentReports.createTest("Autosuggestive Dropdown");
         driver.get("https://www.azal.az/en/");
         WebElement clearText = driver.findElement(By.xpath("//a[@class='btn-clear']//i[@class='fa fa-times']"));
         clearText.click();
