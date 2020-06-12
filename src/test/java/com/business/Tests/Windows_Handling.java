@@ -12,7 +12,7 @@ public class Windows_Handling extends Base {
 
     @Test
     public void handle_Windows() {
-        extentLogger = report.createTest("Window handling test");
+        extentLogger = extentReports.createTest("Window handling test");
         driver.get("https://the-internet.herokuapp.com/windows");
         String parentTitle = driver.getTitle();
         extentLogger.info("click 3 windows");

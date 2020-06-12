@@ -14,7 +14,7 @@ public class CheckBoxes extends Base {
      */
     @Test
     public void checkBoxTesting() {
-        extentLogger= report.createTest("Checkbox testing");
+        extentLogger= extentReports.createTest("Checkbox testing");
         extentLogger.info("Navigate to website");
         driver.get("http://samples.gwtproject.org/samples/Showcase/Showcase.html#!CwCheckBox");
         WebElement monday = driver.findElement(By.id("gwt-debug-cwCheckBox-Monday-input"));

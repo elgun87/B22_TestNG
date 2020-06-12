@@ -12,7 +12,7 @@ public class Group_tests extends Base {
     @Test(groups = {"regression", "smoke"})
     public void verifyWrongLogin() {
         // create a new test in the report and give name : Wrong email and password testing
-        extentLogger = report.createTest("Wrong email and Password testing");
+        extentLogger = extentReports.createTest("Wrong email and Password testing");
         // use the logger to log the steps
         extentLogger.info("Navigating The website");
         driver.get("http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/login.aspx");
@@ -33,7 +33,7 @@ public class Group_tests extends Base {
 
     @Test(groups = {"regression", "smoke"})
     public void doubleClick_RightClick() {
-        extentLogger = report.createTest("Double Click testing");
+        extentLogger = extentReports.createTest("Double Click testing");
         driver.get("https://www.amazon.com/");
         String maintTitle = driver.getTitle();
         // Do double click to element
@@ -54,7 +54,7 @@ public class Group_tests extends Base {
 
     @Test(groups = {"regression"})
     public void verifyBlankUsrNamme() {
-        extentLogger = report.createTest("Verify Blank user");
+        extentLogger = extentReports.createTest("Verify Blank user");
         driver.get("http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/login.aspx");
         pages.homepage.login("", "xosemi");
         String errorMessage = driver.findElement(By.id("ctl00_MainContent_status")).getText();

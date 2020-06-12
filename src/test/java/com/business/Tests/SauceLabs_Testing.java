@@ -4,8 +4,6 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
@@ -29,6 +27,7 @@ public class SauceLabs_Testing {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setPlatform(Platform.WINDOWS);
         caps.setBrowserName("Chrome");
+        caps.setCapability("version","latest");
         // 2. Initialize driver
         driver = new RemoteWebDriver(new URL(SAUCELABS_URL), caps);
         driver.get("https://www.etsy.com");

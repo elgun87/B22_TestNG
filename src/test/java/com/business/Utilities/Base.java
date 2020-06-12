@@ -5,9 +5,10 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.asserts.SoftAssert;
 
 import java.io.IOException;
@@ -18,32 +19,27 @@ public abstract class Base {
 
     protected WebDriver driver;
     protected SoftAssert softAssert;
-    public WebDriverWait wait;
     protected Actions actions;
-    protected static ExtentReports report;
-    private static ExtentHtmlReporter htmlReporter;
+
+    private static ExtentHtmlReporter extentHtmlReporter;
+    protected static ExtentReports extentReports;
     protected static ExtentTest extentLogger;
     protected Pages pages;
 
 
     @BeforeTest(alwaysRun = true)
     public void setupTest() {
-        report = new ExtentReports();
         String filePath = System.getProperty("user.dir") + "\\test-output\\ExtentReport.html";
-        htmlReporter = new ExtentHtmlReporter(filePath);
-        report.attachReporter(htmlReporter);
-        report.setSystemInfo("Environment", "Staging");
-        report.setSystemInfo("Browser", ConfigReader.getProperty("browser"));
-        report.setSystemInfo("OS", System.getProperty("os.name"));
-        report.setSystemInfo("QA Engineer", "Anar Salmanov");
-        htmlReporter.config().setDocumentTitle("Test Results");
-        htmlReporter.config().setReportName("Automated Test Reports");
-    }
+        extentHtmlReporter = new ExtentHtmlReporter(filePath);
+        extentHtmlReporter.config().setReportName("Automated Test Reports"); // name of report
+        extentHtmlReporter.config().setDocumentTitle("Test Results"); // title of report
+        extentReports = new ExtentReports();
+        extentReports.attachReporter(extentHtmlReporter);
+        extentReports.setSystemInfo("Environment", "Staging");
+        extentReports.setSystemInfo("Browser", ConfigReader.getProperty("browser"));
+        extentReports.setSystemInfo("OS", System.getProperty("os.name"));
+        extentReports.setSystemInfo("QA Engineer", "Anar Salmanov");
 
-
-    @AfterTest(alwaysRun = true)
-    public void tearDownTest() {
-        report.flush();
     }
 
 
@@ -54,10 +50,9 @@ public abstract class Base {
         driver.manage().window().maximize();
         softAssert = new SoftAssert();
         actions = new Actions(driver);
-        wait = new WebDriverWait(driver, 30);
         pages = new Pages();
-
     }
+
 
     @AfterMethod(alwaysRun = true)
     public void teardown(ITestResult result) throws IOException {
@@ -70,13 +65,9 @@ public abstract class Base {
         } else if (result.getStatus() == ITestResult.SKIP) {
             extentLogger.skip("Test case skipped " + result.getName());
         }
+        extentReports.flush();
         DriverUtil.closeDriver();
     }
 
 
-    @AfterClass(alwaysRun = true)
-    public void quit() {
-        DriverUtil.closeDriver();
-
-    }
 }

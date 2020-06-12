@@ -15,7 +15,7 @@ public class ErrorMessageValidating extends Base {
     @Test
     public void wrongEmailAndPasswordTest() {
         // create a new test in the report and give name : Wrong email and assword testing
-        extentLogger = report.createTest("Wrong email and Password testing");
+        extentLogger = extentReports.createTest("Wrong email and Password testing");
         // use the logger to log the steps
         extentLogger.info("Navigating The website");
         driver.get("http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/login.aspx");

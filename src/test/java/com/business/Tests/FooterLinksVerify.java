@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Set;
 
 public class FooterLinksVerify extends Base {
-    /*TODO Tomorrow automate qaclickacademy.com footer elements and click them are they wotking or not.
+    /*
      Use the logic, Note: if you click a link then driver object opens that and stays there
       That is why right the logic not move the driver there just click them by que that is it
       Use sendKeys (Keys.chord(Keys.Control, Keys.Enter);
@@ -20,7 +20,7 @@ public class FooterLinksVerify extends Base {
 
     @Test
     public void verifyAllFooterLinks() {
-        extentLogger = report.createTest("Verifying all footer elements");
+        extentLogger = extentReports.createTest("Verifying all footer elements");
         extentLogger.info("Navigating the WebSite");
         driver.get("https://www.day.az/");
         extentLogger.info("Location footer area in 1 WebElement");
@@ -35,7 +35,7 @@ public class FooterLinksVerify extends Base {
 
     @Test
     public void verifyLinkCountInFirstTabInFooter() throws InterruptedException {
-        extentLogger = report.createTest("Verifying all links in 1st column of footer.");
+        extentLogger = extentReports.createTest("Verifying all links in 1st column of footer.");
         extentLogger.info("Navigating the website");
         driver.get("https://www.day.az/");
         extentLogger.info("Checking count of links in footer 1st column and print their names");

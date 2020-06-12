@@ -2,11 +2,9 @@ package com.business.Tests;
 
 import com.business.Utilities.Base;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-import java.security.Key;
 import java.util.List;
 
 /**
@@ -19,7 +17,7 @@ public class Dropdown_BootStrap extends Base {
     @Test
 
     public void noSelectTagDropdown() throws InterruptedException {
-        extentLogger = report.createTest("NoSelectTagDropDown");
+        extentLogger = extentReports.createTest("NoSelectTagDropDown");
         driver.get("http://practice.cybertekschool.com/dropdown");
         Thread.sleep(3000);
         driver.findElement(By.id("dropdownMenuLink")).click();//to expand dropdown

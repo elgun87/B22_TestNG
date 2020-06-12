@@ -3,11 +3,8 @@ package com.business.Tests;
 import com.business.Utilities.Base;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.util.List;
 
 public class Dropdown_Dynamic extends Base {
 
@@ -22,7 +19,7 @@ public class Dropdown_Dynamic extends Base {
 
     @Test
     public void dynamicDropdownCalendarType() {
-        extentLogger = report.createTest("DynamicDropDown Testing");
+        extentLogger = extentReports.createTest("DynamicDropDown Testing");
         driver.get("https://www.spicejet.com");
         driver.findElement(By.cssSelector("input[value='RoundTrip']")).click();
         WebElement from = driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT"));
@@ -32,7 +29,7 @@ public class Dropdown_Dynamic extends Base {
         System.out.println(from.getAttribute("value"));
         Assert.assertTrue(from.getAttribute("value").equalsIgnoreCase("Chennai (MAA)"));
         WebElement to = driver.findElement(By.id("ctl00_mainContent_ddl_destinationStation1_CTXT"));
-        to.click();
+        to.click();                // pay attention !
         WebElement toCity = driver.findElement(By.xpath("(//a[@value='DEL'])[2]"));
         toCity.click();
         System.out.println(to.getAttribute("value"));
