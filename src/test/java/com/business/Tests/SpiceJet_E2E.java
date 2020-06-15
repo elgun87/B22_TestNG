@@ -10,6 +10,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class SpiceJet_E2E extends Base {
 
@@ -17,12 +18,10 @@ public class SpiceJet_E2E extends Base {
     public void spiceJetE2E() throws InterruptedException {
         extentLogger = extentReports.createTest("SpiceJet");
         driver.get("https://www.spicejet.com");
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         // Select round trip
-        WebElement roundTrip = driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_1"));
-        Assert.assertFalse(roundTrip.isSelected());
-        roundTrip.click();
+        driver.findElement(By.xpath("//table[@id='ctl00_mainContent_rbtnl_Trip']//td[2]//input")).click();
         // Verify after click radio btn is selected
-        Assert.assertTrue(roundTrip.isSelected());
         WebElement studentCheckBox = driver.findElement(By.id("ctl00_mainContent_chk_StudentDiscount"));
         //Verify Student checkbox not selected
         Assert.assertFalse(studentCheckBox.isSelected());
@@ -35,15 +34,14 @@ public class SpiceJet_E2E extends Base {
         BrowserUtil.sleep(1000);
         //Dynamically put inside parentises and show [2] -> in table 2
         driver.findElement(By.xpath("(//a[@value='PAT'])[2]")).click();
+        Thread.sleep(1000);
         //Choose current date as from date
-        WebElement currentDate = driver.findElement(By.cssSelector(".ui-state-default.ui-state-highlight.ui-state-active"));
-        currentDate.click();
+        driver.findElement(By.xpath("//table[@class='ui-datepicker-calendar']//a[@class='ui-state-default ui-state-highlight ui-state-active']")).click();
         //Choose returning date
-        WebElement returnDate = driver.findElement(By.id("cctl00_mainContent_view_date2"));
-        returnDate.click();
+        driver.findElement(By.id("ctl00_mainContent_view_date2")).click();
         // Locate table
         // Locate all days from table_2 in 1 List and choose date 13
-        WebElement table = driver.findElement(By.xpath("//div[@class='ui-datepicker-group ui-datepicker-group-last']//table[@class='ui-datepicker-calendar']"));
+        WebElement table = driver.findElement(By.xpath("//div[@class='ui-datepicker-group ui-datepicker-group-last']//table"));
         List<WebElement> allColumns = table.findElements(By.xpath("//tbody//tr//td"));
         for (WebElement day : allColumns) {
             if (day.getText().contains("13")) {

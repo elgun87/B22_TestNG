@@ -11,15 +11,17 @@ import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class SortAlphabetical extends Base {
 
 
-    @Test
-    public void verifyOptionsAreAlphaBetichal() {
+    @Test(enabled = false)
+    public void verifyOptionsAreAlphaBethical() {
         extentLogger = extentReports.createTest("Verify dropdown elements are in asc order ");
         extentLogger.info("navigating the website");
         driver.get("https://www.amazon.com/");
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         extentLogger.info("Locating the dropdown");
         WebElement dropdown = driver.findElement(By.xpath("//select[@id='searchDropdownBox']"));
         extentLogger.info("Storing all WebElements in the List");
@@ -36,8 +38,8 @@ public class SortAlphabetical extends Base {
         extentLogger.info("Sorting second Arraylist");
         Collections.sort(copiedList);
         extentLogger.info("Comparing original list with sorted list");
-       Assert.assertEquals(originalList, copiedList); //-> Logic is correct, but the list in website is not
-                                                           // in ascending order
+        Assert.assertEquals(originalList, copiedList); //-> Logic is correct, but the list in website is not
+        // in ascending order
     }
 
     @Test

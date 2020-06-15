@@ -45,7 +45,7 @@
                             <artifactId>maven-surefire-plugin</artifactId>
                             <version>3.0.0-M3</version>
                             <configuration>
-                                <testFailureIgnore>true</testFailureIgnore>
+                                <testFailureIgnore>false</testFailureIgnore>
                                 <suiteXmlFiles>
                                     <suiteXmlFile>Smoke_runner.xml</suiteXmlFile>
                                 </suiteXmlFiles>
@@ -65,7 +65,7 @@
                             <artifactId>maven-surefire-plugin</artifactId>
                             <version>3.0.0-M3</version>
                             <configuration>
-                                <testFailureIgnore>true</testFailureIgnore>
+                                <testFailureIgnore>false</testFailureIgnore>
                                 <suiteXmlFiles>
                                     <suiteXmlFile>groupRegression_runner.xml</suiteXmlFile>
                                 </suiteXmlFiles>
@@ -85,7 +85,7 @@
                             <artifactId>maven-surefire-plugin</artifactId>
                             <version>3.0.0-M3</version>
                             <configuration>
-                                <testFailureIgnore>true</testFailureIgnore>
+                                <testFailureIgnore>false</testFailureIgnore>
                                 <suiteXmlFiles>
                                     <suiteXmlFile>groupSmoke_runner.xml</suiteXmlFile>
                                 </suiteXmlFiles>

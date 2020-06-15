@@ -23,6 +23,7 @@ public class Dropdown_Autosuggestive extends Base {
         from.sendKeys(Keys.DOWN); // will point to 2nd option, because default points to 1st
         from.sendKeys(Keys.DOWN); // will point to 3rd option
         from.sendKeys(Keys.ENTER);
+        Thread.sleep(2000);
         System.out.println(from.getAttribute("value"));
         Assert.assertTrue(from.getAttribute("value").contains("Minsk, Belarus"));
         Thread.sleep(2000);
