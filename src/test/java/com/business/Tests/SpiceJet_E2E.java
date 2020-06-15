@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 public class SpiceJet_E2E extends Base {
 
-    @Test
+    @Test(enabled = false)
     public void spiceJetE2E() throws InterruptedException {
         extentLogger = extentReports.createTest("SpiceJet");
         driver.get("https://www.spicejet.com");

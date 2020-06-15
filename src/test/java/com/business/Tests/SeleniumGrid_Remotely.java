@@ -18,10 +18,10 @@ public class SeleniumGrid_Remotely {
      */
 
 
-    @Test
+    @Test(enabled = false)
     public void buttonClicking() throws MalformedURLException {
         URL url = new URL("http://localhost:4444/wd/hub");
-        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+        DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setBrowserName("chrome");
         capabilities.setPlatform(Platform.WINDOWS);
         WebDriver driver = new RemoteWebDriver(url, capabilities);

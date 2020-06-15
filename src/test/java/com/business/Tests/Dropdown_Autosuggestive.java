@@ -7,12 +7,15 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.concurrent.TimeUnit;
+
 public class Dropdown_Autosuggestive extends Base {
 
     @Test
     public void autoSuggestiveDropdown() throws InterruptedException {
         extentLogger = extentReports.createTest("Autosuggestive Dropdown");
         driver.get("https://www.azal.az/en/");
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         WebElement clearText = driver.findElement(By.xpath("//a[@class='btn-clear']//i[@class='fa fa-times']"));
         clearText.click();
         Thread.sleep(1000);
