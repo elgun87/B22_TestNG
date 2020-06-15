@@ -12,7 +12,6 @@ import org.testng.annotations.BeforeTest;
 import org.testng.asserts.SoftAssert;
 
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
 
 public abstract class Base {
@@ -46,8 +45,8 @@ public abstract class Base {
     @BeforeMethod(alwaysRun = true)
     public void setup() {
         driver = DriverUtil.getDriver();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
+//        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+//        driver.manage().window().maximize();
         softAssert = new SoftAssert();
         actions = new Actions(driver);
         pages = new Pages();
