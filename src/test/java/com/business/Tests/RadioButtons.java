@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.concurrent.TimeUnit;
+
 public class RadioButtons extends Base {
 
     /**
@@ -16,8 +18,9 @@ public class RadioButtons extends Base {
      */
     @Test
 
-    public void verifyRadioButtond() {
+    public void verifyRadioButton() {
         driver.get("http://samples.gwtproject.org/samples/Showcase/Showcase.html#!CwRadioButton");
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         WebElement blue = driver.findElement(By.id("gwt-debug-cwRadioButton-color-blue-input"));
         WebElement red = driver.findElement(By.id("gwt-debug-cwRadioButton-color-red-input"));
         blue.click();
