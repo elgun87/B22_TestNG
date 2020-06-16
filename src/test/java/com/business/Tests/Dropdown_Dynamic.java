@@ -27,7 +27,8 @@ public class Dropdown_Dynamic extends Base {
         driver.findElement(By.xpath("//table[@id='ctl00_mainContent_rbtnl_Trip']//tbody//tr//td[2]//input")).click();
         Thread.sleep(1000);
         WebElement from = driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT"));
-        from.click();
+        from.
+                click();
         WebElement fromCity = driver.findElement(By.xpath("//a[@value='MAA']"));
         fromCity.click();
         System.out.println(from.getAttribute("value"));
