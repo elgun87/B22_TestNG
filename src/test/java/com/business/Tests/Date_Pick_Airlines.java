@@ -10,7 +10,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class Date_Pick_Airlines extends Base {
 
@@ -18,7 +17,6 @@ public class Date_Pick_Airlines extends Base {
     public void path2US() throws InterruptedException {
         extentLogger = extentReports.createTest("Path2USE23");
         driver.get("https://www.path2usa.com/travel-companions");
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         WebElement from = driver.findElement(By.id("travel_from"));
         from.sendKeys("Arkansas");
         Thread.sleep(700);
