@@ -6,8 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.concurrent.TimeUnit;
-
 public class Dropdown_Dynamic extends Base {
 
 
@@ -23,7 +21,6 @@ public class Dropdown_Dynamic extends Base {
     public void dynamicDropdownCalendarType() throws InterruptedException {
         extentLogger = extentReports.createTest("DynamicDropDown Testing");
         driver.get("https://www.spicejet.com");
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//table[@id='ctl00_mainContent_rbtnl_Trip']//tbody//tr//td[2]//input")).click();
         Thread.sleep(1000);
         WebElement from = driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT"));

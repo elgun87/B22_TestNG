@@ -16,11 +16,11 @@ public class Dropdown_BootStrap extends Base {
 
     @Test
 
-    public void noSelectTagDropdown() throws InterruptedException {
+    public void bootstrapDropdown() throws InterruptedException {
         extentLogger = extentReports.createTest("NoSelectTagDropDown");
         driver.get("http://practice.cybertekschool.com/dropdown");
         Thread.sleep(3000);
-        driver.findElement(By.id("dropdownMenuLink")).click();//to expand dropdown
+        driver.findElement(By.id("dropdownMenuLink")).click(); //to expand dropdown
         //<a class="dropdown-item" href="https://www.amazon.com/">Amazon</a>
         Thread.sleep(3000);
         //store all elements of dropdown in 1 list

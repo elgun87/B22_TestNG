@@ -12,6 +12,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.asserts.SoftAssert;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 
 public abstract class Base {
@@ -28,13 +29,13 @@ public abstract class Base {
 
     @BeforeTest(alwaysRun = true)
     public void setupTest() {
-        String filePath = System.getProperty("user.dir") + "\\test-output\\ExtentReport.html";
+        String filePath = System.getProperty("user.dir") + "\\test-output\\extentReport.html";
         extentHtmlReporter = new ExtentHtmlReporter(filePath);
         extentHtmlReporter.config().setReportName("Automated Test Reports"); // name of report
         extentHtmlReporter.config().setDocumentTitle("Test Results"); // title of report
         extentReports = new ExtentReports();
         extentReports.attachReporter(extentHtmlReporter);
-        extentReports.setSystemInfo("Environment", "Staging");
+        extentReports.setSystemInfo("Environment", "QA_1");
         extentReports.setSystemInfo("Browser", ConfigReader.getProperty("browser"));
         extentReports.setSystemInfo("OS", System.getProperty("os.name"));
         extentReports.setSystemInfo("QA Engineer", "Anar Salmanov");
@@ -45,7 +46,7 @@ public abstract class Base {
     @BeforeMethod(alwaysRun = true)
     public void setup() {
         driver = DriverUtil.getDriver();
-//        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 //        driver.manage().window().maximize();
         softAssert = new SoftAssert();
         actions = new Actions(driver);
