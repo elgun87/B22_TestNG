@@ -1,6 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="GLS Smoke" parallel="classes" thread-count="2">
-
     <test name="Smoke">
         <classes>
             <class name="com.business.Tests.Actions_mouse"></class>

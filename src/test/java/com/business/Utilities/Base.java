@@ -2,7 +2,7 @@ package com.business.Utilities;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.ITestResult;
@@ -21,7 +21,7 @@ public abstract class Base {
     protected SoftAssert softAssert;
     protected Actions actions;
 
-    private static ExtentHtmlReporter extentHtmlReporter;
+    private static ExtentSparkReporter extentSparkReporter;
     protected static ExtentReports extentReports;
     protected static ExtentTest extentLogger;
     protected Pages pages;
@@ -29,12 +29,12 @@ public abstract class Base {
 
     @BeforeTest(alwaysRun = true)
     public void setupTest() {
-        String filePath = System.getProperty("user.dir") + "\\test-output\\extentReport.html";
-        extentHtmlReporter = new ExtentHtmlReporter(filePath);
-        extentHtmlReporter.config().setReportName("Automated Test Reports"); // name of report
-        extentHtmlReporter.config().setDocumentTitle("Test Results"); // title of report
+        String filePath = System.getProperty("user.dir") + "\\test-output\\ExtentReport.html";
+        extentSparkReporter = new ExtentSparkReporter(filePath);
+        extentSparkReporter.config().setReportName("Automated Test Reports"); // name of report
+        extentSparkReporter.config().setDocumentTitle("Test Results"); // title of report
         extentReports = new ExtentReports();
-        extentReports.attachReporter(extentHtmlReporter);
+        extentReports.attachReporter(extentSparkReporter);
         extentReports.setSystemInfo("Environment", "QA_1");
         extentReports.setSystemInfo("Browser", ConfigReader.getProperty("browser"));
         extentReports.setSystemInfo("OS", System.getProperty("os.name"));
@@ -46,8 +46,7 @@ public abstract class Base {
     @BeforeMethod(alwaysRun = true)
     public void setup() {
         driver = DriverUtil.getDriver();
-     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-//        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         softAssert = new SoftAssert();
         actions = new Actions(driver);
         pages = new Pages();
