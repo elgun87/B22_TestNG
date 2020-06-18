@@ -10,15 +10,13 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class SpiceJet_E2E extends Base {
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void spiceJetE2E() throws InterruptedException {
         extentLogger = extentReports.createTest("SpiceJet");
         driver.get("https://www.spicejet.com");
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         // Select round trip
         driver.findElement(By.xpath("//table[@id='ctl00_mainContent_rbtnl_Trip']//td[2]//input")).click();
         // Verify after click radio btn is selected
