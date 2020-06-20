@@ -3,6 +3,8 @@ package com.business.Utilities;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.ITestResult;
@@ -16,6 +18,8 @@ import java.util.concurrent.TimeUnit;
 
 
 public abstract class Base {
+
+    private static Logger log = LogManager.getLogger(Base.class.getName());
 
     protected WebDriver driver;
     protected SoftAssert softAssert;
@@ -46,6 +50,7 @@ public abstract class Base {
     @BeforeMethod(alwaysRun = true)
     public void setup() {
         driver = DriverUtil.getDriver();
+        log.info(ConfigReader.getProperty("browser") + " launched");
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         softAssert = new SoftAssert();
         actions = new Actions(driver);
@@ -66,6 +71,7 @@ public abstract class Base {
         }
         extentReports.flush();
         DriverUtil.closeDriver();
+        log.info("browser closed");
     }
 
 

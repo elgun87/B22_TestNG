@@ -24,7 +24,6 @@ public class DriverUtil {
 
     private static ThreadLocal<WebDriver> driverPool = new ThreadLocal<>();
 
-
     private DriverUtil() {
 
     }
