@@ -15,6 +15,7 @@ public class Editboxes extends Base {
         extentLogger=extentReports.createTest("Editboxes checking test");
         driver.get("https://the-internet.herokuapp.com/forgot_password");
         WebElement editbox = driver.findElement(By.id("email"));
+        Assert.assertTrue(editbox.isDisplayed());
         // editbox.sendKeys("anar" + Keys.ENTER);
         editbox.sendKeys("anar@gmail.com" + Keys.ENTER);
         //editbox.submit();
