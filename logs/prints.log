@@ -1,6 +1,0 @@
-20:22:08.835 [main] INFO  com.business.Utilities.Base - chrome-headless launched
-20:22:09.934 [main] INFO  com.business.Tests.Popup_JS_with_Lof4J - navigated the website
-20:22:10.016 [main] INFO  com.business.Tests.Popup_JS_with_Lof4J - clicked text generating JS popup
-20:22:12.028 [main] INFO  com.business.Tests.Popup_JS_with_Lof4J - alert presents,alert text is: I am a JS Alert
-20:22:14.051 [main] INFO  com.business.Tests.Popup_JS_with_Lof4J - alert presents,alert dismissed
-20:22:14.634 [main] INFO  com.business.Utilities.Base - browser closed
