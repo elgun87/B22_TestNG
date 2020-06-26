@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name=" GLS Smoke By Group" verbose="1">
+
+    <parameter name="Url" value="https://opensource-demo.orangehrmlive.com/index.php/dashboard"></parameter>
+    <parameter name="Login" value="Admin"></parameter>
+    <parameter name="Password" value="admin123"></parameter>
+    <test name="Prametrized tests">
+        <classes>
+            <class name="com.business.Tests.ParametrizedTest"></class>
+        </classes>
+    </test>
+</suite>
