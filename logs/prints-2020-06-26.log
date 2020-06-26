@@ -1,0 +1,160 @@
+12:03:57.083 [main] INFO  com.business.Utilities.Base - chrome launched
+12:04:00.579 [main] INFO  com.business.Tests.Actions_mouse - navigated to website
+12:04:00.741 [main] INFO  com.business.Tests.Actions_mouse - switching to the frame
+12:04:04.197 [main] INFO  com.business.Utilities.Base - browser closed
+12:04:43.305 [main] INFO  com.business.Utilities.Base - chrome launched
+12:04:46.296 [main] INFO  com.business.Tests.Actions_mouse - navigated to website
+12:04:48.437 [main] INFO  com.business.Tests.Actions_mouse - switching to the frame
+12:04:51.102 [main] INFO  com.business.Utilities.Base - browser closed
+12:05:27.156 [main] INFO  com.business.Utilities.Base - chrome launched
+12:05:30.207 [main] INFO  com.business.Tests.Actions_mouse - navigated to website
+12:05:35.315 [main] INFO  com.business.Tests.Actions_mouse - switching to the frame
+12:05:38.342 [main] INFO  com.business.Utilities.Base - browser closed
+12:06:46.294 [main] INFO  com.business.Utilities.Base - chrome launched
+12:06:49.326 [main] INFO  com.business.Tests.Actions_mouse - navigated to website
+12:06:54.428 [main] INFO  com.business.Tests.Actions_mouse - switching to the frame
+12:06:57.366 [main] INFO  com.business.Utilities.Base - browser closed
+12:07:43.412 [main] INFO  com.business.Utilities.Base - chrome launched
+12:07:46.363 [main] INFO  com.business.Tests.Actions_mouse - navigated to website
+12:07:51.644 [main] INFO  com.business.Tests.Actions_mouse - switching to the frame
+12:07:57.401 [main] INFO  com.business.Utilities.Base - browser closed
+12:08:59.947 [main] INFO  com.business.Utilities.Base - chrome launched
+12:09:03.056 [main] INFO  com.business.Tests.Actions_mouse - navigated to website
+12:09:08.245 [main] INFO  com.business.Tests.Actions_mouse - switching to the frame
+12:09:10.820 [main] INFO  com.business.Tests.Actions_mouse - dragging the element and dropping to drop field
+12:09:11.008 [main] INFO  com.business.Tests.Actions_mouse - waiting for confirmation text to be visible
+12:09:11.054 [main] INFO  com.business.Tests.Actions_mouse - element dropped 
+12:09:13.086 [main] INFO  com.business.Utilities.Base - browser closed
+12:10:21.807 [main] INFO  com.business.Utilities.Base - chrome launched
+12:10:25.260 [main] INFO  com.business.Tests.Actions_mouse - navigated to website
+12:10:30.398 [main] INFO  com.business.Tests.Actions_mouse - switching to the frame
+12:10:32.973 [main] INFO  com.business.Utilities.Base - browser closed
+12:13:27.316 [main] INFO  com.business.Utilities.Base - chrome launched
+12:13:30.080 [main] INFO  com.business.Tests.Actions_mouse - navigated to website
+12:14:03.013 [main] INFO  com.business.Utilities.Base - browser closed
+12:15:09.199 [main] INFO  com.business.Utilities.Base - chrome launched
+12:15:12.576 [main] INFO  com.business.Tests.Actions_mouse - navigated to website
+12:15:45.321 [main] INFO  com.business.Utilities.Base - browser closed
+12:17:17.545 [main] INFO  com.business.Utilities.Base - chrome launched
+12:18:16.038 [main] INFO  com.business.Tests.Actions_mouse - navigated to website
+12:18:59.383 [main] INFO  com.business.Utilities.Base - browser closed
+12:20:08.894 [main] INFO  com.business.Utilities.Base - chrome launched
+12:20:11.088 [main] INFO  com.business.Tests.Actions_mouse - navigated to website
+12:20:59.729 [main] INFO  com.business.Utilities.Base - browser closed
+12:21:52.167 [main] INFO  com.business.Utilities.Base - chrome launched
+12:22:54.777 [main] INFO  com.business.Tests.Actions_mouse - navigated to website
+12:22:54.961 [main] INFO  com.business.Tests.Actions_mouse - switching to the frame
+12:22:57.849 [main] INFO  com.business.Utilities.Base - browser closed
+12:23:30.598 [main] INFO  com.business.Utilities.Base - chrome launched
+12:23:33.892 [main] INFO  com.business.Tests.Actions_mouse - navigated to website
+12:23:39.011 [main] INFO  com.business.Tests.Actions_mouse - switching to the frame
+12:23:41.724 [main] INFO  com.business.Utilities.Base - browser closed
+12:32:07.293 [main] INFO  com.business.Utilities.Base - chrome launched
+12:32:10.265 [main] INFO  com.business.Tests.Actions_mouse - navigated to website
+12:32:15.524 [main] INFO  com.business.Tests.Actions_mouse - switching to the frame
+12:32:18.431 [main] INFO  com.business.Utilities.Base - browser closed
+12:34:09.487 [main] INFO  com.business.Utilities.Base - chrome launched
+12:34:11.806 [main] INFO  com.business.Tests.Actions_mouse - navigated to website
+12:34:16.955 [main] INFO  com.business.Tests.Actions_mouse - switching to the frame
+12:34:19.472 [main] INFO  com.business.Tests.Actions_mouse - dragging the element and dropping to drop field
+12:34:19.613 [main] INFO  com.business.Tests.Actions_mouse - waiting for confirmation text to be visible
+12:34:19.660 [main] INFO  com.business.Tests.Actions_mouse - element dropped 
+12:34:21.707 [main] INFO  com.business.Utilities.Base - browser closed
+12:34:47.705 [main] INFO  com.business.Utilities.Base - chrome launched
+12:34:50.616 [main] INFO  com.business.Tests.Actions_mouse - navigated to website
+12:34:55.746 [main] INFO  com.business.Tests.Actions_mouse - switching to the frame
+12:34:58.448 [main] INFO  com.business.Utilities.Base - browser closed
+12:37:19.039 [main] INFO  com.business.Utilities.Base - chrome launched
+12:37:21.780 [main] INFO  com.business.Tests.Actions_mouse - navigated to website
+12:37:26.905 [main] INFO  com.business.Tests.Actions_mouse - switching to the frame
+12:37:29.462 [main] INFO  com.business.Tests.Actions_mouse - dragging the element and dropping to drop field
+12:37:29.602 [main] INFO  com.business.Tests.Actions_mouse - waiting for confirmation text to be visible
+12:37:29.649 [main] INFO  com.business.Tests.Actions_mouse - element dropped 
+12:37:31.571 [main] INFO  com.business.Utilities.Base - browser closed
+12:38:39.233 [main] INFO  com.business.Utilities.Base - chrome launched
+12:38:41.849 [main] INFO  com.business.Tests.Actions_mouse - navigated to website
+12:38:46.979 [main] INFO  com.business.Tests.Actions_mouse - switching to the frame
+12:38:49.510 [main] INFO  com.business.Tests.Actions_mouse - dragging the element and dropping to drop field
+12:38:49.650 [main] INFO  com.business.Tests.Actions_mouse - waiting for confirmation text to be visible
+12:38:49.682 [main] INFO  com.business.Tests.Actions_mouse - element dropped 
+12:38:51.479 [main] INFO  com.business.Utilities.Base - browser closed
+12:39:55.997 [main] INFO  com.business.Utilities.Base - chrome launched
+12:40:09.578 [main] INFO  com.business.Utilities.Base - browser closed
+12:41:43.068 [main] INFO  com.business.Utilities.Base - chrome launched
+12:41:57.336 [main] INFO  com.business.Utilities.Base - browser closed
+12:42:55.518 [main] INFO  com.business.Utilities.Base - chrome launched
+12:43:09.082 [main] INFO  com.business.Utilities.Base - browser closed
+12:43:38.756 [main] INFO  com.business.Utilities.Base - chrome launched
+12:43:52.208 [main] INFO  com.business.Utilities.Base - browser closed
+12:44:20.896 [main] INFO  com.business.Utilities.Base - chrome launched
+12:44:41.985 [main] INFO  com.business.Utilities.Base - browser closed
+12:45:18.685 [main] INFO  com.business.Utilities.Base - chrome launched
+12:45:41.351 [main] INFO  com.business.Utilities.Base - browser closed
+12:47:49.517 [main] INFO  com.business.Utilities.Base - chrome launched
+12:48:12.106 [main] INFO  com.business.Utilities.Base - browser closed
+12:54:02.179 [main] INFO  com.business.Utilities.Base - chrome launched
+12:54:31.136 [main] INFO  com.business.Utilities.Base - browser closed
+12:59:44.626 [main] INFO  com.business.Utilities.Base - chrome launched
+13:00:01.143 [main] INFO  com.business.Utilities.Base - browser closed
+13:01:55.806 [main] INFO  com.business.Utilities.Base - chrome launched
+13:02:06.502 [main] INFO  com.business.Tests.Dropdown_Dynamic - Chennai (MAA)
+13:02:08.469 [main] INFO  com.business.Tests.Dropdown_Dynamic - Delhi (DEL)
+13:02:11.559 [main] INFO  com.business.Utilities.Base - browser closed
+13:16:37.913 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is 
+13:16:37.960 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is 
+13:16:37.960 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is 
+13:16:37.960 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is 
+13:16:37.960 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is 
+13:17:24.726 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is 
+13:17:24.741 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is 
+13:17:24.757 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is 
+13:17:24.757 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is 
+13:17:24.757 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is 
+13:18:12.287 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is 
+13:18:12.318 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is 
+13:18:12.318 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is 
+13:18:12.318 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is 
+13:18:12.318 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is 
+13:18:53.484 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is null
+13:18:53.499 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is null
+13:18:53.503 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is null
+13:18:53.503 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is null
+13:18:53.503 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is null
+13:19:46.710 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is Samir
+13:20:28.585 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is Samir
+13:21:05.134 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is Babayev
+13:21:56.131 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is 
+13:21:56.163 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is 
+13:21:56.163 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is 
+13:21:56.163 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is 
+13:21:56.163 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is 
+13:21:56.163 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is Babayev
+13:23:38.648 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is null
+13:23:38.664 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is null
+13:23:38.664 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is null
+13:23:38.664 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is null
+13:23:38.664 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is null
+13:23:38.664 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is Babayev
+13:24:04.647 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is null
+13:24:04.678 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is null
+13:24:04.678 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is null
+13:24:04.678 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is null
+13:24:04.678 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is null
+13:24:42.554 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is Babayev
+13:24:58.600 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is Babayev
+13:25:55.293 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is Babayev
+13:26:50.428 [main] INFO  com.business.Tests.JDBC_tasks_using_DBUtils - lastname is Babayev
+13:29:51.800 [main] INFO  com.business.Utilities.Base - chrome launched
+13:30:41.244 [main] INFO  com.business.Utilities.Base - browser closed
+13:37:20.045 [main] INFO  com.business.Utilities.Base - chrome launched
+13:37:45.416 [main] INFO  com.business.Utilities.Base - browser closed
+13:39:52.963 [main] INFO  com.business.Utilities.Base - chrome launched
+13:40:17.650 [main] INFO  com.business.Utilities.Base - browser closed
+13:41:29.615 [main] INFO  com.business.Utilities.Base - chrome launched
+13:42:07.690 [main] INFO  com.business.Utilities.Base - browser closed
+13:43:36.330 [main] INFO  com.business.Utilities.Base - chrome launched
+13:44:00.461 [main] INFO  com.business.Utilities.Base - browser closed
+13:45:50.265 [main] INFO  com.business.Utilities.Base - chrome launched
+13:46:15.716 [main] INFO  com.business.Utilities.Base - browser closed
+13:49:28.228 [main] INFO  com.business.Utilities.Base - chrome launched
+13:49:51.806 [main] INFO  com.business.Utilities.Base - browser closed

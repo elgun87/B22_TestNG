@@ -1,7 +1,8 @@
 package com.business.Tests;
 
 import com.business.Utilities.DBUtils;
-import com.mongodb.DB;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -15,6 +16,7 @@ public class JDBC_tasks_using_DBUtils {
      * Connect to DB
      * Verify employee id 105 belongs to Kamil Austin;
      */
+    private static Logger log = LogManager.getLogger(JDBC_tasks_using_DBUtils.class.getName());
 
     @Test
     public void nameTestById() throws SQLException {
@@ -45,26 +47,31 @@ public class JDBC_tasks_using_DBUtils {
     @Test
     public void nestedQuery() {
         DBUtils.createConnectionToHrDB();
-        String query = "select first_name , last_name,job_id from employees where job_id ='IT_PROG';";
+        String query = "select first_name , last_name, job_id from employees where job_id ='IT_PROG';";
         int resultRowCount = DBUtils.executeQueryAndGetRowsCount(query);
-        Assert.assertEquals(resultRowCount, 6);
+        Assert.assertEquals(resultRowCount, 8);
         // get all values from certain column as List and verify certain name exist there
         List<String> names = DBUtils.executeQueryAndGetColumnValuesAsList(query, "first_name");
-        for (String name : names) {
-            System.out.println(name);
-        }
         Assert.assertTrue(names.contains("Samir"));
-        // get whole result as List of Maps and iterate all firstname and lastnames
+        //verify Samir's lastname is Babayev
+        String lastName = "";
         List<Map<String, Object>> resAsListOfMaps = DBUtils.executeQueryAndGetResultAsListOfMaps(query);
         for (int i = 0; i < resAsListOfMaps.size(); i++) {
-            System.out.println(resAsListOfMaps.get(i).get("first_name") + " "
-                    + resAsListOfMaps.get(i).get("last_name"));
+            if (resAsListOfMaps.get(i).get("first_name").equals("Samir")) {
+                lastName += resAsListOfMaps.get(i).get("last_name").toString();
+                break;
+            }
         }
+        log.info("lastname is " + lastName);
+        Assert.assertEquals(lastName, "Babayev");
+
         // get whole result as List of Lists (all rows)
         List<List<Object>> resAsLisOfLists = DBUtils.executeQueryAndGetResultAsListOfLists(query);
         for (int i = 0; i < resAsLisOfLists.size(); i++) {
             System.out.println(resAsLisOfLists.get(i));
         }
+
+
     }
 }
 

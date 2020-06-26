@@ -18,14 +18,15 @@ public class SpiceJet_E2E extends Base {
         extentLogger = extentReports.createTest("SpiceJet");
         driver.get("https://www.spicejet.com");
         // Select round trip
-        driver.findElement(By.xpath("//table[@id='ctl00_mainContent_rbtnl_Trip']//td[2]//input")).click();
+        driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_1")).click();
         // Verify after click radio btn is selected
-        WebElement studentCheckBox = driver.findElement(By.id("ctl00_mainContent_chk_StudentDiscount"));
+        Thread.sleep(1000);
+        WebElement familyCheckBox = driver.findElement(By.id("ctl00_mainContent_chk_friendsandfamily"));
         //Verify Student checkbox not selected
-        Assert.assertFalse(studentCheckBox.isSelected());
-        studentCheckBox.click();
+        Assert.assertFalse(familyCheckBox.isSelected());
+        familyCheckBox.click();
         //Verify after clicking on it Student checkbox is selected
-        Assert.assertTrue(studentCheckBox.isSelected());
+        Assert.assertTrue(familyCheckBox.isSelected());
         // Choose from and to locations
         driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT")).click();
         driver.findElement(By.xpath("//a[@text='Kolkata (CCU)']")).click();
@@ -34,7 +35,7 @@ public class SpiceJet_E2E extends Base {
         driver.findElement(By.xpath("(//a[@value='PAT'])[2]")).click();
         Thread.sleep(1000);
         //Choose current date as from date
-        driver.findElement(By.xpath("//table[@class='ui-datepicker-calendar']//a[@class='ui-state-default ui-state-highlight ui-state-active']")).click();
+        driver.findElement(By.xpath("//td[contains(@class,'ui-datepicker-current-day ui-datepicker-today')]//a")).click();
         //Choose returning date
         driver.findElement(By.id("ctl00_mainContent_view_date2")).click();
         // Locate table
@@ -51,20 +52,18 @@ public class SpiceJet_E2E extends Base {
         WebElement totalPassengers = driver.findElement(By.id("divpaxinfo"));
         JSUtil.clickElementByJS(totalPassengers, driver);
         BrowserUtil.sleep(2000);
-        // choose adults
+        // choose adults and verify
         WebElement adultsDropdown = driver.findElement(By.id("ctl00_mainContent_ddl_Adult"));
         Select selectAdults = new Select(adultsDropdown);
         selectAdults.selectByVisibleText("2");
-        //Verify you selected 2 adults from Adult dropdown
         Assert.assertEquals(selectAdults.getFirstSelectedOption().getText(), "2");
-        // choose children
+        // choose children and verify
         WebElement childDropdown = driver.findElement(By.id("ctl00_mainContent_ddl_Child"));
         Select selectChild = new Select(childDropdown);
         selectChild.selectByVisibleText("2");
-        //Verify you selected 2 adults from Child dropdown
         Assert.assertEquals(selectChild.getFirstSelectedOption().getText(), "2");
         // Verify total passengers are 2 Adults 2 Child
+        JSUtil.clickElementByJS(totalPassengers, driver);
         Assert.assertEquals(totalPassengers.getText(), "2 Adult, 2 Child");
-
     }
 }

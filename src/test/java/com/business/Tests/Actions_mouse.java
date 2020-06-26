@@ -1,13 +1,19 @@
 package com.business.Tests;
 
 import com.business.Utilities.Base;
+import com.business.Utilities.BrowserUtil;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+
 public class Actions_mouse extends Base {
+
+    private static Logger log = LogManager.getLogger(Actions_mouse.class.getName());
 
     @Test
     public void doubleClick_RightClick() {
@@ -62,15 +68,25 @@ public class Actions_mouse extends Base {
     }
 
     @Test
-    public void dragAndDrop() {
+    public void dragAndDrop() throws InterruptedException {
         extentLogger = extentReports.createTest("Drag and drop testing");
         driver.get("https://jqueryui.com/droppable/");
+        log.info("navigated to website");
+        Thread.sleep(5000);
         WebElement mainFrame = driver.findElement(By.xpath("//iframe[@class='demo-frame']"));
         driver.switchTo().frame(mainFrame);
+        log.info("switching to the frame");
         extentLogger.info("Verifying the result");
         WebElement draggable = driver.findElement(By.id("draggable"));
         WebElement droppable = driver.findElement(By.id("droppable"));
-        actions.dragAndDrop(draggable, draggable).build().perform();
+        actions.clickAndHold(draggable).moveToElement(droppable).release().build().perform();
+        Thread.sleep(2000);
+        log.info("dragging the element and dropping to drop field");
+        WebElement dropConfirmTextField = driver.findElement(By.xpath("//p[text()='Dropped!']"));
+        BrowserUtil.waitFor_Visibility(dropConfirmTextField);
+        log.info("waiting for confirmation text to be visible");
+        Assert.assertTrue(dropConfirmTextField.isDisplayed());
+        log.info("element dropped ");
 
     }
 }
