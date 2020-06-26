@@ -280,3 +280,26 @@
 14:04:29.275 [TestNG-test=Regression-4] INFO  com.business.Utilities.Base - browser closed
 14:04:32.962 [TestNG-test=Regression-4] INFO  com.business.Utilities.Base - chrome launched
 14:04:35.491 [TestNG-test=Regression-4] INFO  com.business.Utilities.Base - browser closed
+17:23:47.860 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+17:23:49.210 [main] INFO  com.business.Utilities.Base - browser closed
+17:24:29.414 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+17:24:29.507 [main] INFO  com.business.Tests.ParametrizedTest - null
+17:25:01.048 [main] INFO  com.business.Utilities.Base - browser closed
+17:25:22.277 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+17:25:25.680 [main] INFO  com.business.Tests.ParametrizedTest - https://opensource-demo.orangehrmlive.com/index.php/dashboard
+17:25:32.596 [main] INFO  com.business.Tests.ParametrizedTest - verified editbox contains given value
+17:25:33.707 [main] INFO  com.business.Utilities.Base - browser closed
+17:26:03.001 [main] INFO  com.business.Utilities.Base - chrome launched
+17:26:04.077 [main] INFO  com.business.Tests.ParametrizedTest - https://opensource-demo.orangehrmlive.com/index.php/dashboard
+17:26:11.445 [main] INFO  com.business.Tests.ParametrizedTest - verified editbox contains given value
+17:26:13.103 [main] INFO  com.business.Utilities.Base - browser closed
+17:46:44.877 [main] INFO  com.business.Utilities.Base - chrome launched
+17:46:46.143 [main] INFO  com.business.Tests.ParametrizedTest - navigating to :https://opensource-demo.orangehrmlive.com/index.php/dashboard
+17:47:18.275 [main] INFO  com.business.Utilities.Base - chrome launched
+17:47:19.333 [main] INFO  com.business.Tests.ParametrizedTest - navigating to :https://opensource-demo.orangehrmlive.com/index.php/dashboard
+17:47:26.664 [main] INFO  com.business.Tests.ParametrizedTest - verified editbox contains given value
+17:47:28.087 [main] INFO  com.business.Utilities.Base - browser closed
+17:54:44.785 [main] INFO  com.business.Utilities.Base - chrome launched
+17:54:45.934 [main] INFO  com.business.Tests.ParametrizedTest - navigating to :https://opensource-demo.orangehrmlive.com/index.php/dashboard
+17:54:53.096 [main] INFO  com.business.Tests.ParametrizedTest - verified editbox contains given value
+17:54:54.265 [main] INFO  com.business.Utilities.Base - browser closed
