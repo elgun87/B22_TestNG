@@ -1,6 +1,8 @@
 package com.business.Tests;
 
 import com.business.Utilities.Base;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -8,6 +10,7 @@ import org.testng.annotations.Test;
 
 public class Dropdown_Dynamic extends Base {
 
+    private static Logger log = LogManager.getLogger(Dropdown_Dynamic.class.getName());
 
     /**
      * Note : If we work with dropdowns which one appears only after
@@ -21,21 +24,22 @@ public class Dropdown_Dynamic extends Base {
     public void dynamicDropdownCalendarType() throws InterruptedException {
         extentLogger = extentReports.createTest("DynamicDropDown Testing");
         driver.get("https://www.spicejet.com");
-        driver.findElement(By.xpath("//table[@id='ctl00_mainContent_rbtnl_Trip']//tbody//tr//td[2]//input")).click();
+        driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_1")).click();
         Thread.sleep(1000);
         WebElement from = driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT"));
-        from.
-                click();
+        from.click();
         WebElement fromCity = driver.findElement(By.xpath("//a[@value='MAA']"));
         fromCity.click();
-        System.out.println(from.getAttribute("value"));
+        Thread.sleep(1000);
         Assert.assertTrue(from.getAttribute("value").equalsIgnoreCase("Chennai (MAA)"));
+        log.info(from.getAttribute("value"));
         WebElement to = driver.findElement(By.id("ctl00_mainContent_ddl_destinationStation1_CTXT"));
         to.click();                // pay attention !
         WebElement toCity = driver.findElement(By.xpath("(//a[@value='DEL'])[2]"));
         toCity.click();
-        System.out.println(to.getAttribute("value"));
+        Thread.sleep(1000);
         extentLogger.info("Verify the data");
+        log.info(to.getAttribute("value"));
         Assert.assertTrue(to.getAttribute("value").equalsIgnoreCase("Delhi (DEL)"));
 
         // or for each table we can use //parent //child xpath (space in the middle)
