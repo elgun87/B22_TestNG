@@ -28,10 +28,12 @@ public class SpiceJet_E2E extends Base {
         //Verify after clicking on it Student checkbox is selected
         Assert.assertTrue(familyCheckBox.isSelected());
         // Choose from and to locations
-        driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT")).click();
-        driver.findElement(By.xpath("//a[@text='Kolkata (CCU)']")).click();
+        WebElement from = driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT"));
+        JSUtil.clickElementByJS(from, driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//a[contains(text(),' Kolkata (CCU)')]")).click();
         BrowserUtil.sleep(1000);
-        //Dynamically put inside parentises and show [2] -> in table 2
+        //Dynamically put inside parentheses and show [2] -> in table 2
         driver.findElement(By.xpath("(//a[@value='PAT'])[2]")).click();
         Thread.sleep(1000);
         //Choose current date as from date
