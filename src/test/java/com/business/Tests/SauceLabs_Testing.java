@@ -21,13 +21,13 @@ public class SauceLabs_Testing {
     public static final String SAUCELABS_URL = "https://anar1986:" +
             "d49bdf28-ea00-4d0d-81fa-ee7be578238e@ondemand.us-west-1.saucelabs.com:443/wd/hub";
 
-    @Test
+    @Test(enabled = false)
     public void buttonClicking() throws MalformedURLException {
         //1 step -Setting DesiredCapabilities
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setPlatform(Platform.WINDOWS);
         caps.setBrowserName("Chrome");
-        caps.setCapability("version","latest");
+        caps.setCapability("version", "latest");
         // 2. Initialize driver
         driver = new RemoteWebDriver(new URL(SAUCELABS_URL), caps);
         driver.get("https://www.etsy.com");
