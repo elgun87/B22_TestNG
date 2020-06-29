@@ -28,7 +28,6 @@
                                 <testFailureIgnore>false</testFailureIgnore>
                                 <suiteXmlFiles>
                                     <suiteXmlFile>Regression_runner.xml</suiteXmlFile>
-                                    <suiteXmlFile>Parametrized.xml</suiteXmlFile>
                                 </suiteXmlFiles>
                             </configuration>
                         </plugin>
