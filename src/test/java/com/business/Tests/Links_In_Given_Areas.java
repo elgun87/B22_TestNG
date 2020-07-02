@@ -18,6 +18,7 @@ public class Links_In_Given_Areas extends Base {
 
     @Test
     public void find_All_Links_In_Footer() {
+        extentLogger = extentReports.createTest("Verify links in footer area");
         driver.get("https://www.spicejet.com/");
         WebElement footerArea = driver.findElement(By.cssSelector("div[class='wrapper_footer wrapper-footer-new']"));
         List<WebElement> allLinks = footerArea.findElements(By.tagName("a"));

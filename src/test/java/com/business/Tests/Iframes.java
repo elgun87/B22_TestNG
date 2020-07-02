@@ -12,6 +12,7 @@ public class Iframes extends Base {
 
     @Test
     public void iFrameTesting() throws InterruptedException {
+        extentLogger = extentReports.createTest("Verify frames in the page");
         driver.get("https://the-internet.herokuapp.com/tinymce");
         WebElement iframe = driver.findElement(By.id("mce_0_ifr"));
         driver.switchTo().frame(iframe);
@@ -24,10 +25,8 @@ public class Iframes extends Base {
               ---  FIND HOW MANY FRAMES IN THIS PAGE ---
          */
         List<WebElement> frameList = driver.findElements(By.tagName("iframe"));
-        int size =  frameList.size();
+        int size = frameList.size();
         System.out.println(driver.findElements(By.tagName("iframe")).size());
-
-
 
 
     }

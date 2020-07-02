@@ -16,7 +16,8 @@ public class Gettext_VS_getAttribute extends Base {
      * Expected : Mega-menu-link
      */
     @Test
-    public void verifyOpenxcell() {
+    public void verifyAttributeValue() {
+        extentLogger = extentReports.createTest("Verifying value of attribute in element");
         driver.get("https://www.openxcell.com/");
         WebElement caseStudy = driver.findElement(By.linkText("Case Studies"));
         //getting value of attribute

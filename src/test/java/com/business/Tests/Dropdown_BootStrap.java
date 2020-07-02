@@ -17,7 +17,7 @@ public class Dropdown_BootStrap extends Base {
     @Test
 
     public void bootstrapDropdown() throws InterruptedException {
-        extentLogger = extentReports.createTest("NoSelectTagDropDown");
+        extentLogger = extentReports.createTest("Verifying Bootstrap dropdowns");
         driver.get("http://practice.cybertekschool.com/dropdown");
         Thread.sleep(3000);
         driver.findElement(By.id("dropdownMenuLink")).click(); //to expand dropdown

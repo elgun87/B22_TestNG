@@ -20,9 +20,9 @@ public class ParametrizedTest extends Base {
 
     //Parameter means this is applicable for this parameter only, put same value in .xml file
     @Parameters({"Url", "Login", "Password"})
-    @Test
-    public void orangeLeave(@Optional String url, String login, String password) throws InterruptedException {
-        extentLogger = extentReports.createTest("Orange HRM Leave");
+    @Test(enabled = false)
+    public void ParametrizedTest(@Optional String url, String login, String password) throws InterruptedException {
+        extentLogger = extentReports.createTest("Parametrized test in testNg.xml file");
         driver.get(url);
         log.info("navigating to :" + url);
         driver.findElement(By.id("txtUsername")).sendKeys(login);

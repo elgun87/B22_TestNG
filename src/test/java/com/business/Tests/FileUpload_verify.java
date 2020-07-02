@@ -16,7 +16,7 @@ public class FileUpload_verify extends Base {
      * We have to store the full path of the to be uploaded document.
      * In website we don't click the upload button and choose the document to upload,
      * We just locate the element(element must have INPUT tag), dont click on that just
-     * using sendkeys method and putting the path of the document.
+     * using sendKeys method and putting the path of the document.
      * Then ve can verify any notification message in website to verify the document
      * uploaded.
      */
@@ -24,10 +24,12 @@ public class FileUpload_verify extends Base {
 
     @Test
     public void file_Uploaded_Verify() {
+        extentLogger = extentReports.createTest("Verifying file upload to element having input tag");
         driver.get("https://the-internet.herokuapp.com/upload");
         String fileName = "test.txt";
-        String path = "C:\\Users\\salma\\OneDrive\\Desktop\\" + fileName;
-        driver.findElement(By.xpath("//input[@id='file-upload']")).sendKeys(path);
+        String filePath = "C:\\Users\\salma\\Downloads\\" + fileName;
+        WebElement chooseFile = driver.findElement(By.xpath("//input[@id='file-upload']"));
+        chooseFile.sendKeys(filePath);
         driver.findElement(By.xpath("//input[@id='file-submit']")).click();
         Assert.assertTrue(driver.findElement(By.xpath("//h3[contains(text(),'File Uploaded!')]")).getText().contains("File Uploaded!"));
 
@@ -37,9 +39,10 @@ public class FileUpload_verify extends Base {
 
     @Test
     public void drag_Drop_file_Uploaded_Verify() {
+        extentLogger = extentReports.createTest("Verifying file upload by drag and drop using JS executor");
         driver.get("https://the-internet.herokuapp.com/upload");
         String fileName = "test.txt";
-        String path = "C:\\Users\\salma\\OneDrive\\Desktop\\" + fileName;
+        String path = "C:\\Users\\salma\\Downloads\\" + fileName;
         WebElement target = driver.findElement(By.id("drag-drop-upload"));
         DropFile(new File(path), target, 0, 0);
         driver.findElement(By.xpath("//input[@id='file-submit']")).click();

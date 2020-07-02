@@ -15,7 +15,7 @@ public class Date_Pick_Airlines extends Base {
 
     @Test
     public void path2US() throws InterruptedException {
-        extentLogger = extentReports.createTest("Path2USE23");
+        extentLogger = extentReports.createTest("Verifying calendar date picking");
         driver.get("https://www.path2usa.com/travel-companions");
         Thread.sleep(10000);
         WebElement from = driver.findElement(By.id("travel_from"));

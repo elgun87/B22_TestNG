@@ -11,12 +11,11 @@ public class Editboxes extends Base {
 
 
     @Test
-    public void editboxTesing() throws InterruptedException {
-        extentLogger=extentReports.createTest("Editboxes checking test");
+    public void editBoxTesting() throws InterruptedException {
+        extentLogger=extentReports.createTest("EditBoxes checking test");
         driver.get("https://the-internet.herokuapp.com/forgot_password");
         WebElement editbox = driver.findElement(By.id("email"));
         Assert.assertTrue(editbox.isDisplayed());
-        // editbox.sendKeys("anar" + Keys.ENTER);
         editbox.sendKeys("anar@gmail.com" + Keys.ENTER);
         //editbox.submit();
         String notification = driver.findElement(By.id("content")).getText();

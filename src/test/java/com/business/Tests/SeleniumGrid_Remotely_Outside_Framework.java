@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class SeleniumGrid_Remotely {
+public class SeleniumGrid_Remotely_Outside_Framework {
 
     /**
      * 2 steps to run our tests in SauceLabs/Any ready Selenium Grid
@@ -17,7 +17,7 @@ public class SeleniumGrid_Remotely {
      * > 2) Create RemoteWebDriver with HUB url and caps object;
      */
 
-
+    // In framework level we just need to change browserName in properties file to chrome-remote
     @Test(enabled = false)
     public void buttonClicking() throws MalformedURLException {
         URL url = new URL("http://localhost:4444/wd/hub");
