@@ -10,7 +10,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-public class FooterLinksVerify extends Base {
+public class Links_FooterLinks extends Base {
     /*
      Use the logic, Note: if you click a link then driver object opens that and stays there
       That is why right the logic not move the driver there just click them by que that is it
