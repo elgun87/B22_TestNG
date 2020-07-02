@@ -19,8 +19,8 @@ public class Date_Pick_Airlines extends Base {
         driver.get("https://www.path2usa.com/travel-companions");
         Thread.sleep(10000);
         WebElement from = driver.findElement(By.id("travel_from"));
-        from.sendKeys("Arkansas");
-        Thread.sleep(700);
+        from.sendKeys("Arkan");
+        Thread.sleep(1000);
         from.sendKeys(Keys.ENTER); // will point 1st option
         Assert.assertEquals(from.getAttribute("value"), "Northwest Arkansas Regional Airport (XNA) Fayetteville");
         WebElement to = driver.findElement(By.id("travel_to"));

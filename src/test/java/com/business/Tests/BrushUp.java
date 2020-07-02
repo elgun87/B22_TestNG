@@ -17,7 +17,7 @@ public class BrushUp extends Base {
 
     private static Logger log = LogManager.getLogger(BrushUp.class.getName());
 
-    @Test(groups = {"regression"})
+    @Test(enabled = false) // website is not stable
     public void orangeLeave() throws InterruptedException {
         extentLogger = extentReports.createTest("Orange HRM Leave");
         driver.get("https://opensource-demo.orangehrmlive.com/index.php/dashboard");
