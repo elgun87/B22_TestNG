@@ -22,7 +22,7 @@ public class Dropdown_Dynamic extends Base {
 
     @Test
     public void dynamicDropdownCalendarType() throws InterruptedException {
-        extentLogger = extentReports.createTest("DynamicDropDown Testing");
+        extentLogger = extentReports.createTest("Verifying DynamicDropDown dropdowns");
         driver.get("https://www.spicejet.com");
         driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_1")).click();
         Thread.sleep(1000);

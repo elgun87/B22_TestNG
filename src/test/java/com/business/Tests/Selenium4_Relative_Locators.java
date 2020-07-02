@@ -4,7 +4,9 @@ import com.business.Utilities.Base;
 import org.testng.annotations.Test;
 
 public class Selenium4_Relative_Locators extends Base {
-
+    /**
+     * This class can work only if we use Selenium 4.
+     */
     @Test
     public void testingSelenium4RelativeLocators() {
 //        driver.get("https://rahulshettyacademy.com/angularpractice/");

@@ -1,0 +1,18 @@
+21:36:51.155 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+21:37:23.485 [main] INFO  com.business.Utilities.Base - browser closed
+21:40:04.171 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+21:40:05.362 [main] INFO  com.business.Tests.Popup_JS_with_Lof4J - navigated the website
+21:40:05.454 [main] INFO  com.business.Tests.Popup_JS_with_Lof4J - clicked text generating JS popup
+21:40:07.474 [main] INFO  com.business.Tests.Popup_JS_with_Lof4J - alert presents,alert text is: I am a JS Alert
+21:40:09.507 [main] INFO  com.business.Tests.Popup_JS_with_Lof4J - alert presents,alert dismissed
+21:40:10.489 [main] INFO  com.business.Utilities.Base - browser closed
+21:56:32.198 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+21:56:47.610 [main] INFO  com.business.Utilities.Base - browser closed
+22:00:38.604 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+22:01:09.699 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+22:01:12.768 [main] INFO  com.business.Utilities.Base - browser closed
+22:04:11.547 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+22:04:13.348 [main] INFO  com.business.Tests.HiddenElements - Element does not exist in the page
+22:04:14.437 [main] INFO  com.business.Utilities.Base - browser closed
+22:09:54.507 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+22:09:57.072 [main] INFO  com.business.Utilities.Base - browser closed

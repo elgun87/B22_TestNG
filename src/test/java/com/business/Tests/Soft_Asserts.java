@@ -16,6 +16,7 @@ public class Soft_Asserts extends Base {
     @Test
 
     public void verifySearchTerm() {
+        extentLogger = extentReports.createTest("Testing softAssert");
         driver.get("https://www.google.com/");
         driver.findElement(By.name("q")).sendKeys("Selenium cookbook" + Keys.ENTER);
         String title = driver.getTitle();

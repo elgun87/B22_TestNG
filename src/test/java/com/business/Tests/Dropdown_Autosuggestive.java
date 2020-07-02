@@ -14,7 +14,7 @@ public class Dropdown_Autosuggestive extends Base {
 
     @Test
     public void autoSuggestiveDropdown() throws InterruptedException {
-        extentLogger = extentReports.createTest("Autosuggestive Dropdown");
+        extentLogger = extentReports.createTest("Verifying AutoSuggestive Dropdown");
         driver.get("https://www.azal.az/en/");
         WebElement clearText = driver.findElement(By.xpath("//a[@class='btn-clear']//i[@class='fa fa-times']"));
         clearText.click();

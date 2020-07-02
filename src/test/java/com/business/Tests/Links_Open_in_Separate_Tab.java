@@ -21,11 +21,12 @@ public class Links_Open_in_Separate_Tab extends Base {
 
     @Test
     public void openLinksInSeparateTab() {
+        extentLogger = extentReports.createTest("Open each link in separate tab");
         driver.get("https://www.rahulshettyacademy.com/AutomationPractice/");
         String title = driver.getTitle();
         WebElement footerArea = driver.findElement(By.id("gf-BIG"));
         List<WebElement> allLinksInFooter = footerArea.findElements(By.tagName("a"));
-        // hold control and click enter, will open each link in separate tab
+        // hold control and click enter, will open each link in separate tab , IMPORTANT
         String clickInNewTab = Keys.chord(Keys.CONTROL, Keys.ENTER);
         for (WebElement link : allLinksInFooter) {
             link.sendKeys(clickInNewTab);

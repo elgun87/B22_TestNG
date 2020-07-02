@@ -12,6 +12,7 @@ public class Popup_JS_with_Lof4J extends Base {
 
     @Test
     public void JS_popupTesting() throws InterruptedException {
+        extentLogger = extentReports.createTest("JS_Popup with Log_4J");
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
         log.info("navigated the website");
         driver.findElement(By.xpath("//button[contains(text(),'Click for JS Alert')]")).click();

@@ -11,6 +11,9 @@ public class Selenium4_Invoke_Multiple_Tabs extends Base {
     Scenario ; Go to https://rahulshettyacademy.com/angularpractice/"
     in name field add 1st course name from  https://rahulshettyacademy.com
      */
+    /**
+     * This class can work only if we use Selenium 4.
+     */
     @Test
     public void invokeMultipleWindows() throws InterruptedException, IOException {
 //        driver.get("https://rahulshettyacademy.com/angularpractice/");

@@ -10,6 +10,7 @@ public class Locators extends Base {
 
     @Test
     public void usingLocators() throws InterruptedException {
+        extentLogger = extentReports.createTest("Different locators");
         driver.get("https://www.cargurus.com/");
         WebElement carMakeDropdown = driver.findElement(By.id("carPickerUsed_makerSelect"));
         Select selectMake = new Select(carMakeDropdown);
@@ -20,8 +21,6 @@ public class Locators extends Base {
         driver.findElement(By.id("dealFinderZipUsedId_dealFinderForm")).sendKeys("72713");
         driver.findElement(By.id("dealFinderForm_0")).click();
         Thread.sleep(1000);
-        driver.close();
-        driver.quit();
 
     }
 

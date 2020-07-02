@@ -14,6 +14,7 @@ public class Waits_Synchronizations extends Base {
 
     @Test              // wait until visible
     public void testExplicitWait() {
+        extentLogger = extentReports.createTest("testExplicitWait");
         driver.get("https://the-internet.herokuapp.com/dynamic_controls");
         WebElement editbox = driver.findElement(By.xpath("//form[@id='input-example']//input"));
         //verify by default editbox is disabled
@@ -37,6 +38,7 @@ public class Waits_Synchronizations extends Base {
 
     @Test
     public void testExplicitWait2() {
+        extentLogger = extentReports.createTest("testExplicitWait_Wait until visibility");
         driver.get("https://the-internet.herokuapp.com/dynamic_loading/1");
         WebElement startBbtn = driver.findElement(By.xpath("//button[contains(text(),'Start')]"));
         startBbtn.click();
@@ -47,6 +49,7 @@ public class Waits_Synchronizations extends Base {
 
     @Test         // wait untill invisible
     public void waitUntilElementDisappears() {
+        extentLogger = extentReports.createTest("testExplicitWait_Wait until in-visibility");
         driver.get("https://the-internet.herokuapp.com/dynamic_loading/1");
         WebElement startBbtn = driver.findElement(By.xpath("//button[contains(text(),'Start')]"));
         startBbtn.click();

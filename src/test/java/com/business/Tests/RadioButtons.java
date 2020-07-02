@@ -19,6 +19,7 @@ public class RadioButtons extends Base {
     @Test
 
     public void verifyRadioButton() {
+        extentLogger = extentReports.createTest("Verify Radio button");
         driver.get("http://samples.gwtproject.org/samples/Showcase/Showcase.html#!CwRadioButton");
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         WebElement blue = driver.findElement(By.id("gwt-debug-cwRadioButton-color-blue-input"));
