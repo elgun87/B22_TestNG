@@ -16,3 +16,20 @@
 22:04:14.437 [main] INFO  com.business.Utilities.Base - browser closed
 22:09:54.507 [main] INFO  com.business.Utilities.Base - chrome-headless launched
 22:09:57.072 [main] INFO  com.business.Utilities.Base - browser closed
+22:26:42.534 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+22:26:44.050 [main] INFO  com.business.Tests.Actions_mouse - navigated to website
+22:26:49.166 [main] INFO  com.business.Tests.Actions_mouse - switching to the frame
+22:26:51.591 [main] INFO  com.business.Tests.Actions_mouse - dragging the element and dropping to drop field
+22:26:51.702 [main] INFO  com.business.Tests.Actions_mouse - waiting for confirmation text to be visible
+22:26:51.737 [main] INFO  com.business.Tests.Actions_mouse - element dropped 
+22:26:52.752 [main] INFO  com.business.Utilities.Base - browser closed
+22:27:10.764 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+22:27:26.180 [main] INFO  com.business.Utilities.Base - browser closed
+22:29:42.654 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+22:30:01.597 [main] INFO  com.business.Utilities.Base - browser closed
+22:31:52.902 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+22:32:04.621 [main] INFO  com.business.Utilities.Base - browser closed
+22:32:45.920 [main] INFO  com.business.Utilities.Base - chrome launched
+22:32:59.058 [main] INFO  com.business.Utilities.Base - browser closed
+22:33:13.362 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+22:33:26.107 [main] INFO  com.business.Utilities.Base - browser closed

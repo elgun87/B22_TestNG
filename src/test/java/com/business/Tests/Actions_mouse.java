@@ -41,7 +41,7 @@ public class Actions_mouse extends Base {
      * Here we use KEYS for down/up
      */
     @Test
-    public void mouseHower_MoveToElement() {
+    public void mouseHover_MoveToElement() {
         extentLogger = extentReports.createTest("Mouse hover test");
         driver.get("https://www.amazon.com/");
         WebElement prime = driver.findElement(By.xpath("//span[contains(text(),'Try Prime')]"));
@@ -51,7 +51,7 @@ public class Actions_mouse extends Base {
 
     @Test
     public void scrollDown_scrollUP() throws InterruptedException {
-        extentLogger = extentReports.createTest("Scroll up amd down");
+        extentLogger = extentReports.createTest("Scroll up and down");
         driver.get("https://www.airtelxstream.in/");
         int i = 0;
         int j = 0;

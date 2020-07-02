@@ -20,7 +20,7 @@ public class Dropdown_Dynamic extends Base {
      * (//a[@value='DEL'])[2]  -> (base xpath inside parentheses) [2] ,index 2 means in second table
      */
 
-    @Test
+    @Test(enabled = false) // not run with headless
     public void dynamicDropdownCalendarType() throws InterruptedException {
         extentLogger = extentReports.createTest("Verifying DynamicDropDown dropdowns");
         driver.get("https://www.spicejet.com");
