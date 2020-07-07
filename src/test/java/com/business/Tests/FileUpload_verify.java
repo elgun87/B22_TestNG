@@ -13,23 +13,23 @@ import java.io.File;
 public class FileUpload_verify extends Base {
     /**
      * --  FILE UPLOADING --
-     * We have to store the full path of the to be uploaded document.
+     * We have to store the full path of the to be uploaded document in String..
      * In website we don't click the upload button and choose the document to upload,
-     * We just locate the element(element must have INPUT tag), dont click on that just
-     * using sendKeys method and putting the path of the document.
+     * We just locate the element choose file (element must have INPUT tag),don't click on that just
+     * using sendKeys method we are sending the String
      * Then ve can verify any notification message in website to verify the document
      * uploaded.
      */
 
 
     @Test
-    public void file_Uploaded_Verify() {
-        extentLogger = extentReports.createTest("Verifying file upload to element having input tag");
+    public void file_Uploaded_Verify() throws InterruptedException {
+        extentLogger = extentReports.createTest("Verifying file upload to using sendkeys method to element having input tag");
         driver.get("https://the-internet.herokuapp.com/upload");
-        String fileName = "test.txt";
-        String filePath = "C:\\Users\\salma\\Downloads\\" + fileName;
+        String filePath = System.getProperty("user.dir") + "/text.txt";
         WebElement chooseFile = driver.findElement(By.xpath("//input[@id='file-upload']"));
         chooseFile.sendKeys(filePath);
+        Thread.sleep(1000);
         driver.findElement(By.xpath("//input[@id='file-submit']")).click();
         Assert.assertTrue(driver.findElement(By.xpath("//h3[contains(text(),'File Uploaded!')]")).getText().contains("File Uploaded!"));
 
@@ -41,13 +41,11 @@ public class FileUpload_verify extends Base {
     public void drag_Drop_file_Uploaded_Verify() {
         extentLogger = extentReports.createTest("Verifying file upload by drag and drop using JS executor");
         driver.get("https://the-internet.herokuapp.com/upload");
-        String fileName = "test.txt";
-        String path = "C:\\Users\\salma\\Downloads\\" + fileName;
+        File filePath = new File(System.getProperty("user.dir") + "/text.txt");
         WebElement target = driver.findElement(By.id("drag-drop-upload"));
-        DropFile(new File(path), target, 0, 0);
+        DropFile(filePath, target, 0, 0);
         driver.findElement(By.xpath("//input[@id='file-submit']")).click();
         Assert.assertTrue(driver.findElement(By.xpath("//h1[contains(text(),'Internal Server Error')]")).getText().contains("Internal Server Error"));
-
 
 
     }

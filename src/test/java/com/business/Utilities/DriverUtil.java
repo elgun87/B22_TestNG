@@ -14,6 +14,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import java.net.URL;
+import java.util.HashMap;
 
 /**
  * We use Singleton design pattern in order to have one browser instance at the same time
@@ -34,16 +35,24 @@ public class DriverUtil {
             String browser = browserParamFromEnv == null ? ConfigReader.getProperty("browser") : browserParamFromEnv;
             switch (browser) {
                 case "chrome":
+                    String downloadPath = System.getProperty("user.dir");
                     WebDriverManager.chromedriver().setup();
-                    driverPool.set(new ChromeDriver());
+                    HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
+                    chromePrefs.put("profile.default_content_settings.popups", 0);
+                    chromePrefs.put("download.default_directory", downloadPath);
+                    driverPool.set(new ChromeDriver(new ChromeOptions().setExperimentalOption("prefs", chromePrefs)));
                     break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     driverPool.set(new FirefoxDriver());
                     break;
                 case "chrome-headless":
+                    String downloadPathHeadless = System.getProperty("user.dir");
                     WebDriverManager.chromedriver().setup();
-                    driverPool.set(new ChromeDriver(new ChromeOptions().setHeadless(true)));
+                    HashMap<String, Object> chromePrefHeadless = new HashMap<String, Object>();
+                    chromePrefHeadless.put("profile.default_content_settings.popups", 0);
+                    chromePrefHeadless.put("download.default_directory", downloadPathHeadless);
+                    driverPool.set(new ChromeDriver(new ChromeOptions().setHeadless(true).setExperimentalOption("prefs", chromePrefHeadless)));
                     break;
                 case "firefox-headless":
                     WebDriverManager.firefoxdriver().setup();
@@ -67,6 +76,7 @@ public class DriverUtil {
                         driverPool.set(new RemoteWebDriver(url, desiredCapabilities));
                     } catch (Exception e) {
                         e.printStackTrace();
+
                     }
                     break;
                 case "ie":

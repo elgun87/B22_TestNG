@@ -89,6 +89,20 @@ public class Actions_mouse extends Base {
         log.info("element dropped ");
 
     }
+
+    @Test
+    public void sendTextInUppercase() throws InterruptedException {
+        extentLogger = extentReports.createTest("Sending text in Uppercase");
+        log.info("navigating the amazon.com");
+        driver.get("https://www.amazon.com/");
+        WebElement editBox = driver.findElement(By.id("twotabsearchtextbox"));
+        log.info("entering text in Upeercase");
+        actions.keyDown(editBox, Keys.SHIFT).sendKeys("hello").build().perform();
+        Thread.sleep(2000);
+        log.info("Verifying text added in Upeercase");
+        Assert.assertEquals(editBox.getAttribute("value"), "HELLO");
+        log.info("text passed in Uppercase");
+    }
 }
 
 

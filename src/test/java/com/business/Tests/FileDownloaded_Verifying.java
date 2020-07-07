@@ -7,9 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.io.File;
 
 public class FileDownloaded_Verifying extends Base {
 
@@ -24,17 +22,17 @@ public class FileDownloaded_Verifying extends Base {
      */
 
 
-    @Test(enabled = false)
-    public void verifyFileExistInDownloadedFolder() throws AWTException {
+    @Test
+    public void verifyFileExistInDownloadedFolder() throws AWTException, InterruptedException {
         extentLogger = extentReports.createTest("Verifying file downloaded to our machine");
         driver.get("https://the-internet.herokuapp.com/download");
         WebElement file = driver.findElement(By.linkText("text.txt"));
-        file.click();
-        Robot robot = new Robot();
-        robot.keyPress(KeyEvent.VK_ENTER);
-        String fileName = "text.txt";
-        String path = "C:\\Users\\salma\\Downloads\\" + fileName;
-        Assert.assertTrue(Files.exists(Paths.get(path)));
+        File filePath = new File(System.getProperty("user.dir") + "/text.txt");
+        if (!filePath.exists()) {
+            file.click();
+        }
+        Thread.sleep(2000);
+        Assert.assertTrue(filePath.exists());
     }
 
 
