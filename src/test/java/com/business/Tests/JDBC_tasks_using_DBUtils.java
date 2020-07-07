@@ -53,7 +53,7 @@ public class JDBC_tasks_using_DBUtils {
         // get all values from certain column as List and verify certain name exist there
         List<String> names = DBUtils.executeQueryAndGetColumnValuesAsList(query, "first_name");
         Assert.assertTrue(names.contains("Samir"));
-        //verify Samir's lastname is Babayev
+        // verify Samir's lastName is Babayev
         String lastName = "";
         List<Map<String, Object>> resAsListOfMaps = DBUtils.executeQueryAndGetResultAsListOfMaps(query);
         for (int i = 0; i < resAsListOfMaps.size(); i++) {
