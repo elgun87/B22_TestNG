@@ -18,19 +18,19 @@ public class JSExecutor_functions extends Base {
         JSUtil.flashElement(dropDown, driver);
         WebElement dynamicContent = driver.findElement(By.linkText("Dynamic Content"));
         extentLogger.info("Drawing the border for element");
-        JSUtil.drawBorder(dynamicContent, driver);
+        JSUtil.drawBorder(dynamicContent);
         Thread.sleep(2000);
         extentLogger.info("Getting title with JS executor");
-        String title = JSUtil.getTitleOfPageByJS(driver);
+        String title = JSUtil.getTitleOfPageByJS();
         System.out.println(title);
         extentLogger.info("Clicking element with JS executor");
-        JSUtil.clickElementByJS(dynamicContent, driver);
+        JSUtil.clickElementByJS(dynamicContent);
         extentLogger.info("Using JS executor creating JS alert message in the page after certain operation");
-        JSUtil.generateJSAlert(driver, "You have clicked the Dynamic Elements link");
+        JSUtil.generateJSAlert( "You have clicked the Dynamic Elements link");
         Thread.sleep(2000);
         driver.switchTo().alert().accept();
         extentLogger.info("Refreshing the page with JS executor");
-        JSUtil.refreshPageByJS(driver);
+        JSUtil.refreshPageByJS();
     }
 
 

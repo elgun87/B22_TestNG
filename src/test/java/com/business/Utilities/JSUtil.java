@@ -1,7 +1,5 @@
 package com.business.Utilities;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -25,29 +23,29 @@ public class JSUtil {
         }
     }
 
-    public static void drawBorder(WebElement element, WebDriver driver) {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+    public static void drawBorder(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) DriverUtil.getDriver();
         js.executeScript("arguments[0].style.border='3px solid red'", element);
     }
 
-    public static String getTitleOfPageByJS(WebDriver driver) {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+    public static String getTitleOfPageByJS() {
+        JavascriptExecutor js = (JavascriptExecutor) DriverUtil.getDriver();
         String title = js.executeScript("return document.title;").toString();
         return title;
     }
 
-    public static void clickElementByJS(WebElement element, WebDriver driver) {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+    public static void clickElementByJS(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) DriverUtil.getDriver();
         js.executeScript("arguments[0].click();", element);
     }
 
-    public static void generateJSAlert(WebDriver driver, String message) {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+    public static void generateJSAlert( String message) {
+        JavascriptExecutor js = (JavascriptExecutor)DriverUtil.getDriver();
         js.executeScript("alert('" + message + "')");
     }
 
-    public static void refreshPageByJS(WebDriver driver) {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+    public static void refreshPageByJS() {
+        JavascriptExecutor js = (JavascriptExecutor)DriverUtil.getDriver();
         js.executeScript("history.go(0)");
     }
 

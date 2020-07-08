@@ -63,7 +63,7 @@ public class Date_Pick_Airlines extends Base {
         Assert.assertEquals(selectLanguage.getFirstSelectedOption().getText(), "English");
         WebElement searchBtn = driver.findElement(By.xpath("//button[contains(text(),'SEARCH')]"));
         // searchBtn.click(); --> ElementClickInterceptedException:
-        JSUtil.clickElementByJS(searchBtn, driver);
+        JSUtil.clickElementByJS(searchBtn);
         Assert.assertTrue(driver.getPageSource().contains("Travel Companions"));
 
 

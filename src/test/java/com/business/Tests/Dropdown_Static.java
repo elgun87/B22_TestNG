@@ -14,8 +14,8 @@ public class Dropdown_Static extends Base {
     /**
      * Static dropdown is a dropdown which has select tag.
      * We just locate the element itself, and using Select class
-     * we can make choise by index, value, and visibleText
-     * .getFirstSelecteOption().getText - works with visibleText
+     * we can make choice by index, value, and visibleText
+     * .getFirstSelectedOption().getText - works with visibleText
      */
 
     @Test

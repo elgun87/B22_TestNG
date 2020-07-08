@@ -29,7 +29,7 @@ public class SpiceJet_E2E extends Base {
         Assert.assertTrue(familyCheckBox.isSelected());
         // Choose from and to locations
         WebElement from = driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT"));
-        JSUtil.clickElementByJS(from, driver);
+        JSUtil.clickElementByJS(from);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//a[contains(text(),' Kolkata (CCU)')]")).click();
         BrowserUtil.sleep(1000);
@@ -52,7 +52,7 @@ public class SpiceJet_E2E extends Base {
         }
         // Choose passengers
         WebElement totalPassengers = driver.findElement(By.id("divpaxinfo"));
-        JSUtil.clickElementByJS(totalPassengers, driver);
+        JSUtil.clickElementByJS(totalPassengers);
         BrowserUtil.sleep(2000);
         // choose adults and verify
         WebElement adultsDropdown = driver.findElement(By.id("ctl00_mainContent_ddl_Adult"));
@@ -65,7 +65,7 @@ public class SpiceJet_E2E extends Base {
         selectChild.selectByVisibleText("2");
         Assert.assertEquals(selectChild.getFirstSelectedOption().getText(), "2");
         // Verify total passengers are 2 Adults 2 Child
-        JSUtil.clickElementByJS(totalPassengers, driver);
+        JSUtil.clickElementByJS(totalPassengers);
         Assert.assertEquals(totalPassengers.getText(), "2 Adult, 2 Child");
     }
 }
