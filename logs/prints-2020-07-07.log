@@ -1,0 +1,72 @@
+20:17:22.086 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+20:17:27.130 [main] INFO  com.business.Utilities.Base - browser closed
+20:19:31.403 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+20:19:34.030 [main] INFO  com.business.Utilities.Base - browser closed
+20:24:11.310 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+20:24:13.948 [main] INFO  com.business.Utilities.Base - browser closed
+20:38:35.335 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+20:38:40.024 [main] INFO  com.business.Utilities.Base - browser closed
+20:43:10.468 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+20:43:11.635 [main] INFO  com.business.Tests.Tables_Static - Bach
+20:43:11.650 [main] INFO  com.business.Tests.Tables_Static - Frank
+20:43:11.666 [main] INFO  com.business.Tests.Tables_Static - fbach@yahoo.com
+20:43:11.682 [main] INFO  com.business.Tests.Tables_Static - $51.00
+20:43:11.697 [main] INFO  com.business.Tests.Tables_Static - http://www.frank.com
+20:43:11.729 [main] INFO  com.business.Tests.Tables_Static - edit delete
+20:43:12.699 [main] INFO  com.business.Utilities.Base - browser closed
+20:43:15.866 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+20:43:16.941 [main] INFO  com.business.Tests.Tables_Static - Smith
+20:43:16.961 [main] INFO  com.business.Tests.Tables_Static - John
+20:43:16.967 [main] INFO  com.business.Tests.Tables_Static - jsmith@gmail.com
+20:43:16.983 [main] INFO  com.business.Tests.Tables_Static - $50.00
+20:43:16.999 [main] INFO  com.business.Tests.Tables_Static - http://www.jsmith.com
+20:43:17.030 [main] INFO  com.business.Tests.Tables_Static - edit delete
+20:43:17.046 [main] INFO  com.business.Tests.Tables_Static - Bach
+20:43:17.061 [main] INFO  com.business.Tests.Tables_Static - Frank
+20:43:17.077 [main] INFO  com.business.Tests.Tables_Static - fbach@yahoo.com
+20:43:17.092 [main] INFO  com.business.Tests.Tables_Static - $51.00
+20:43:17.108 [main] INFO  com.business.Tests.Tables_Static - http://www.frank.com
+20:43:17.124 [main] INFO  com.business.Tests.Tables_Static - edit delete
+20:43:17.139 [main] INFO  com.business.Tests.Tables_Static - Doe
+20:43:17.155 [main] INFO  com.business.Tests.Tables_Static - Jason
+20:43:17.171 [main] INFO  com.business.Tests.Tables_Static - jdoe@hotmail.com
+20:43:17.202 [main] INFO  com.business.Tests.Tables_Static - $100.00
+20:43:17.217 [main] INFO  com.business.Tests.Tables_Static - http://www.jdoe.com
+20:43:17.233 [main] INFO  com.business.Tests.Tables_Static - edit delete
+20:43:17.249 [main] INFO  com.business.Tests.Tables_Static - Conway
+20:43:17.264 [main] INFO  com.business.Tests.Tables_Static - Tim
+20:43:17.280 [main] INFO  com.business.Tests.Tables_Static - tconway@earthlink.net
+20:43:17.296 [main] INFO  com.business.Tests.Tables_Static - $50.00
+20:43:17.311 [main] INFO  com.business.Tests.Tables_Static - http://www.timconway.com
+20:43:17.327 [main] INFO  com.business.Tests.Tables_Static - edit delete
+20:43:17.951 [main] INFO  com.business.Utilities.Base - browser closed
+20:43:21.051 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+20:43:22.716 [main] INFO  com.business.Utilities.Base - browser closed
+20:43:25.802 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+20:43:26.861 [main] INFO  com.business.Tests.Tables_Static - Last Name
+20:43:26.878 [main] INFO  com.business.Tests.Tables_Static - First Name
+20:43:26.885 [main] INFO  com.business.Tests.Tables_Static - Email
+20:43:26.917 [main] INFO  com.business.Tests.Tables_Static - Due
+20:43:26.932 [main] INFO  com.business.Tests.Tables_Static - Web Site
+20:43:26.948 [main] INFO  com.business.Tests.Tables_Static - Action
+20:43:27.573 [main] INFO  com.business.Utilities.Base - browser closed
+20:43:30.683 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+20:43:31.929 [main] INFO  com.business.Tests.Tables_Static - Smith John jsmith@gmail.com $50.00 http://www.jsmith.com edit delete
+20:43:31.935 [main] INFO  com.business.Tests.Tables_Static - Bach Frank fbach@yahoo.com $51.00 http://www.frank.com edit delete
+20:43:31.967 [main] INFO  com.business.Tests.Tables_Static - Doe Jason jdoe@hotmail.com $100.00 http://www.jdoe.com edit delete
+20:43:31.982 [main] INFO  com.business.Tests.Tables_Static - Conway Tim tconway@earthlink.net $50.00 http://www.timconway.com edit delete
+20:43:31.998 [main] INFO  com.business.Tests.Tables_Static - Doe Jason jdoe@hotmail.com $100.00 http://www.jdoe.com edit delete
+20:43:32.623 [main] INFO  com.business.Utilities.Base - browser closed
+20:43:35.702 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+20:43:36.925 [main] INFO  com.business.Tests.Tables_Static - John
+20:43:36.934 [main] INFO  com.business.Tests.Tables_Static - Frank
+20:43:36.950 [main] INFO  com.business.Tests.Tables_Static - Jason
+20:43:36.966 [main] INFO  com.business.Tests.Tables_Static - Tim
+20:43:37.560 [main] INFO  com.business.Utilities.Base - browser closed
+20:43:40.699 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+20:43:41.943 [main] INFO  com.business.Tests.Tables_Static - Email
+20:43:42.545 [main] INFO  com.business.Utilities.Base - browser closed
+20:43:45.650 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+20:43:47.361 [main] INFO  com.business.Utilities.Base - browser closed
+20:43:50.485 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+20:43:52.177 [main] INFO  com.business.Utilities.Base - browser closed
