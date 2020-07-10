@@ -13,7 +13,7 @@ import java.util.List;
 
 public class SpiceJet_E2E extends Base {
 
-    @Test(enabled = false)  //not run with headless chrome
+    @Test
     public void spiceJetE2E() throws InterruptedException {
         extentLogger = extentReports.createTest("SpiceJet");
         driver.get("https://www.spicejet.com");

@@ -23,7 +23,7 @@ public class FileDownloaded_Verifying extends Base {
 
 
     @Test
-    public void verifyFileExistInDownloadedFolder() throws AWTException, InterruptedException {
+    public void verifyFileExistInProjectDirectory() throws AWTException, InterruptedException {
         extentLogger = extentReports.createTest("Verifying file downloaded to our machine");
         driver.get("https://the-internet.herokuapp.com/download");
         WebElement file = driver.findElement(By.linkText("text.txt"));
