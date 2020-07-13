@@ -32,7 +32,7 @@ public class SpiceJet_E2E extends Base {
         JSUtil.clickElementByJS(from);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//a[contains(text(),' Kolkata (CCU)')]")).click();
-        BrowserUtil.sleep(1000);
+        BrowserUtil.wait(1000);
         //Dynamically put inside parentheses and show [2] -> in table 2
         driver.findElement(By.xpath("(//a[@value='PAT'])[2]")).click();
         Thread.sleep(1000);
@@ -53,7 +53,7 @@ public class SpiceJet_E2E extends Base {
         // Choose passengers
         WebElement totalPassengers = driver.findElement(By.id("divpaxinfo"));
         JSUtil.clickElementByJS(totalPassengers);
-        BrowserUtil.sleep(2000);
+        BrowserUtil.wait(2000);
         // choose adults and verify
         WebElement adultsDropdown = driver.findElement(By.id("ctl00_mainContent_ddl_Adult"));
         Select selectAdults = new Select(adultsDropdown);

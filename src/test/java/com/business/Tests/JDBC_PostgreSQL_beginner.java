@@ -2,15 +2,10 @@ package com.business.Tests;
 
 import com.business.Utilities.ConfigReader;
 import com.business.Utilities.DBUtils;
-import com.mongodb.DB;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import javax.xml.transform.sax.SAXSource;
-import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +24,7 @@ public class JDBC_PostgreSQL_beginner {
         DBUtils.createConnection(hrdbURL, hrdbUsername, hrdbPassword);
         String query = "SELECT first_name from employees ;";
         ResultSet resultEmployees = DBUtils.executeQuery(query);
-        resultEmployees.next(); //if we don't use while loop,then we need to skip first row always.
+       // resultEmployees.next(); //if we don't use while loop,then we need to skip first row always.
         List<String> names = new ArrayList<>();
         while (resultEmployees.next()) {
             names.add(resultEmployees.getString("first_name"));
@@ -38,7 +33,7 @@ public class JDBC_PostgreSQL_beginner {
         Assert.assertTrue(names.contains("John"));
 
         // Countries table
-        ResultSet countriesRes = DBUtils.executeQuery("select * from countries ;");
+        ResultSet countriesRes = DBUtils.executeQuery("select * from countries;");
         while (countriesRes.next()) {
             System.out.println(countriesRes.getObject("country_id") + " - "
                     + countriesRes.getObject("country_name") + " - "
