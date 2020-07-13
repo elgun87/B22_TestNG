@@ -8,8 +8,7 @@ import org.testng.annotations.Test;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.io.File;
 
 public class RobotClass extends Base {
 
@@ -17,14 +16,17 @@ public class RobotClass extends Base {
     public void downloadWithRobot() throws AWTException {
         extentLogger = extentReports.createTest("download With Robot Class");
         driver.get("https://the-internet.herokuapp.com/download");
-        WebElement file = driver.findElement(By.linkText("test.txt"));
-        file.click();
-        Robot robot = new Robot();
-        robot.keyPress(KeyEvent.VK_ENTER);
-        String fileName = "test.txt";
-        String path = "C:\\Users\\salma\\Downloads\\" + fileName;
+
+        WebElement file = driver.findElement(By.linkText("some-file.txt"));
+        File filePath = new File(System.getProperty("user.dir") + "/" + file.getText());
+        if (!filePath.exists()) {
+            file.click();
+            Robot robot = new Robot();
+            robot.keyPress(KeyEvent.VK_ENTER);
+            robot.keyRelease(KeyEvent.VK_ENTER);
+        }
         //important
-        Assert.assertTrue(Files.exists(Paths.get(path)));
+        Assert.assertTrue(filePath.exists());
 
     }
 }

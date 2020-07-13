@@ -38,7 +38,7 @@ public class DDT_example extends Base {
         driver.findElement(By.xpath("//i[text()=' Login']")).click();
         Thread.sleep(1000);
         WebElement resultField = driver.findElement(By.xpath("//div[@id='flash']"));
-        BrowserUtil.waitFor_Visibility(resultField);
+        BrowserUtil.waitForVisibility(resultField);
         String resultText = resultField.getText();
         System.out.println(resultText);
         extentLogger.info("Verifying the welcome text");

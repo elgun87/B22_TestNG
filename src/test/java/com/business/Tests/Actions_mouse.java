@@ -83,7 +83,7 @@ public class Actions_mouse extends Base {
         Thread.sleep(2000);
         log.info("dragging the element and dropping to drop field");
         WebElement dropConfirmTextField = driver.findElement(By.xpath("//p[text()='Dropped!']"));
-        BrowserUtil.waitFor_Visibility(dropConfirmTextField);
+        BrowserUtil.waitForVisibility(dropConfirmTextField);
         log.info("waiting for confirmation text to be visible");
         Assert.assertTrue(dropConfirmTextField.isDisplayed());
         log.info("element dropped ");

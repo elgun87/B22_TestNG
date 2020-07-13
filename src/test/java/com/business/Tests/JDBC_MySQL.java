@@ -1,7 +1,6 @@
 package com.business.Tests;
 
 import com.business.Utilities.DBUtils;
-import com.mongodb.DB;
 import org.testng.annotations.Test;
 
 import java.sql.ResultSet;
@@ -10,7 +9,7 @@ import java.util.List;
 
 public class JDBC_MySQL {
 
-    private String url = "jdbc:mysql://127.0.0.1:3306/world";
+    private String url = "jdbc:mysql://127.0.0.1:3306/world"; // dbName here is must
     private String username = "root";
     private String password = "anar";
 
