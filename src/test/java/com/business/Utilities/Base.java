@@ -3,6 +3,7 @@ package com.business.Utilities;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -37,6 +38,7 @@ public abstract class Base {
         extentSparkReporter = new ExtentSparkReporter(filePath);
         extentSparkReporter.config().setReportName("Automated Test Reports"); // name of report
         extentSparkReporter.config().setDocumentTitle("Test Results"); // title of report
+        extentSparkReporter.config().setTheme(Theme.DARK);
         extentReports = new ExtentReports();
         extentReports.attachReporter(extentSparkReporter);
         extentReports.setSystemInfo("Environment", "QA_1");

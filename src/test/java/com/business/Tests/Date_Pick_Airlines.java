@@ -37,17 +37,17 @@ public class Date_Pick_Airlines extends Base {
         while (!month.getText().contains("July")) {
             next.click();
         }
-        // store all days in List, iterate and click 15
+        // store all days in List, iterate and click 16
         List<WebElement> days = driver.findElements(By.xpath("//td[@class='day']"));
         for (WebElement day : days) {
-            if (day.getText().contains("15")) {
+            if (day.getText().contains("16")) {
                 day.click();
                 break;
             }
         }
         Thread.sleep(1000);
         // Verify date selected correctly
-        Assert.assertTrue(travelDate.getAttribute("value").contains("07-15"));
+        Assert.assertTrue(travelDate.getAttribute("value").contains("07-16"));
         //Select dropdown from static dropdown
         WebElement weeks = driver.findElement(By.id("datebetween"));
         Select selectWeek = new Select(weeks);

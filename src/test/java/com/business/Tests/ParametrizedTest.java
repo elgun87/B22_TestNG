@@ -51,6 +51,6 @@ public class ParametrizedTest extends Base {
         }
         Thread.sleep(1000);
         Assert.assertTrue(fromDateEditbox.getAttribute("value").contains("2022-09-23"));
-        log.info("verified editbox contains given value");
+        log.info("verified editBox contains given value");
     }
 }

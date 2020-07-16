@@ -1,14 +1,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name=" GLS Smoke By Group" verbose="1">
+<suite name="Group Smoke">
 
-    <test name="Smoke groups">
+    <test name="group Smoke">
         <groups>
             <run>
                 <include name="smoke"/>
             </run>
         </groups>
-        <classes>
-            <class name="com.business.Tests.Group_tests"></class>
-        </classes>
+        <packages>
+            <package name="com.business.Tests"/>
+        </packages>
     </test>
 </suite>

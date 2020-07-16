@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name=" GLS Regression By Group">
+<suite name=" GLS Regression By Group" parallel="classes">
 
     <test name="Regression groups">
         <groups>
@@ -7,10 +7,9 @@
                 <include name="regression"/>
             </run>
         </groups>
-
-        <classes>
-            <class name="com.business.Tests.Group_tests"></class>
-        </classes>
+        <packages>
+            <package name="com.business.Tests"/>
+        </packages>
     </test>
 
 </suite>
