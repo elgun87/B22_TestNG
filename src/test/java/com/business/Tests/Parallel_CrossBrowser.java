@@ -8,15 +8,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 
-public class Actions_mouse extends Base {
+public class Parallel_CrossBrowser extends Base {
 
-    private static Logger log = LogManager.getLogger(Actions_mouse.class.getName());
+    private static Logger log = LogManager.getLogger(Parallel_CrossBrowser.class.getName());
 
+    @Parameters({"browser"})
     @Test(groups = "smoke")
-    public void doubleClick_RightClick() {
+    public void doubleClick_RightClick(String browserName) {
         extentLogger = extentReports.createTest("Double click on element");
         driver.get("https://www.amazon.com/");
         String mainTitle = driver.getTitle();

@@ -52,8 +52,8 @@ public class Group_tests extends Base {
     }
 
 
-    @Test(groups = {"regression"})
-    public void verifyBlankUsrNamme() {
+    @Test(groups = {"smoke", "regression"})
+    public void verifyBlankUsrName() {
         extentLogger = extentReports.createTest("Verify Blank user");
         driver.get("http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/login.aspx");
         pages.homepage.login("", "xosemi");

@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression_Parallel_CrossBrowser" parallel="classes">
+<parameter name="url" value="chrome"></parameter>
+    <test name="Regression">
+        <packages>
+            <package name="com.business.Tests"/>
+        </packages>
+    </test>
+
+
+</suite>

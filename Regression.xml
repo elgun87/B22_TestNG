@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="GLS Regression" parallel="classes" thread-count="4">
+<suite name="GLS Regression" >
 
     <test name="Regression">
         <packages>
