@@ -13,7 +13,7 @@ public class HiddenElements extends Base {
 
     @Test
     public void verifyTextDisappears() {
-        extentLogger = extentReports.createTest("Verify element not in the page");
+
         driver.get("https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp");
         WebElement textFrame = driver.findElement(By.id("myDIV"));
         Assert.assertTrue(textFrame.isDisplayed());

@@ -11,7 +11,7 @@ public class Button extends Base {
 
     @Test
     public void buttonClicking() throws InterruptedException {
-        extentLogger = extentReports.createTest("Button clicking test");
+
         driver.get("https://www.etsy.com/");
         WebElement searchBox = driver.findElement(By.id("global-enhancements-search-query"));
         searchBox.sendKeys("Wooden spoon");

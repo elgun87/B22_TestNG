@@ -1,6 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="GLS Regression" parallel="classes" thread-count="3">
-
+<suite name="GLS Regression" parallel="classes" thread-count="4">
+    <listeners>
+        <listener class-name="com.business.Utilities.Listeners"/>
+    </listeners>
     <test name="Regression">
         <packages>
             <package name="com.business.Tests"/>

@@ -17,7 +17,6 @@ public class Actions_mouse extends Base {
 
     @Test(groups = "smoke")
     public void doubleClick_RightClick() {
-        extentLogger = extentReports.createTest("Double click on element");
         driver.get("https://www.amazon.com/");
         String mainTitle = driver.getTitle();
         // Do double click to element
@@ -31,7 +30,7 @@ public class Actions_mouse extends Base {
         WebElement customerService = driver.findElement(By.xpath("//a[contains(text(),'Customer Service')]"));
         actions.moveToElement(customerService).click().build().perform();
         String cstmrTitle = driver.getTitle();
-        extentLogger.info("Verifying th result");
+
         Assert.assertFalse(mainTitle.equalsIgnoreCase(cstmrTitle));
 
     }
@@ -42,16 +41,15 @@ public class Actions_mouse extends Base {
      */
     @Test
     public void mouseHover_MoveToElement() {
-        extentLogger = extentReports.createTest("Mouse hover test");
+
         driver.get("https://www.amazon.com/");
         WebElement prime = driver.findElement(By.xpath("//span[contains(text(),'Try Prime')]"));
-        extentLogger.info("Verifying the result");
+
         actions.moveToElement(prime).build().perform();
     }
 
     @Test
     public void scrollDown_scrollUP() throws InterruptedException {
-        extentLogger = extentReports.createTest("Scroll up and down");
         driver.get("https://www.airtelxstream.in/");
         int i = 0;
         int j = 0;
@@ -69,14 +67,12 @@ public class Actions_mouse extends Base {
 
     @Test
     public void dragAndDrop() throws InterruptedException {
-        extentLogger = extentReports.createTest("Drag and drop testing");
         driver.get("https://jqueryui.com/droppable/");
         log.info("navigated to website");
         Thread.sleep(5000);
         WebElement mainFrame = driver.findElement(By.xpath("//iframe[@class='demo-frame']"));
         driver.switchTo().frame(mainFrame);
         log.info("switching to the frame");
-        extentLogger.info("Verifying the result");
         WebElement draggable = driver.findElement(By.id("draggable"));
         WebElement droppable = driver.findElement(By.id("droppable"));
         actions.clickAndHold(draggable).moveToElement(droppable).release().build().perform();
@@ -92,7 +88,6 @@ public class Actions_mouse extends Base {
 
     @Test
     public void sendTextInUppercase() throws InterruptedException {
-        extentLogger = extentReports.createTest("Sending text in Uppercase");
         log.info("navigating the amazon.com");
         driver.get("https://www.amazon.com/");
         WebElement editBox = driver.findElement(By.id("twotabsearchtextbox"));

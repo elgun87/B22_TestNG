@@ -22,7 +22,6 @@ public class ParametrizedTest extends Base {
     @Parameters({"Url", "Login", "Password"})
     @Test(enabled = false)
     public void ParametrizedTest(@Optional String url, String login, String password) throws InterruptedException {
-        extentLogger = extentReports.createTest("Parametrized test in testNg.xml file");
         driver.get(url);
         log.info("navigating to :" + url);
         driver.findElement(By.id("txtUsername")).sendKeys(login);

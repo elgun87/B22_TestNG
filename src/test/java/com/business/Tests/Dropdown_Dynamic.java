@@ -22,7 +22,7 @@ public class Dropdown_Dynamic extends Base {
 
     @Test(enabled = false) // not run with headless
     public void dynamicDropdownCalendarType() throws InterruptedException {
-        extentLogger = extentReports.createTest("Verifying DynamicDropDown dropdowns");
+
         driver.get("https://www.spicejet.com");
         driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_1")).click();
         Thread.sleep(1000);
@@ -38,7 +38,7 @@ public class Dropdown_Dynamic extends Base {
         WebElement toCity = driver.findElement(By.xpath("(//a[@value='DEL'])[2]"));
         toCity.click();
         Thread.sleep(1000);
-        extentLogger.info("Verify the data");
+
         log.info(to.getAttribute("value"));
         Assert.assertTrue(to.getAttribute("value").equalsIgnoreCase("Delhi (DEL)"));
 

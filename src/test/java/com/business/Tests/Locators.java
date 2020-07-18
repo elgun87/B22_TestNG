@@ -10,7 +10,6 @@ public class Locators extends Base {
 
     @Test
     public void usingLocators() throws InterruptedException {
-        extentLogger = extentReports.createTest("Different locators");
         driver.get("https://www.cargurus.com/");
         WebElement carMakeDropdown = driver.findElement(By.id("carPickerUsed_makerSelect"));
         Select selectMake = new Select(carMakeDropdown);

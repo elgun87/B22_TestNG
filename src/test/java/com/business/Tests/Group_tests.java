@@ -12,28 +12,28 @@ public class Group_tests extends Base {
     @Test(groups = {"regression", "smoke"})
     public void verifyWrongLogin() {
         // create a new test in the report and give name : Wrong email and password testing
-        extentLogger = extentReports.createTest("Wrong email and Password testing");
+
         // use the logger to log the steps
-        extentLogger.info("Navigating The website");
+
         driver.get("http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/login.aspx");
         //using page objects
-        extentLogger.info("entering username");
+
         pages.homepage.username.sendKeys(ConfigReader.getProperty("username"));
-        extentLogger.info("entering password");
+
         pages.homepage.passWord.sendKeys(ConfigReader.getProperty("password"));
-        extentLogger.info("clicking submit button");
+
         pages.homepage.submitBtn.click();
         // using the method which created from  page objects
         pages.homepage.login("zorayde", "xosemi");
-        extentLogger.info("Validating the error message");
+
         String errorMessage = driver.findElement(By.id("ctl00_MainContent_status")).getText();
         Assert.assertEquals(errorMessage, "Invalid Login or Password.");
-        extentLogger.pass("Wrong email and password");
+
     }
 
     @Test(groups = {"regression", "smoke"})
     public void doubleClick_RightClick() {
-        extentLogger = extentReports.createTest("Double Click testing");
+
         driver.get("https://www.amazon.com/");
         String maintTitle = driver.getTitle();
         // Do double click to element
@@ -48,18 +48,18 @@ public class Group_tests extends Base {
         actions.moveToElement(customerService).click().build().perform();
         String cstmrTitle = driver.getTitle();
         Assert.assertFalse(maintTitle.equalsIgnoreCase(cstmrTitle));
-        extentLogger.pass("Test pass");
+
     }
 
 
     @Test(groups = {"smoke", "regression"})
     public void verifyBlankUsrName() {
-        extentLogger = extentReports.createTest("Verify Blank user");
+
         driver.get("http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/login.aspx");
         pages.homepage.login("", "xosemi");
         String errorMessage = driver.findElement(By.id("ctl00_MainContent_status")).getText();
         Assert.assertEquals(errorMessage, "Invalid Login or Password.");
-        extentLogger.pass("Test pass");
+
     }
 
 
