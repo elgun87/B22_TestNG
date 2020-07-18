@@ -24,24 +24,24 @@ public class DDT_example extends Base {
 
     @Test(dataProvider = "loginData")
     public void dataDrivenTest(String username, String password, String result) throws InterruptedException {
-        extentLogger = extentReports.createTest("Data Driven Test");
+
         driver.get("https://the-internet.herokuapp.com/login");
         WebElement usernameBox = driver.findElement(By.id("username"));
-        extentLogger.info("Passing username");
+
         usernameBox.sendKeys(username);
         Thread.sleep(1000);
         WebElement passwordBox = driver.findElement(By.id("password"));
-        extentLogger.info("Passing password");
+
         passwordBox.sendKeys(password);
         Thread.sleep(1000);
-        extentLogger.info("Clicking login button");
+
         driver.findElement(By.xpath("//i[text()=' Login']")).click();
         Thread.sleep(1000);
         WebElement resultField = driver.findElement(By.xpath("//div[@id='flash']"));
         BrowserUtil.waitForVisibility(resultField);
         String resultText = resultField.getText();
         System.out.println(resultText);
-        extentLogger.info("Verifying the welcome text");
+
         Assert.assertTrue(resultText.contains(result));
     }
 

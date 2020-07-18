@@ -14,7 +14,7 @@ public class RobotClass extends Base {
 
     @Test
     public void downloadWithRobot() throws AWTException {
-        extentLogger = extentReports.createTest("download With Robot Class");
+
         driver.get("https://the-internet.herokuapp.com/download");
 
         WebElement file = driver.findElement(By.linkText("some-file.txt"));

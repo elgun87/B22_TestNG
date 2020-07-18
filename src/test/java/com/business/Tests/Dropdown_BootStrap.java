@@ -17,7 +17,7 @@ public class Dropdown_BootStrap extends Base {
     @Test
 
     public void bootstrapDropdown() throws InterruptedException {
-        extentLogger = extentReports.createTest("Verifying Bootstrap dropdowns");
+
         driver.get("http://practice.cybertekschool.com/dropdown");
         Thread.sleep(3000);
         driver.findElement(By.id("dropdownMenuLink")).click(); //to expand dropdown
@@ -29,7 +29,7 @@ public class Dropdown_BootStrap extends Base {
         for (WebElement link : allLinks) {
             System.out.println(link.getText() + " : " + link.getAttribute("href"));
         }
-        extentLogger.info("Verify the links");
+
         driver.findElement(By.linkText("Etsy")).click();//click on option
         Thread.sleep(1000);
 

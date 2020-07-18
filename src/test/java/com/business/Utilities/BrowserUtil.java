@@ -100,12 +100,12 @@ public class BrowserUtil {
      * @param name of test or whatever your like
      * take a name of a test and returns a path to screenshot takes
      */
-    public static String getScreenshot(String name) {
+    public static String getScreenshotPath(String testMethodName){
         SimpleDateFormat df = new SimpleDateFormat("-yyyy-MM-dd-HH-mm");
         String date = df.format(new Date());
         TakesScreenshot ts = (TakesScreenshot) DriverUtil.getDriver();
         File source = ts.getScreenshotAs(OutputType.FILE);
-        String target = System.getProperty("user.dir") + "/test-output/screenshots/" + name + date + ".png";
+        String target = System.getProperty("user.dir") + "/test-output/screenshots/" + testMethodName + date + ".png";
         File finalDestination = new File(target);
         try {
             FileUtils.copyFile(source, finalDestination);

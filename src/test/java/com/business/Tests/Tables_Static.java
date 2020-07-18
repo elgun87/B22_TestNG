@@ -34,7 +34,7 @@ public class Tables_Static extends Base {
 
     @Test
     public void find_All_Headers_And_Get_Names() {
-        extentLogger = extentReports.createTest("find_All_Headers_And_Get_Names");
+
         driver.get(homePage);
         List<WebElement> allHeaders = driver.findElements(By.xpath("//table[@id='table1']//th"));
         for (WebElement header : allHeaders) {
@@ -47,7 +47,7 @@ public class Tables_Static extends Base {
 
     @Test
     public void find_Certain_Header_direct_in_HTML() {
-        extentLogger = extentReports.createTest("find_Certain_Header_direct_in_HTML");
+
         driver.get(homePage);
         // Find 3rd header in table direct !
         WebElement header3 = driver.findElement(By.xpath("//table[@id='table1']//th[3]"));
@@ -58,7 +58,7 @@ public class Tables_Static extends Base {
 
     @Test   // NOTE: Here getText() method reads all values from row.
     public void find_All_Rows_And_Get_All_Values() {
-        extentLogger = extentReports.createTest("find_All_Rows_And_Get_All_Values");
+
         driver.get(homePage);
         List<WebElement> allRows = driver.findElements(By.xpath("//table[@id='table1']/tbody/tr"));
         int size = allRows.size();
@@ -73,7 +73,7 @@ public class Tables_Static extends Base {
 
     @Test  // Note each row is a WebElement as row (not WebElements)
     public void find_All_Cells_in_Certain_Row_direct_in_HTML() {
-        extentLogger = extentReports.createTest("find_All_Cells_in_Certain_Row_direct_in_HTML");
+
         driver.get(homePage);
         // Find 3rd Row and get all values -
         WebElement row3 = driver.findElement(By.xpath("//table[@id='table1']/tbody/tr[3]"));
@@ -83,7 +83,7 @@ public class Tables_Static extends Base {
 
     @Test
     public void allCells_In_Certain_Row() {
-        extentLogger = extentReports.createTest("allCells_In_Certain_Row");
+
         driver.get(homePage);
         //Get values of all cells in table
         List<WebElement> allCellsInRow_2 = driver.findElements(By.xpath("//table[@id='table1']/tbody/tr[2]/td"));
@@ -98,7 +98,7 @@ public class Tables_Static extends Base {
      * row= 2 ; cell =4; verify value is = "$51.00"
      */
     public void find_Certain_Value_With_Row_And_Column_Coordinates() {
-        extentLogger = extentReports.createTest("find_Certain_Value_With_Row_And_Column_Coordinates");
+
         driver.get(homePage);
         List<WebElement> allRows = driver.findElements(By.xpath("//table[@id='table1']/tbody/tr"));
         List<WebElement> allCellsInRow2 = allRows.get(1).findElements(By.tagName("td"));
@@ -109,7 +109,6 @@ public class Tables_Static extends Base {
 
     @Test
     public void find_Certain_Value_with_Row_And_Column_Coordinates_direct_in_HTML() {
-        extentLogger = extentReports.createTest("find_Certain_Value_with_Row_And_Column_Coordinates_direct_in_HTML");
         driver.get(homePage);
         // Find cell at row 2 column 4
         WebElement row2column4 = driver.findElement(By.xpath("//table[@id='table1']/tbody/tr[2]/td[4]"));
@@ -118,7 +117,6 @@ public class Tables_Static extends Base {
 
     @Test
     public void find_All_Values_In_Certain_Column_direct_In_HTML() {
-        extentLogger = extentReports.createTest("find_All_Values_In_Certain_Column_direct_In_HTML");
         driver.get(homePage);
         //FInd all cells of Column 2 in table
         List<WebElement> column2Values = driver.findElements(By.xpath("//table[@id='table1']/tbody/tr/td[2]"));
@@ -129,7 +127,6 @@ public class Tables_Static extends Base {
 
     @Test
     public void find_All_Cells_In_Table() {
-        extentLogger = extentReports.createTest("find_All_Cells_In_Table");
         driver.get(homePage);
         //Get values of all cells in table
         List<WebElement> allCells = driver.findElements(By.xpath("//table[@id='table1']/tbody/tr/td"));

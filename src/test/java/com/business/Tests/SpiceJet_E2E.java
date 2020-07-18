@@ -15,7 +15,6 @@ public class SpiceJet_E2E extends Base {
 
     @Test
     public void spiceJetE2E() throws InterruptedException {
-        extentLogger = extentReports.createTest("SpiceJet");
         driver.get("https://www.spicejet.com");
         // Select round trip
         driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_1")).click();

@@ -14,11 +14,10 @@ public class CheckBoxes extends Base {
      */
     @Test
     public void checkBoxTesting() {
-        extentLogger= extentReports.createTest("Checkbox testing");
-        extentLogger.info("Navigate to website");
+
         driver.get("http://samples.gwtproject.org/samples/Showcase/Showcase.html#!CwCheckBox");
         WebElement monday = driver.findElement(By.id("gwt-debug-cwCheckBox-Monday-input"));
-        extentLogger.info("Verify the Monday is selected");
+
         Assert.assertFalse(monday.isSelected());
         monday.click();
         Assert.assertTrue(monday.isSelected());

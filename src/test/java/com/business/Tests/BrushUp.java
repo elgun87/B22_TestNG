@@ -19,7 +19,7 @@ public class BrushUp extends Base {
 
     @Test(enabled = false) // website is not stable
     public void orangeLeave() throws InterruptedException {
-        extentLogger = extentReports.createTest("Orange HRM Leave");
+        
         driver.get("https://opensource-demo.orangehrmlive.com/index.php/dashboard");
         driver.findElement(By.id("txtUsername")).sendKeys("Admin");
         driver.findElement(By.id("txtPassword")).sendKeys("admin123" + Keys.ENTER);

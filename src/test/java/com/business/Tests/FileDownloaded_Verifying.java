@@ -24,7 +24,7 @@ public class FileDownloaded_Verifying extends Base {
 
     @Test
     public void verifyFileExistInProjectDirectory() throws AWTException, InterruptedException {
-        extentLogger = extentReports.createTest("Verifying file downloaded to our machine");
+
         driver.get("https://the-internet.herokuapp.com/download");
         WebElement file = driver.findElement(By.linkText("text.txt"));
         //store in File object in the project with name to be loaded file
