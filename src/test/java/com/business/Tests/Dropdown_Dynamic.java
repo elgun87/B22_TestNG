@@ -17,7 +17,7 @@ public class Dropdown_Dynamic extends Base {
      * selecting value in previous dropdowns (as airline dropdowns (not dates) )
      * from and to tables then we have to understand the second tab is exact copy of first table,
      * to locate second element we have to use below syntax:
-     * (//a[@value='DEL'])[2]  -> (base xpath inside parentheses) [2] ,index 2 means in second table
+     * (//a[@value='DEL'])[2]  -> (first xpath inside parentheses)[2] ,index 2 means in second table
      */
 
     @Test(enabled = false) // not run with headless

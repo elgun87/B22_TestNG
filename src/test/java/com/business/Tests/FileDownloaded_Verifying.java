@@ -27,12 +27,13 @@ public class FileDownloaded_Verifying extends Base {
         extentLogger = extentReports.createTest("Verifying file downloaded to our machine");
         driver.get("https://the-internet.herokuapp.com/download");
         WebElement file = driver.findElement(By.linkText("text.txt"));
+        //store in File object in the project with name to be loaded file
         File filePath = new File(System.getProperty("user.dir") + "/text.txt");
         if (!filePath.exists()) {
             file.click();
         }
         Thread.sleep(2000);
-        Assert.assertTrue(filePath.exists());
+        Assert.assertTrue(filePath.exists()); // Used to verify weather any file exist or not.
     }
 
 

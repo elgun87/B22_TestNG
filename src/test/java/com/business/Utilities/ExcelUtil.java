@@ -27,7 +27,6 @@ public class ExcelUtil {
             workSheet = workBook.getSheet(sheetName);
             // check if sheet is null or not. null means  sheetname was wrong
             Assert.assertNotNull(workSheet, "Sheet: \"" + sheetName + "\" does not exist\n");
-
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -71,10 +70,8 @@ public class ExcelUtil {
                 int columnIndex = cell.getColumnIndex();
                 rowMap.put(columns.get(columnIndex), cell.toString());
             }
-
             data.add(rowMap);
         }
-
         return data;
     }
 

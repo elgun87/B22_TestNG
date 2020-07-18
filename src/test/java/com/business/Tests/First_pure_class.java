@@ -1,6 +1,5 @@
 package com.business.Tests;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
@@ -11,7 +10,9 @@ public class First_pure_class {
 
     @Test
     public void verifyGoogle() throws InterruptedException {
-        WebDriverManager.chromedriver().setup();
+        // WebDriverManager.chromedriver().setup();
+        // In project use / slash in comp use \\ slashes  , path from repository root
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/browser/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();
@@ -29,11 +30,10 @@ public class First_pure_class {
         if (driver.getTitle().contains("Google")) {
             System.out.println("Google title successfully verified");
         }
-        if(driver!=null){
+        if (driver != null) {
             driver.close();
             driver.quit();
         }
-
 
 
     }

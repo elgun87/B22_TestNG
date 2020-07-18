@@ -26,6 +26,7 @@ public class FileUpload_verify extends Base {
     public void file_Uploaded_Verify() throws InterruptedException {
         extentLogger = extentReports.createTest("Verifying file upload to using sendkeys method to element having input tag");
         driver.get("https://the-internet.herokuapp.com/upload");
+        // We store filepath in Sting but not in File object, cause .sendKeys() accepts only String.
         String filePath = System.getProperty("user.dir") + "/text.txt";
         WebElement chooseFile = driver.findElement(By.xpath("//input[@id='file-upload']"));
         chooseFile.sendKeys(filePath);

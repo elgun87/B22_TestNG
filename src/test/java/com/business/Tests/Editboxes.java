@@ -17,7 +17,7 @@ public class Editboxes extends Base {
         WebElement editbox = driver.findElement(By.id("email"));
         Assert.assertTrue(editbox.isDisplayed());
         editbox.sendKeys("anar@gmail.com" + Keys.ENTER);
-        //editbox.submit();
+        //editbox.submit(); --> Works only firh elements inside form tag
         String notification = driver.findElement(By.id("content")).getText();
         extentLogger.info("Verifying the result");
         Assert.assertEquals(notification, "Your e-mail's been sent!");
