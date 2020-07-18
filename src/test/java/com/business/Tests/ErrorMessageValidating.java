@@ -35,7 +35,7 @@ public class ErrorMessageValidating extends Base {
     }
 
     @Test
-    public void verifyBlankUsrNamme() {
+    public void verifyBlankUsrName() {
         driver.get("http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/login.aspx");
         pages.homepage.login("", "xosemi");
         String errorMessage = driver.findElement(By.id("ctl00_MainContent_status")).getText();

@@ -26,7 +26,7 @@ public abstract class Base {
     protected SoftAssert softAssert;
     protected Actions actions;
 
-    private static ExtentSparkReporter extentSparkReporter;
+    protected static ExtentSparkReporter extentSparkReporter;
     protected static ExtentReports extentReports;
     protected static ExtentTest extentLogger;
     protected Pages pages;
