@@ -25,7 +25,6 @@
                             <artifactId>maven-surefire-plugin</artifactId>
                             <version>3.0.0-M3</version>
                             <configuration>
-                                <testFailureIgnore>false</testFailureIgnore>
                                 <suiteXmlFiles>
                                     <suiteXmlFile>Regression.xml</suiteXmlFile>
                                 </suiteXmlFiles>
@@ -45,7 +44,6 @@
                             <artifactId>maven-surefire-plugin</artifactId>
                             <version>3.0.0-M3</version>
                             <configuration>
-                                <testFailureIgnore>false</testFailureIgnore>
                                 <suiteXmlFiles>
                                     <suiteXmlFile>groupSmoke.xml</suiteXmlFile>
                                 </suiteXmlFiles>
