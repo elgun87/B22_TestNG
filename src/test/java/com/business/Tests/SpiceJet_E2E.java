@@ -13,7 +13,7 @@ import java.util.List;
 
 public class SpiceJet_E2E extends Base {
 
-    @Test
+    @Test(groups = {"regression"})
     public void spiceJetE2E() throws InterruptedException {
         driver.get("https://www.spicejet.com");
         // Select round trip

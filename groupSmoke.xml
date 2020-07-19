@@ -1,5 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Group Smoke">
+    <listeners>
+        <listener class-name="com.business.Utilities.Listeners"/>
+    </listeners>
 
     <test name="group Smoke">
         <groups>

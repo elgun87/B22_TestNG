@@ -55,7 +55,6 @@ public abstract class Base {
 
 
   @AfterMethod(alwaysRun = true)
-//    public void teardown(ITestResult result) throws IOException {
   public void teardown (ITestResult result) {
       softAssert.assertAll();
       if (result.getStatus() == ITestResult.FAILURE) {
