@@ -20,11 +20,15 @@ public class Listeners implements ITestListener {
     }
 
     public void onTestSuccess(ITestResult result) {
-        test.log(Status.PASS, "Successfully passed");
+        if (result.getStatus() != ITestResult.FAILURE) {
+            test.log(Status.PASS, "Successful");
+        }
+
     }
 
     public void onTestFailure(ITestResult result) {
         String screenshotLocation = BrowserUtil.getScreenshotPath(result.getName());
+        extentTest.get().log(Status.FAIL, "Failed");
         extentTest.get().fail(result.getThrowable());
         try {
             extentTest.get().addScreenCaptureFromPath(screenshotLocation);
