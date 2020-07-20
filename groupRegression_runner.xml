@@ -3,7 +3,6 @@
     <listeners>
         <listener class-name="com.business.Utilities.Listeners"/>
     </listeners>
-
     <test name="Regression groups">
         <groups>
             <run>

@@ -15,7 +15,7 @@ public class Actions_mouse extends Base {
 
     private static Logger log = LogManager.getLogger(Actions_mouse.class.getName());
 
-    @Test(groups = "smoke")
+    @Test(groups = {"smoke", "regression"})
     public void doubleClick_RightClick() {
         driver.get("https://www.amazon.com/");
         String mainTitle = driver.getTitle();
@@ -30,7 +30,6 @@ public class Actions_mouse extends Base {
         WebElement customerService = driver.findElement(By.xpath("//a[contains(text(),'Customer Service')]"));
         actions.moveToElement(customerService).click().build().perform();
         String cstmrTitle = driver.getTitle();
-
         Assert.assertFalse(mainTitle.equalsIgnoreCase(cstmrTitle));
 
     }
@@ -41,10 +40,8 @@ public class Actions_mouse extends Base {
      */
     @Test
     public void mouseHover_MoveToElement() {
-
         driver.get("https://www.amazon.com/");
         WebElement prime = driver.findElement(By.xpath("//span[contains(text(),'Try Prime')]"));
-
         actions.moveToElement(prime).build().perform();
     }
 

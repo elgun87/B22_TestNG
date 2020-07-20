@@ -12,7 +12,7 @@ import java.io.IOException;
 public class Listeners implements ITestListener {
     public ExtentReports extent = ExtentReportUtil.extentReportGenerator();
     public ExtentTest test;
-    private static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
+    private static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
 
     public void onTestStart(ITestResult result) {
         test = extent.createTest(result.getMethod().getMethodName());
@@ -20,10 +20,7 @@ public class Listeners implements ITestListener {
     }
 
     public void onTestSuccess(ITestResult result) {
-        if (result.getStatus() != ITestResult.FAILURE) {
-            test.log(Status.PASS, "Successful");
-        }
-
+        extentTest.get().log(Status.PASS, "Successful");
     }
 
     public void onTestFailure(ITestResult result) {
@@ -35,7 +32,6 @@ public class Listeners implements ITestListener {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     public void onFinish(ITestContext context) {
