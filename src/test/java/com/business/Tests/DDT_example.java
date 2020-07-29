@@ -9,6 +9,9 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import java.util.List;
+import java.util.Map;
+
 public class DDT_example extends Base {
 
     // create object of ExcelUtil and pass path and sheet name to its constructor.
@@ -23,27 +26,44 @@ public class DDT_example extends Base {
     }
 
     @Test(dataProvider = "loginData")
-    public void dataDrivenTest(String username, String password, String result) throws InterruptedException {
-
+    public void dataDrivenTest(String username, String password, String result) {
         driver.get("https://the-internet.herokuapp.com/login");
         WebElement usernameBox = driver.findElement(By.id("username"));
-
         usernameBox.sendKeys(username);
-        Thread.sleep(1000);
+        BrowserUtil.wait(1);
         WebElement passwordBox = driver.findElement(By.id("password"));
-
         passwordBox.sendKeys(password);
-        Thread.sleep(1000);
-
+        BrowserUtil.wait(1);
         driver.findElement(By.xpath("//i[text()=' Login']")).click();
-        Thread.sleep(1000);
+        BrowserUtil.wait(1);
         WebElement resultField = driver.findElement(By.xpath("//div[@id='flash']"));
         BrowserUtil.waitForVisibility(resultField);
         String resultText = resultField.getText();
         System.out.println(resultText);
-
         Assert.assertTrue(resultText.contains(result));
+
     }
 
+    @Test
+    public void dataDrivenTestWithMaps() {
+        List<Map<String, String>> dataList = excelUtil.getDataListOfMap();
+        for (int i = 0; i < dataList.size(); i++) {
+            driver.get("https://the-internet.herokuapp.com/login");
+            WebElement usernameBox = driver.findElement(By.id("username"));
+            usernameBox.sendKeys(dataList.get(i).get("username"));
+            BrowserUtil.wait(1);
+            WebElement passwordBox = driver.findElement(By.id("password"));
+            passwordBox.sendKeys(dataList.get(i).get("password"));
+            BrowserUtil.wait(1);
+            driver.findElement(By.xpath("//i[text()=' Login']")).click();
+            BrowserUtil.wait(1);
+            WebElement resultField = driver.findElement(By.xpath("//div[@id='flash']"));
+            BrowserUtil.waitForVisibility(resultField);
+            String resultText = resultField.getText();
+            System.out.println(resultText);
+            Assert.assertTrue(resultText.contains(dataList.get(i).get("result")));
+        }
+
+    }
 
 }

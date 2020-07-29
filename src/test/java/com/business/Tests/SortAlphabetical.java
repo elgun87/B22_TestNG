@@ -34,15 +34,15 @@ public class SortAlphabetical extends Base {
     }
 
     @Test
-    public void verifyCellsInTableAreSorted() throws InterruptedException {
+    public void verifyCellsInTableAreSorted() {
         driver.get("https://rahulshettyacademy.com/seleniumPractise/#/offers");
         WebElement header = driver.findElement(By.xpath("//b[contains(text(),'Veg/fruit name')]"));
         header.click();
         header.click();
         List<WebElement> column_1st = driver.findElements(By.xpath("//table[@id='sortableTable']//tbody//tr//td[2]"));
         ArrayList<String> originalList = new ArrayList<>();
-        for (int i = 0; i < column_1st.size(); i++) {
-            originalList.add(column_1st.get(i).getText());
+        for (WebElement webElement : column_1st) {
+            originalList.add(webElement.getText());
         }
         ArrayList<String> copiedList = new ArrayList<>(originalList);
         Collections.sort(copiedList);

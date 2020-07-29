@@ -8,8 +8,6 @@ import org.testng.annotations.Test;
 
 public class CheckBoxes extends Base {
     /**
-     * go to : http://samples.gwtproject.org/samples/Showcase/Showcase.html#!CwCheckBox
-     * <p>
      * select on monday only if it is not select
      */
     @Test
@@ -17,7 +15,6 @@ public class CheckBoxes extends Base {
 
         driver.get("http://samples.gwtproject.org/samples/Showcase/Showcase.html#!CwCheckBox");
         WebElement monday = driver.findElement(By.id("gwt-debug-cwCheckBox-Monday-input"));
-
         Assert.assertFalse(monday.isSelected());
         monday.click();
         Assert.assertTrue(monday.isSelected());

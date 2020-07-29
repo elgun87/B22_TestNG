@@ -54,13 +54,12 @@ public class ExcelUtil {
         return data;
     }
 
-    public List<Map<String, String>> getDataList() {
+    public List<Map<String, String>> getDataListOfMap() {
         // get all columns
         List<String> columns = getColumnsNames();
         // this will be returned
         List<Map<String, String>> data = new ArrayList<>();
-
-        for (int i = 1; i < rowCount(); i++) {
+        for (int i = 1; i <=rowCount(); i++) {
             // get each row
             Row row = workSheet.getRow(i);
             // create map of the row using the column and value

@@ -1,9 +1,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name=" GLS Regression By Group" parallel="classes" thread-count="2">
+<suite name=" GLS Regression By Group">
     <listeners>
         <listener class-name="com.business.Utilities.Listeners"/>
     </listeners>
-    <test name="Regression groups">
+    <test name="Regression groups" parallel="classes" thread-count="3">
         <groups>
             <run>
                 <include name="regression"/>
