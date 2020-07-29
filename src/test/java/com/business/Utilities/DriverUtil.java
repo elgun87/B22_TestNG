@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DriverUtil {
 
 
-    private static ThreadLocal<WebDriver> driverPool = new ThreadLocal<>();
+    private static final ThreadLocal<WebDriver> driverPool = new ThreadLocal<>();
 
     private DriverUtil() {
 
@@ -37,7 +37,7 @@ public class DriverUtil {
                 case "chrome":
                     String downloadPath = System.getProperty("user.dir");
                     WebDriverManager.chromedriver().setup();
-                    HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
+                    HashMap<String, Object> chromePrefs = new HashMap<>();
                     chromePrefs.put("profile.default_content_settings.popups", 0);
                     chromePrefs.put("download.default_directory", downloadPath);
                     driverPool.set(new ChromeDriver(new ChromeOptions().setExperimentalOption("prefs", chromePrefs)));
@@ -49,7 +49,7 @@ public class DriverUtil {
                 case "chrome-headless":
                     String downloadPathHeadless = System.getProperty("user.dir");
                     WebDriverManager.chromedriver().setup();
-                    HashMap<String, Object> chromePrefHeadless = new HashMap<String, Object>();
+                    HashMap<String, Object> chromePrefHeadless = new HashMap<>();
                     chromePrefHeadless.put("profile.default_content_settings.popups", 0);
                     chromePrefHeadless.put("download.default_directory", downloadPathHeadless);
                     driverPool.set(new ChromeDriver(new ChromeOptions().setHeadless(true).setExperimentalOption("prefs", chromePrefHeadless)));
@@ -108,9 +108,11 @@ public class DriverUtil {
     }
 
     public static void closeDriver() {
+        driverPool.get().close();
+    }
+    public static void quitDriver() {
         driverPool.get().quit();
         driverPool.remove();
     }
-
 
 }

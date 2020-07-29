@@ -22,6 +22,7 @@ public class DBUtils {
     private static Connection connection;
     private static Statement statement;
     private static ResultSet resultSet;
+    private static ResultSetMetaData rsmd;
 
     private DBUtils() {
 
@@ -86,9 +87,9 @@ public class DBUtils {
      * Accepts : resultSet as parameter.
      */
     public static int executeQueryAndGetRowsCount(String query) {
-        ResultSet resultSet = executeQuery(query);
         int amountOfRows = 0;
         try {
+            executeQuery(query);
             resultSet.last();
             amountOfRows = resultSet.getRow();
         } catch (SQLException e) {
@@ -104,9 +105,9 @@ public class DBUtils {
      */
     public static int executeQueryAndGetColumnsCount(String query) {
         int columnsCount = 0;
-        ResultSet resultSet = executeQuery(query);
+        executeQuery(query);
         try {
-            ResultSetMetaData rsmd = resultSet.getMetaData();
+            rsmd = resultSet.getMetaData();
             columnsCount = rsmd.getColumnCount();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -124,7 +125,7 @@ public class DBUtils {
         List<String> columns = new ArrayList<>();
         try {
             executeQuery(query);
-            ResultSetMetaData rsmd = resultSet.getMetaData();
+            rsmd = resultSet.getMetaData();
             int columnCount = rsmd.getColumnCount();
             for (int i = 1; i <= columnCount; i++) {
                 columns.add(rsmd.getColumnName(i));
@@ -142,7 +143,6 @@ public class DBUtils {
      */
     public static List<String> executeQueryAndGetColumnValuesAsList(String query, String columnName) {
         List<String> values = new ArrayList<>();
-        ResultSetMetaData rsmd;
         try {
             executeQuery(query);
             rsmd = resultSet.getMetaData();
@@ -163,7 +163,6 @@ public class DBUtils {
      */
     public static List<List<Object>> executeQueryAndGetResultAsListOfLists(String query) {
         List<List<Object>> rowList = new ArrayList<>();
-        ResultSetMetaData rsmd;
         try {
             executeQuery(query);
             rsmd = resultSet.getMetaData();
@@ -188,7 +187,6 @@ public class DBUtils {
 
     public static List<Map<String, Object>> executeQueryAndGetResultAsListOfMaps(String query) {
         List<Map<String, Object>> rowList = new ArrayList<>();
-        ResultSetMetaData rsmd;
         try {
             executeQuery(query);
             rsmd = resultSet.getMetaData();

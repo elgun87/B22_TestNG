@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
+
 public class SpiceJet_E2E extends Base {
 
     @Test(groups = {"regression"})
@@ -19,7 +20,7 @@ public class SpiceJet_E2E extends Base {
         // Select round trip
         driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_1")).click();
         // Verify after click radio btn is selected
-        Thread.sleep(1000);
+        BrowserUtil.wait(2);
         WebElement familyCheckBox = driver.findElement(By.id("ctl00_mainContent_chk_friendsandfamily"));
         //Verify Student checkbox not selected
         Assert.assertFalse(familyCheckBox.isSelected());
@@ -30,7 +31,7 @@ public class SpiceJet_E2E extends Base {
         WebElement from = driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT"));
         JSUtil.clickElementByJS(from);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//a[contains(text(),' Kolkata (CCU)')]")).click();
+        driver.findElement(By.xpath("//a[contains(text(),'Kolkata (CCU)')]")).click();
         BrowserUtil.wait(1000);
         //Dynamically put inside parentheses and show [2] -> in table 2
         driver.findElement(By.xpath("(//a[@value='PAT'])[2]")).click();
@@ -52,7 +53,7 @@ public class SpiceJet_E2E extends Base {
         // Choose passengers
         WebElement totalPassengers = driver.findElement(By.id("divpaxinfo"));
         JSUtil.clickElementByJS(totalPassengers);
-        BrowserUtil.wait(2000);
+        BrowserUtil.wait(2);
         // choose adults and verify
         WebElement adultsDropdown = driver.findElement(By.id("ctl00_mainContent_ddl_Adult"));
         Select selectAdults = new Select(adultsDropdown);
