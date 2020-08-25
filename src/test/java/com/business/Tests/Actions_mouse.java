@@ -10,13 +10,16 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
+
 
 public class Actions_mouse extends Base {
 
     private static Logger log = LogManager.getLogger(Actions_mouse.class.getName());
 
     @Test(groups = {"smoke", "regression"})
-    public void doubleClick_RightClick() {
+    public void doubleClick_RightClick() throws AWTException {
         driver.get("https://www.amazon.com/");
         String mainTitle = driver.getTitle();
         // Do double click to element
@@ -24,11 +27,14 @@ public class Actions_mouse extends Base {
         actions.moveToElement(nextSign).doubleClick().build().perform();
         // Do right click
         WebElement searchEditbox = driver.findElement(By.id("twotabsearchtextbox"));
-        actions.moveToElement(searchEditbox).contextClick().build().perform();
-        searchEditbox.click();
+        actions.contextClick(searchEditbox).build().perform();
+        Robot robot = new Robot();
+        robot.keyPress(KeyEvent.VK_ESCAPE);
+        robot.keyRelease(KeyEvent.VK_ESCAPE);
         // Move to specific element
         WebElement customerService = driver.findElement(By.xpath("//a[contains(text(),'Customer Service')]"));
         actions.moveToElement(customerService).click().build().perform();
+        BrowserUtil.wait(3);
         String cstmrTitle = driver.getTitle();
         Assert.assertFalse(mainTitle.equalsIgnoreCase(cstmrTitle));
 

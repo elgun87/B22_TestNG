@@ -3,14 +3,13 @@ package com.business.Tests;
 import com.business.Utilities.DBUtils;
 import org.testng.annotations.Test;
 
-import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 
 public class JDBC_Using_DBUtil_methods {
 
     @Test
-    public void metadataTesting() throws SQLException {
+    public void metadataTesting() {
         DBUtils.createConnectionToHrDB();
         String query = "select * from employees;";
         // Using DBUtil get ROWSCOUNT in the result

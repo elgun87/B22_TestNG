@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 public class First_pure_class {
 
     @Test
-    public void verifyGoogle() throws InterruptedException {
+    public void verifyGoogle(){
         // WebDriverManager.chromedriver().setup();
         // In project use / slash in comp use \\ slashes  , path from repository root
         System.setProperty("webdriver.chrome.driver", "src/test/resources/browser/chromedriver.exe");
@@ -30,10 +30,8 @@ public class First_pure_class {
         if (driver.getTitle().contains("Google")) {
             System.out.println("Google title successfully verified");
         }
-        if (driver != null) {
-            driver.close();
-            driver.quit();
-        }
+        driver.close();
+        driver.quit();
 
 
     }

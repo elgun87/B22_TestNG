@@ -1,6 +1,7 @@
 package com.business.Tests;
 
 import com.business.Utilities.Base;
+import com.business.Utilities.BrowserUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -10,7 +11,7 @@ import org.testng.annotations.Test;
 
 public class Dropdown_Dynamic extends Base {
 
-    private static Logger log = LogManager.getLogger(Dropdown_Dynamic.class.getName());
+    private static final Logger log = LogManager.getLogger(Dropdown_Dynamic.class.getName());
 
     /**
      * Note : If we work with dropdowns which one appears only after
@@ -21,28 +22,26 @@ public class Dropdown_Dynamic extends Base {
      */
 
     @Test(enabled = false) // not run with headless
-    public void dynamicDropdownCalendarType() throws InterruptedException {
-
+    public void dynamicDropdownCalendarType() {
         driver.get("https://www.spicejet.com");
         driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_1")).click();
-        Thread.sleep(1000);
+        BrowserUtil.wait(1);
         WebElement from = driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT"));
         from.click();
         WebElement fromCity = driver.findElement(By.xpath("//a[@value='MAA']"));
         fromCity.click();
-        Thread.sleep(1000);
+        BrowserUtil.wait(1);
         Assert.assertTrue(from.getAttribute("value").equalsIgnoreCase("Chennai (MAA)"));
         log.info(from.getAttribute("value"));
         WebElement to = driver.findElement(By.id("ctl00_mainContent_ddl_destinationStation1_CTXT"));
         to.click();                // pay attention !
         WebElement toCity = driver.findElement(By.xpath("(//a[@value='DEL'])[2]"));
         toCity.click();
-        Thread.sleep(1000);
-
+        BrowserUtil.wait(1);
         log.info(to.getAttribute("value"));
         Assert.assertTrue(to.getAttribute("value").equalsIgnoreCase("Delhi (DEL)"));
 
-        // or for each table we can use //parent //child xpath (space in the middle)
+        // -------- or for each table we can use //parent //child xpath (space in the middle)------
         //driver.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='MAA']")).click();
 
     }

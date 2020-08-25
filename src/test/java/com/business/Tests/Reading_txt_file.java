@@ -23,8 +23,8 @@ public class Reading_txt_file {
             line = readLine;
             list.add(line);
         }
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
+        for (String str : list) {
+            System.out.println(str);
         }
         Assert.assertTrue(list.get(1).contains("code2"));
     }

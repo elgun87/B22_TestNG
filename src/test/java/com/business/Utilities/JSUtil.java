@@ -17,10 +17,8 @@ public class JSUtil {
     private static void changeColor(String color, WebElement element, WebDriver driver) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].style.backgroundColor = '" + color + "'", element);
-        try {
-            Thread.sleep(150);
-        } catch (InterruptedException e) {
-        }
+        BrowserUtil.wait(1);
+
     }
 
     public static void drawBorder(WebElement element) {
@@ -30,8 +28,7 @@ public class JSUtil {
 
     public static String getTitleOfPageByJS() {
         JavascriptExecutor js = (JavascriptExecutor) DriverUtil.getDriver();
-        String title = js.executeScript("return document.title;").toString();
-        return title;
+        return js.executeScript("return document.title;").toString();
     }
 
     public static void clickElementByJS(WebElement element) {
@@ -39,16 +36,15 @@ public class JSUtil {
         js.executeScript("arguments[0].click();", element);
     }
 
-    public static void generateJSAlert( String message) {
-        JavascriptExecutor js = (JavascriptExecutor)DriverUtil.getDriver();
+    public static void generateJSAlert(String message) {
+        JavascriptExecutor js = (JavascriptExecutor) DriverUtil.getDriver();
         js.executeScript("alert('" + message + "')");
     }
 
     public static void refreshPageByJS() {
-        JavascriptExecutor js = (JavascriptExecutor)DriverUtil.getDriver();
+        JavascriptExecutor js = (JavascriptExecutor) DriverUtil.getDriver();
         js.executeScript("history.go(0)");
     }
-
 
 
 }

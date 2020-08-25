@@ -1,12 +1,12 @@
 package com.business.Tests;
 
 import com.business.Utilities.Base;
+import com.business.Utilities.BrowserUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.awt.*;
 import java.io.File;
 
 public class FileDownloaded_Verifying extends Base {
@@ -23,8 +23,7 @@ public class FileDownloaded_Verifying extends Base {
 
 
     @Test
-    public void verifyFileExistInProjectDirectory() throws AWTException, InterruptedException {
-
+    public void verifyFileExistInProjectDirectory() {
         driver.get("https://the-internet.herokuapp.com/download");
         WebElement file = driver.findElement(By.linkText("text.txt"));
         //store in File object in the project with name to be loaded file
@@ -32,7 +31,7 @@ public class FileDownloaded_Verifying extends Base {
         if (!filePath.exists()) {
             file.click();
         }
-        Thread.sleep(2000);
+        BrowserUtil.wait(1);
         Assert.assertTrue(filePath.exists()); // Used to verify weather any file exist or not.
     }
 

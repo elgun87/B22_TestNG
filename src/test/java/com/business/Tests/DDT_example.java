@@ -14,9 +14,8 @@ import java.util.Map;
 
 public class DDT_example extends Base {
 
-    // create object of ExcelUtil and pass path and sheet name to its constructor.
-    String path = "src/test/resources/login.xlsx"; // internally in method uses FileInputStream
-    ExcelUtil excelUtil = new ExcelUtil(path, "details");
+
+    ExcelUtil excelUtil = new ExcelUtil("src/test/resources/login.xlsx", "details");
 
 
     @DataProvider(name = "loginData")
@@ -63,7 +62,6 @@ public class DDT_example extends Base {
             System.out.println(resultText);
             Assert.assertTrue(resultText.contains(dataList.get(i).get("result")));
         }
-
     }
 
 }

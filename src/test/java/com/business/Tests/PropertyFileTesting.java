@@ -9,11 +9,8 @@ public class PropertyFileTesting extends Base {
 
     @Test
     public void testPropertyFile() {
-
         driver.get(ConfigReader.getProperty("url"));
         pages.homepage.login(ConfigReader.getProperty("username"), ConfigReader.getProperty("password"));
-
-
     }
 
 }

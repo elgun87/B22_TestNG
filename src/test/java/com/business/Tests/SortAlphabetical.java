@@ -11,7 +11,6 @@ import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class SortAlphabetical extends Base {
 
@@ -19,7 +18,6 @@ public class SortAlphabetical extends Base {
     @Test(groups = {"regression"})
     public void verifyOptionsAreAlphaBethical() {
         driver.get("https://www.amazon.com/");
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         WebElement dropdown = driver.findElement(By.xpath("//select[@id='searchDropdownBox']"));
         Select selectDropdown = new Select(dropdown);
         List<WebElement> optionsList = selectDropdown.getOptions();
@@ -47,8 +45,6 @@ public class SortAlphabetical extends Base {
         ArrayList<String> copiedList = new ArrayList<>(originalList);
         Collections.sort(copiedList);
         Assert.assertEquals(originalList, copiedList);
-
-
     }
 
 }

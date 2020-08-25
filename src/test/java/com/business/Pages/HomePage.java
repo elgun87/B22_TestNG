@@ -8,10 +8,10 @@ import org.openqa.selenium.support.PageFactory;
 public class HomePage {
 
     /**
-     * All page object classes must have the special constructor which inside that constructor using Pagefactory
+     * All page object classes must have the special constructor and inside that constructor using PageFactory
      * we will  pass the driver object.
-     *
-     * @FindBy annotation comes form testNg used for store located element.
+     * <p>
+     * "@FindBy" annotation comes form testNg used for store located element.
      * If there is some common actions which are repeated lots of time, then in page class we can create a method
      * for the repeated actions (for example: login);
      */
@@ -28,8 +28,8 @@ public class HomePage {
     public WebElement submitBtn;
 
     public void login(String login, String pass) {
-        this.username.sendKeys(login);
-        this.passWord.sendKeys(pass);
+        username.sendKeys(login);
+        passWord.sendKeys(pass);
         this.submitBtn.click();
     }
 

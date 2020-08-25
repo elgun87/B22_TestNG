@@ -1,6 +1,7 @@
 package com.business.Tests;
 
 import com.business.Utilities.Base;
+import com.business.Utilities.BrowserUtil;
 import com.business.Utilities.JSUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -11,16 +12,12 @@ public class JSExecutor_functions extends Base {
 
     @Test
     public void flashingTheElement() throws InterruptedException {
-
         driver.get("https://the-internet.herokuapp.com/");
         WebElement dropDown = driver.findElement(By.linkText("Dropdown"));
-
         JSUtil.flashElement(dropDown, driver);
         WebElement dynamicContent = driver.findElement(By.linkText("Dynamic Content"));
-
         JSUtil.drawBorder(dynamicContent);
-        Thread.sleep(2000);
-
+        BrowserUtil.wait(2);
         String title = JSUtil.getTitleOfPageByJS();
         System.out.println(title);
 

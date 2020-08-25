@@ -9,17 +9,17 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class HiddenElements extends Base {
-    private static Logger log = LogManager.getLogger(HiddenElements.class.getName());
+
+    private static final Logger log = LogManager.getLogger(HiddenElements.class.getName());
 
     @Test
     public void verifyTextDisappears() {
-
         driver.get("https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp");
         WebElement textFrame = driver.findElement(By.id("myDIV"));
         Assert.assertTrue(textFrame.isDisplayed());
         driver.findElement(By.xpath("//button[contains(text(),'Toggle Hide and Show')]")).click();
         if (textFrame.isDisplayed()) {
-            Assert.assertTrue(false);
+            Assert.fail();
         } else {
             log.info("Element does not exist in the page");
         }

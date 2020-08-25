@@ -12,7 +12,7 @@ public class Links_In_Given_Areas extends Base {
     /**
      * Note:
      * As a main element always locate div element, not table.
-     * Then using findelements find a tag elements inside main element.
+     * Then using findElements find a tag elements inside main element.
      * It will not include the headers, will take only links.
      */
 

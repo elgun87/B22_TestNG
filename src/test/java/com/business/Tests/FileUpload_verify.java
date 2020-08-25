@@ -12,7 +12,7 @@ import java.io.File;
 
 public class FileUpload_verify extends Base {
     /**
-     * --  FILE UPLOADING --
+     * -------------  FILE UPLOADING ---------------
      * We have to store the full path of the to be uploaded document in String..
      * In website we don't click the upload button and choose the document to upload,
      * We just locate the element choose file (element must have INPUT tag),don't click on that just

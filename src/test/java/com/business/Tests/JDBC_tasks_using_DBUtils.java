@@ -16,7 +16,7 @@ public class JDBC_tasks_using_DBUtils {
      * Connect to DB
      * Verify employee id 105 belongs to Kamil Austin;
      */
-    private static Logger log = LogManager.getLogger(JDBC_tasks_using_DBUtils.class.getName());
+    private static final Logger log = LogManager.getLogger(JDBC_tasks_using_DBUtils.class.getName());
 
     @Test
     public void nameTestById() throws SQLException {

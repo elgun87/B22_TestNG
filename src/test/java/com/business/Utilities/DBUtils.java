@@ -12,7 +12,7 @@ public class DBUtils {
      * Only after that we can call other methods from DBUtil class.
      */
 
-    //Connection info for Hr DB -> PostgreSQL databaase:
+    //Connection info for Hr DB -> PostgreSQL database:
     //jdbc:postgresql:(jdbc db driver)//ip where db is : 5432(port) + /hr (dbname)
     private static String hrdbURL = ConfigReader.getProperty("hrdbUrl");
     private static String hrdbUsername = ConfigReader.getProperty("hrdbUser");  //hr
