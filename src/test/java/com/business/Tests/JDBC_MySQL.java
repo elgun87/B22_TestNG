@@ -9,9 +9,9 @@ import java.util.List;
 
 public class JDBC_MySQL {
 
-    private String url = "jdbc:mysql://127.0.0.1:3306/world"; // dbName here is must
-    private String username = "root";
-    private String password = "anar";
+    private final String url = "jdbc:mysql://127.0.0.1:3306/world"; // dbName here is must
+    private final String username = "root";
+    private final String password = "anar";
 
     @Test
     public void testingMySqlDb_Table_City() throws SQLException {

@@ -31,15 +31,13 @@ public class DriverUtil {
 
     public static WebDriver getDriver() {
         if (driverPool.get() == null) {
-            String browserParamFromEnv = System.getProperty("browser");
-            String browser = browserParamFromEnv == null ? ConfigReader.getProperty("browser") : browserParamFromEnv;
+            String browser = ConfigReader.getProperty("browser");
             switch (browser) {
                 case "chrome":
-                    String downloadPath = System.getProperty("user.dir");
                     WebDriverManager.chromedriver().setup();
                     HashMap<String, Object> chromePrefs = new HashMap<>();
                     chromePrefs.put("profile.default_content_settings.popups", 0);
-                    chromePrefs.put("download.default_directory", downloadPath);
+                    chromePrefs.put("download.default_directory", "user.dir");
                     driverPool.set(new ChromeDriver(new ChromeOptions().setExperimentalOption("prefs", chromePrefs)));
                     break;
                 case "firefox":
@@ -47,11 +45,10 @@ public class DriverUtil {
                     driverPool.set(new FirefoxDriver());
                     break;
                 case "chrome-headless":
-                    String downloadPathHeadless = System.getProperty("user.dir");
                     WebDriverManager.chromedriver().setup();
                     HashMap<String, Object> chromePrefHeadless = new HashMap<>();
                     chromePrefHeadless.put("profile.default_content_settings.popups", 0);
-                    chromePrefHeadless.put("download.default_directory", downloadPathHeadless);
+                    chromePrefHeadless.put("download.default_directory", "user.dir");
                     driverPool.set(new ChromeDriver(new ChromeOptions().setHeadless(true).setExperimentalOption("prefs", chromePrefHeadless)));
                     break;
                 case "firefox-headless":

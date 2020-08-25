@@ -20,7 +20,6 @@ public class Dropdown_Static extends Base {
 
     @Test
     public void checkDropdowns() {
-
         driver.get("https://the-internet.herokuapp.com/dropdown");
         WebElement dropdown = driver.findElement(By.id("dropdown"));
         Select select = new Select(dropdown);

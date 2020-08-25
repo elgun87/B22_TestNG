@@ -7,7 +7,6 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.testng.annotations.Test;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
 public class ExcelWriting {
@@ -15,7 +14,6 @@ public class ExcelWriting {
     @Test
     public void excelWriting() throws Exception {
         String path = "./src/test/resources/ExcelWriting.xlsx";
-        // FileOutputStream fio = new FileOutputStream(path);
         FileInputStream fis = new FileInputStream(path);
         Workbook workbook = WorkbookFactory.create(fis);
         Sheet worksheet = workbook.getSheetAt(0);   //can be sheetName too.

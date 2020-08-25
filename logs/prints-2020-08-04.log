@@ -1,0 +1,151 @@
+00:00:08.991 [main] INFO  com.business.Utilities.Base - browser closed
+00:04:38.554 [main] INFO  com.business.Utilities.Base - chrome launched
+00:05:18.024 [main] INFO  com.business.Utilities.Base - browser closed
+00:09:11.054 [main] INFO  com.business.Utilities.Base - chrome launched
+00:10:04.749 [main] INFO  com.business.Utilities.Base - browser closed
+00:16:04.176 [main] INFO  com.business.Utilities.Base - chrome launched
+00:16:26.054 [main] INFO  com.business.Utilities.Base - browser closed
+00:18:20.799 [main] INFO  com.business.Utilities.Base - chrome launched
+00:20:42.808 [main] INFO  com.business.Utilities.Base - chrome launched
+00:21:03.527 [main] INFO  com.business.Utilities.Base - browser closed
+00:21:33.549 [main] INFO  com.business.Utilities.Base - chrome launched
+00:21:42.564 [main] INFO  com.business.Utilities.Base - browser closed
+00:22:08.478 [main] INFO  com.business.Utilities.Base - chrome launched
+00:23:05.207 [main] INFO  com.business.Utilities.Base - chrome launched
+00:29:42.440 [main] INFO  com.business.Utilities.Base - chrome launched
+00:30:06.738 [main] INFO  com.business.Utilities.Base - browser closed
+00:32:17.876 [main] INFO  com.business.Utilities.Base - chrome launched
+00:32:51.911 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+00:33:18.806 [main] INFO  com.business.Utilities.Base - browser closed
+00:34:28.038 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+00:34:48.345 [main] INFO  com.business.Utilities.Base - browser closed
+00:36:03.009 [main] INFO  com.business.Utilities.Base - chrome launched
+00:38:28.345 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+00:38:50.005 [main] INFO  com.business.Utilities.Base - browser closed
+11:50:22.361 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+11:50:50.515 [main] INFO  com.business.Utilities.Base - browser closed
+11:51:13.132 [main] INFO  com.business.Utilities.Base - chrome launched
+11:52:13.743 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:52:13.743 [TestNG-test=Regression-2] INFO  com.business.Utilities.Base - chrome-headless launched
+11:52:13.743 [TestNG-test=Regression-3] INFO  com.business.Utilities.Base - chrome-headless launched
+11:52:21.194 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:52:21.359 [TestNG-test=Regression-3] INFO  com.business.Utilities.Base - chrome-headless launched
+11:52:23.196 [TestNG-test=Regression-1] INFO  com.business.Tests.Actions_mouse - navigated to website
+11:52:28.320 [TestNG-test=Regression-1] INFO  com.business.Tests.Actions_mouse - switching to the frame
+11:52:30.763 [TestNG-test=Regression-1] INFO  com.business.Tests.Actions_mouse - dragging the element and dropping to drop field
+11:52:30.932 [TestNG-test=Regression-1] INFO  com.business.Tests.Actions_mouse - waiting for confirmation text to be visible
+11:52:30.982 [TestNG-test=Regression-1] INFO  com.business.Tests.Actions_mouse - element dropped 
+11:52:30.983 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:52:33.451 [TestNG-test=Regression-2] INFO  com.business.Utilities.Base - chrome-headless launched
+11:52:37.229 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:52:44.526 [TestNG-test=Regression-2] INFO  com.business.Utilities.Base - chrome-headless launched
+11:52:45.629 [TestNG-test=Regression-2] INFO  com.business.Utilities.Base - chrome-headless launched
+11:52:46.845 [TestNG-test=Regression-2] INFO  com.business.Utilities.Base - chrome-headless launched
+11:52:47.960 [TestNG-test=Regression-2] INFO  com.business.Utilities.Base - chrome-headless launched
+11:52:49.115 [TestNG-test=Regression-2] INFO  com.business.Utilities.Base - chrome-headless launched
+11:52:50.120 [TestNG-test=Regression-3] INFO  com.business.Utilities.Base - browser closed
+11:52:52.876 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:52:52.884 [TestNG-test=Regression-1] INFO  com.business.Tests.Actions_mouse - navigating the amazon.com
+11:52:53.978 [TestNG-test=Regression-3] INFO  com.business.Utilities.Base - chrome-headless launched
+11:52:55.559 [TestNG-test=Regression-1] INFO  com.business.Tests.Actions_mouse - entering text in Uppercase
+11:52:57.858 [TestNG-test=Regression-1] INFO  com.business.Tests.Actions_mouse - Verifying text added in Uppercase
+11:52:57.888 [TestNG-test=Regression-1] INFO  com.business.Tests.Actions_mouse - text passed in Uppercase
+11:52:58.437 [TestNG-test=Regression-2] INFO  com.business.Utilities.Base - chrome-headless launched
+11:53:01.928 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:53:08.192 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:53:15.770 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:53:17.369 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:53:18.899 [TestNG-test=Regression-3] INFO  com.business.Utilities.Base - chrome-headless launched
+11:53:23.607 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:53:26.769 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:53:32.640 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:53:36.540 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:53:46.060 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:53:48.129 [TestNG-test=Regression-2] INFO  com.business.Utilities.Base - chrome-headless launched
+11:53:51.430 [TestNG-test=Regression-3] INFO  com.business.Utilities.Base - chrome-headless launched
+11:53:57.015 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:53:59.631 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:54:08.623 [TestNG-test=Regression-2] INFO  com.business.Tests.HiddenElements - Element does not exist in the page
+11:54:17.387 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:54:17.656 [TestNG-test=Regression-2] INFO  com.business.Utilities.Base - chrome-headless launched
+11:54:36.537 [TestNG-test=Regression-2] INFO  com.business.Utilities.Base - chrome-headless launched
+11:54:38.039 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:54:49.890 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:54:53.419 [TestNG-test=Regression-2] INFO  com.business.Utilities.Base - chrome-headless launched
+11:55:06.853 [TestNG-test=Regression-3] INFO  com.business.Utilities.Base - chrome-headless launched
+11:55:41.737 [TestNG-test=Regression-3] INFO  com.business.Utilities.Base - chrome-headless launched
+11:55:45.484 [TestNG-test=Regression-3] INFO  com.business.Tests.Popup_JS_with_Lof4J - navigated the website
+11:55:45.844 [TestNG-test=Regression-3] INFO  com.business.Tests.Popup_JS_with_Lof4J - clicked text generating JS popup
+11:55:48.287 [TestNG-test=Regression-3] INFO  com.business.Tests.Popup_JS_with_Lof4J - alert presents,alert text is: I am a JS Alert
+11:55:50.343 [TestNG-test=Regression-3] INFO  com.business.Tests.Popup_JS_with_Lof4J - alert presents,alert dismissed
+11:55:54.471 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - browser closed
+11:55:57.230 [TestNG-test=Regression-3] INFO  com.business.Utilities.Base - chrome-headless launched
+11:55:58.704 [TestNG-test=Regression-2] INFO  com.business.Utilities.Base - chrome-headless launched
+11:56:00.674 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:56:03.226 [TestNG-test=Regression-3] INFO  com.business.Utilities.Base - chrome-headless launched
+11:56:05.201 [TestNG-test=Regression-2] INFO  com.business.Utilities.Base - chrome-headless launched
+11:56:06.224 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:56:07.094 [TestNG-test=Regression-3] INFO  com.business.Utilities.Base - chrome-headless launched
+11:56:09.192 [TestNG-test=Regression-2] INFO  com.business.Utilities.Base - chrome-headless launched
+11:56:13.214 [TestNG-test=Regression-3] INFO  com.business.Utilities.Base - chrome-headless launched
+11:56:13.300 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:56:15.176 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - Bach
+11:56:15.206 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - Frank
+11:56:15.254 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - fbach@yahoo.com
+11:56:15.335 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - $51.00
+11:56:15.381 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - http://www.frank.com
+11:56:15.423 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - edit delete
+11:56:15.427 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:56:15.810 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - Smith
+11:56:15.849 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - John
+11:56:15.893 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - jsmith@gmail.com
+11:56:15.967 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - $50.00
+11:56:16.013 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - http://www.jsmith.com
+11:56:16.058 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - edit delete
+11:56:16.118 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - Bach
+11:56:16.158 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - Frank
+11:56:16.193 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - fbach@yahoo.com
+11:56:16.240 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - $51.00
+11:56:16.288 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - http://www.frank.com
+11:56:16.326 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - edit delete
+11:56:16.361 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - Doe
+11:56:16.394 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - Jason
+11:56:16.430 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - jdoe@hotmail.com
+11:56:16.465 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - $100.00
+11:56:16.497 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - http://www.jdoe.com
+11:56:16.542 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - edit delete
+11:56:16.584 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - Conway
+11:56:16.618 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - Tim
+11:56:16.642 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - tconway@earthlink.net
+11:56:16.670 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - $50.00
+11:56:16.700 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - http://www.timconway.com
+11:56:16.749 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - edit delete
+11:56:16.755 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:56:17.336 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:56:17.705 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - Last Name
+11:56:17.737 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - First Name
+11:56:17.765 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - Email
+11:56:17.794 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - Due
+11:56:17.841 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - Web Site
+11:56:17.883 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - Action
+11:56:17.902 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:56:18.235 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - Smith John jsmith@gmail.com $50.00 http://www.jsmith.com edit delete
+11:56:18.265 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - Bach Frank fbach@yahoo.com $51.00 http://www.frank.com edit delete
+11:56:18.295 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - Doe Jason jdoe@hotmail.com $100.00 http://www.jdoe.com edit delete
+11:56:18.324 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - Conway Tim tconway@earthlink.net $50.00 http://www.timconway.com edit delete
+11:56:18.347 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - Doe Jason jdoe@hotmail.com $100.00 http://www.jdoe.com edit delete
+11:56:18.369 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:56:18.658 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - John
+11:56:18.698 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - Frank
+11:56:18.723 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - Jason
+11:56:18.747 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - Tim
+11:56:18.750 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:56:19.261 [TestNG-test=Regression-1] INFO  com.business.Tests.Tables_Static - Email
+11:56:19.342 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:56:19.819 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:56:21.561 [TestNG-test=Regression-3] INFO  com.business.Utilities.Base - browser closed
+11:56:24.153 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:56:25.335 [TestNG-test=Regression-3] INFO  com.business.Utilities.Base - chrome-headless launched
+11:56:29.551 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched
+11:56:31.738 [TestNG-test=Regression-2] INFO  com.business.Utilities.Base - browser closed
+11:56:35.745 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - chrome-headless launched

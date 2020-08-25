@@ -20,12 +20,12 @@ import java.util.function.Function;
 public class BrowserUtil {
 
 
-    private static Logger log = LogManager.getLogger(BrowserUtil.class.getName());
+    private static final Logger log = LogManager.getLogger(BrowserUtil.class.getName());
 
 
     public static void wait(int seconds) {
         try {
-            Thread.sleep(seconds);
+            Thread.sleep(seconds * 1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -60,6 +60,18 @@ public class BrowserUtil {
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
 
+    public static WebElement waitForVisibilityByXpath(String xpath) {
+        WebDriverWait wait = new WebDriverWait(DriverUtil.getDriver(), 15);
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+        return element;
+    }
+
+    public static WebElement waitForVisibilityBuId(String id) {
+        WebDriverWait wait = new WebDriverWait(DriverUtil.getDriver(), 15);
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(id)));
+        return element;
+    }
+
     /**
      * Waits for provided element to be clickable
      */
@@ -84,12 +96,11 @@ public class BrowserUtil {
     public static void verifyElementNotDisplayed(String xpath) {
         List<WebElement> elem = DriverUtil.getDriver().findElements(By.xpath(xpath));
         if (elem.size() > 0) {
-            Assert.assertTrue(false);
+            Assert.fail();
             log.error("Element still displayed in the page");
         } else {
             Assert.assertTrue(true);
             log.info("Element not displayed ");
-
         }
     }
 
@@ -100,7 +111,7 @@ public class BrowserUtil {
      * @param name of test or whatever your like
      * take a name of a test and returns a path to screenshot takes
      */
-    public static String getScreenshotPath(String testMethodName){
+    public static String getScreenshotPath(String testMethodName) {
         SimpleDateFormat df = new SimpleDateFormat("-yyyy-MM-dd-HH-mm");
         String date = df.format(new Date());
         TakesScreenshot ts = (TakesScreenshot) DriverUtil.getDriver();

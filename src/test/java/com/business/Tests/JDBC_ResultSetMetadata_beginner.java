@@ -22,9 +22,9 @@ public class JDBC_ResultSetMetadata_beginner {
 
     //Connection info:
     //jdbc:postgresql:(jdbc db driver)//ip where db is : 5432(port) + /hr (dbname)
-    private String hrdbURL = ConfigReader.getProperty("hrdbUrl");
-    private String hrdbUsername = ConfigReader.getProperty("hrdbUser");  //hr
-    private String hrdbPassword = ConfigReader.getProperty("hrdbPassword");  //hr
+    private final String hrdbURL = ConfigReader.getProperty("hrdbUrl");
+    private final String hrdbUsername = ConfigReader.getProperty("hrdbUser");  //hr
+    private final String hrdbPassword = ConfigReader.getProperty("hrdbPassword");  //hr
 
 
     @Test

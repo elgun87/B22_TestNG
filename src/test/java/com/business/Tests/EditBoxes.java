@@ -7,19 +7,17 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class Editboxes extends Base {
+public class EditBoxes extends Base {
 
 
-    @Test
-    public void editBoxTesting() throws InterruptedException {
-
+    @Test(invocationCount = 3)
+    public void editBoxTesting() {
         driver.get("https://the-internet.herokuapp.com/forgot_password");
-        WebElement editbox = driver.findElement(By.id("email"));
-        Assert.assertTrue(editbox.isDisplayed());
-        editbox.sendKeys("anar@gmail.com" + Keys.ENTER);
-        //editbox.submit(); --> Works only firh elements inside form tag
+        WebElement editBox = driver.findElement(By.id("email"));
+        Assert.assertTrue(editBox.isDisplayed());
+        editBox.sendKeys("anar@gmail.com" + Keys.ENTER);
+        //editbox.submit(); --> Works only form elements inside form tag
         String notification = driver.findElement(By.id("content")).getText();
-
         Assert.assertEquals(notification, "Your e-mail's been sent!");
     }
 }

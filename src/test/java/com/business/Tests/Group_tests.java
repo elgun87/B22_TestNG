@@ -41,7 +41,7 @@ public class Group_tests extends Base {
     }
 
 
-    @Test(groups = {"smoke", "regression"})
+    @Test(groups = {"regression", "smoke"})
     public void verifyBlankUsrName() {
         driver.get("http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/login.aspx");
         pages.homepage.login("", "xosemi");

@@ -1,6 +1,7 @@
 package com.business.Tests;
 
 import com.business.Utilities.Base;
+import com.business.Utilities.BrowserUtil;
 import com.business.Utilities.JSUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -14,18 +15,17 @@ import java.util.List;
 public class Date_Pick_Airlines extends Base {
 
     @Test
-    public void path2US() throws InterruptedException {
-
+    public void path2US() {
         driver.get("https://www.path2usa.com/travel-companions");
-        Thread.sleep(10000);
+        BrowserUtil.wait(8);
         WebElement from = driver.findElement(By.id("travel_from"));
         from.sendKeys("Arkan");
-        Thread.sleep(1000);
+        BrowserUtil.wait(2);
         from.sendKeys(Keys.ENTER); // will point 1st option
         Assert.assertEquals(from.getAttribute("value"), "Northwest Arkansas Regional Airport (XNA) Fayetteville");
         WebElement to = driver.findElement(By.id("travel_to"));
         to.sendKeys("JFK");
-        Thread.sleep(700);
+        BrowserUtil.wait(1);
         to.sendKeys(Keys.ENTER); // will point 1st option
         Assert.assertTrue(to.getAttribute("value").contains("John F. Kennedy International Airport"));
         //Choose July 15
@@ -45,7 +45,7 @@ public class Date_Pick_Airlines extends Base {
                 break;
             }
         }
-        Thread.sleep(1000);
+        BrowserUtil.wait(1);
         // Verify date selected correctly
         Assert.assertTrue(travelDate.getAttribute("value").contains("07-16"));
         //Select dropdown from static dropdown

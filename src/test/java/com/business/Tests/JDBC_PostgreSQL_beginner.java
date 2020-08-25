@@ -14,9 +14,9 @@ public class JDBC_PostgreSQL_beginner {
 
     //Connection info:
     //jdbc:postgresql:(jdbc db driver)//ip where db is : 5432(port) + /hr (dbname)
-    private String hrdbURL = ConfigReader.getProperty("hrdbUrl");
-    private String hrdbUsername = ConfigReader.getProperty("hrdbUser");  //hr
-    private String hrdbPassword = ConfigReader.getProperty("hrdbPassword");  //hr
+    private final String hrdbURL = ConfigReader.getProperty("hrdbUrl");
+    private final String hrdbUsername = ConfigReader.getProperty("hrdbUser");  //hr
+    private final String hrdbPassword = ConfigReader.getProperty("hrdbPassword");  //hr
 
 
     @Test
@@ -24,14 +24,13 @@ public class JDBC_PostgreSQL_beginner {
         DBUtils.createConnection(hrdbURL, hrdbUsername, hrdbPassword);
         String query = "SELECT first_name from employees ;";
         ResultSet resultEmployees = DBUtils.executeQuery(query);
-       // resultEmployees.next(); //if we don't use while loop,then we need to skip first row always.
+        // resultEmployees.next(); //if we don't use while loop,then we need to skip first row always.
         List<String> names = new ArrayList<>();
         while (resultEmployees.next()) {
             names.add(resultEmployees.getString("first_name"));
         }
         System.out.println(names);
         Assert.assertTrue(names.contains("John"));
-
         // Countries table
         ResultSet countriesRes = DBUtils.executeQuery("select * from countries;");
         while (countriesRes.next()) {

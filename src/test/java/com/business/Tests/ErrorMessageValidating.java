@@ -14,21 +14,13 @@ public class ErrorMessageValidating extends Base {
 
     @Test
     public void wrongEmailAndPasswordTest() {
-        // create a new test in the report and give name : Wrong email and assword testing
-
-        // use the logger to log the steps
-
         driver.get("http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/login.aspx");
         //using page objects
-
         pages.homepage.username.sendKeys(ConfigReader.getProperty("username"));
-
         pages.homepage.passWord.sendKeys(ConfigReader.getProperty("password"));
-
         pages.homepage.submitBtn.click();
         // using the method which created from  page objects
         pages.homepage.login("zorayde", "xosemi");
-
         String errorMessage = driver.findElement(By.id("ctl00_MainContent_status")).getText();
         Assert.assertEquals(errorMessage, "Invalid Login or Password.");
 

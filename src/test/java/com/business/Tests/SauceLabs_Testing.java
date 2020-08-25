@@ -17,8 +17,6 @@ public class SauceLabs_Testing {
      * --> 2) Create RemoteWebDriver with HUB url and caps object;
      */
 
-    private WebDriver driver;
-
 
     @Test(enabled = false)
     public void buttonClicking() throws MalformedURLException {
@@ -29,9 +27,9 @@ public class SauceLabs_Testing {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setPlatform(Platform.WINDOWS);
         caps.setBrowserName("Chrome");
-        caps.setCapability("version", "latest");
+        caps.setVersion("latest");
         // 2. Initialize driver
-        driver = new RemoteWebDriver(url, caps);
+        WebDriver driver = new RemoteWebDriver(url, caps);
         driver.get("https://www.etsy.com");
         WebElement searchBox = driver.findElement(By.id("global-enhancements-search-query"));
         searchBox.sendKeys("Wooden spoon" + Keys.ENTER);

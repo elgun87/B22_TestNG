@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Group Smoke">
+<suite name="Group Smoke" parallel="classes" thread-count="2">
     <listeners>
         <listener class-name="com.business.Utilities.Listeners"/>
     </listeners>

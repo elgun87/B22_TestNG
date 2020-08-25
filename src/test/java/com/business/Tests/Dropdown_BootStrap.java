@@ -1,6 +1,7 @@
 package com.business.Tests;
 
 import com.business.Utilities.Base;
+import com.business.Utilities.BrowserUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
@@ -17,19 +18,17 @@ public class Dropdown_BootStrap extends Base {
     @Test
 
     public void bootstrapDropdown() throws InterruptedException {
-
         driver.get("http://practice.cybertekschool.com/dropdown");
-        Thread.sleep(3000);
+        BrowserUtil.wait(3);
         driver.findElement(By.id("dropdownMenuLink")).click(); //to expand dropdown
         //<a class="dropdown-item" href="https://www.amazon.com/">Amazon</a>
-        Thread.sleep(3000);
+        BrowserUtil.wait(3);
         //store all elements of dropdown in 1 list
         List<WebElement> allLinks = driver.findElements(By.xpath("a[@class='dropdown-item']"));
         // loop the list , get text and value of attributes from each element
         for (WebElement link : allLinks) {
             System.out.println(link.getText() + " : " + link.getAttribute("href"));
         }
-
         driver.findElement(By.linkText("Etsy")).click();//click on option
         Thread.sleep(1000);
 

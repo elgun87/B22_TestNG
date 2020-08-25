@@ -12,8 +12,11 @@ public class CheckBoxes extends Base {
      */
     @Test
     public void checkBoxTesting() {
-
         driver.get("http://samples.gwtproject.org/samples/Showcase/Showcase.html#!CwCheckBox");
+        int allCheckBoxesCount = driver.findElements(By.cssSelector("*[type='checkbox']")).size();
+        int allCheckBoxesCount2 = driver.findElements(By.xpath("//*[@type='checkbox']")).size();
+        System.out.println(allCheckBoxesCount);
+        System.out.println(allCheckBoxesCount2);
         WebElement monday = driver.findElement(By.id("gwt-debug-cwCheckBox-Monday-input"));
         Assert.assertFalse(monday.isSelected());
         monday.click();
