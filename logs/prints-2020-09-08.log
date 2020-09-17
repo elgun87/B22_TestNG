@@ -1,0 +1,8 @@
+21:10:09.250 [TestNG-test=group Smoke-2] INFO  com.business.Utilities.Base - chrome launched
+21:10:09.250 [TestNG-test=group Smoke-1] INFO  com.business.Utilities.Base - chrome launched
+21:10:25.409 [TestNG-test=group Smoke-2] INFO  com.business.Utilities.Base - browser closed
+21:10:27.831 [TestNG-test=group Smoke-1] INFO  com.business.Utilities.Base - browser closed
+21:10:30.171 [TestNG-test=group Smoke-2] INFO  com.business.Utilities.Base - chrome launched
+21:10:31.854 [TestNG-test=group Smoke-2] INFO  com.business.Utilities.Base - browser closed
+21:10:36.591 [TestNG-test=group Smoke-2] INFO  com.business.Utilities.Base - chrome launched
+21:10:39.424 [TestNG-test=group Smoke-2] INFO  com.business.Utilities.Base - browser closed

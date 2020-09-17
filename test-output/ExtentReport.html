@@ -48,7 +48,7 @@
           </li>
             <li class="m-r-10">
                 <a href="#">
-                    <span class="badge badge-primary">Aug 14, 2020 11:55:41 PM</span>
+                    <span class="badge badge-primary">Sep 10, 2020 10:27:53 PM</span>
                 </a>
             </li>
         </ul>
@@ -114,55 +114,7 @@
 		</div>
 		<div class="test-list-wrapper scrollable">
 			<ul class="test-list-item">
-				<li class="test-item"  status="pass" test-id="1"
-					author=""
-					tag=""
-					device="">
-					<div class="status-avatar pass-bg">
-						<i class="fa fa-check text-white"></i>
-					</div>
-					<div class="open-test">
-						<div class="test-detail">
-							<p class="name">doubleClick_RightClick</p>
-							<p class="duration text-sm">0h 0m 47s+288ms</p>
-							<span class="datetime">23:55:56 PM</span>
-						</div>
-					</div>
-					<div class="test-contents d-none">
-						<div class="detail-head">
-							<div class="p-v-10 d-inline-block">
-								<div class="info">
-									<h5 class="test-status text-pass">doubleClick_RightClick</h5>
-									<span class='badge badge-success'>08.14.2020 23:55:56</span>
-									<span class='badge badge-danger'>08.14.2020 23:56:43</span>
-									<span class='badge badge-default'>0h 0m 47s+288ms</span>
-								</div>
-								<div class="m-t-10 m-l-5">
-									
-								</div>
-							</div>
-						</div>
-<div class="detail-body mt-4">                                              
-<table class="table table-sm">
-	<thead><tr>
-		<th class="status-col">Status</th>
-		<th class="timestamp-col">Timestamp</th>
-		<th class="details-col">Details</th>
-	</tr></thead>
-	<tbody>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>11:56:43 PM</td>
-				<td>
-						Passed
-				</td>
-			</tr>
-	</tbody>
-</table>
-</div>
-					</div>
-				</li>
-				<li class="test-item"  status="fail" test-id="2"
+				<li class="test-item"  status="fail" test-id="1"
 					author=""
 					tag=""
 					device="">
@@ -172,8 +124,8 @@
 					<div class="open-test">
 						<div class="test-detail">
 							<p class="name">verifyOptionsAreAlphaBethical</p>
-							<p class="duration text-sm">0h 0m 55s+396ms</p>
-							<span class="datetime">23:55:56 PM</span>
+							<p class="duration text-sm">0h 0m 31s+924ms</p>
+							<span class="datetime">22:28:02 PM</span>
 						</div>
 					</div>
 					<div class="test-contents d-none">
@@ -181,9 +133,9 @@
 							<div class="p-v-10 d-inline-block">
 								<div class="info">
 									<h5 class="test-status text-fail">verifyOptionsAreAlphaBethical</h5>
-									<span class='badge badge-success'>08.14.2020 23:55:56</span>
-									<span class='badge badge-danger'>08.14.2020 23:56:51</span>
-									<span class='badge badge-default'>0h 0m 55s+396ms</span>
+									<span class='badge badge-success'>09.10.2020 22:28:02</span>
+									<span class='badge badge-danger'>09.10.2020 22:28:34</span>
+									<span class='badge badge-default'>0h 0m 31s+924ms</span>
 								</div>
 								<div class="m-t-10 m-l-5">
 									
@@ -200,23 +152,39 @@
 	<tbody>
 			<tr class="event-row">
 				<td><i class="fa fa-times text-fail"></i></td>
-				<td>11:56:51 PM</td>
+				<td>10:28:34 PM</td>
 				<td>
 						Failed
 				</td>
 			</tr>
 			<tr class="event-row">
 				<td><i class="fa fa-times text-fail"></i></td>
-				<td>11:56:51 PM</td>
+				<td>10:28:34 PM</td>
 				<td>
-						<textarea disabled class="code-block">java.lang.AssertionError: Lists differ at element [0]:  
-Under $10 != All Departments expected [ 
-Under $10] but found [All Departments]
-	at org.testng.Assert.fail(Assert.java:97)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
-	at org.testng.Assert.assertEquals(Assert.java:1031)
-	at org.testng.Assert.assertEquals(Assert.java:993)
-	at com.business.Tests.SortAlphabetical.verifyOptionsAreAlphaBethical(SortAlphabetical.java:32)
+						<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//select[@id='searchDropdownBox']"}
+  (Session info: chrome=85.0.4183.83)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ANAR', ip: '10.229.9.163', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.83, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\salma\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 51f179bfc37fa8752bd5301dd85756a4
+*** Element info: {Using=xpath, value=//select[@id='searchDropdownBox']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.business.Tests.SortAlphabetical.verifyOptionsAreAlphaBethical(SortAlphabetical.java:21)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -240,33 +208,33 @@ Under $10] but found [All Departments]
 </div>
 <div class="detail-foot">
 	<ul class="attachments">
-			<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\salma\IdeaProjects\My_TestNG-project/test-output/screenshots/verifyOptionsAreAlphaBethical-2020-08-14-23-56.png' src='C:\Users\salma\IdeaProjects\My_TestNG-project/test-output/screenshots/verifyOptionsAreAlphaBethical-2020-08-14-23-56.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\salma\IdeaProjects\My_TestNG-project/test-output/screenshots/verifyOptionsAreAlphaBethical-2020-09-10-22-28.png' src='C:\Users\salma\IdeaProjects\My_TestNG-project/test-output/screenshots/verifyOptionsAreAlphaBethical-2020-09-10-22-28.png'>
 	</ul>
 </div>
 					</div>
 				</li>
-				<li class="test-item"  status="pass" test-id="3"
+				<li class="test-item"  status="fail" test-id="3"
 					author=""
 					tag=""
 					device="">
-					<div class="status-avatar pass-bg">
-						<i class="fa fa-check text-white"></i>
+					<div class="status-avatar fail-bg">
+						<i class="fa fa-times text-white"></i>
 					</div>
 					<div class="open-test">
 						<div class="test-detail">
 							<p class="name">smke_exmple</p>
-							<p class="duration text-sm">0h 0m 47s+278ms</p>
-							<span class="datetime">23:55:56 PM</span>
+							<p class="duration text-sm">0h 0m 31s+895ms</p>
+							<span class="datetime">22:28:02 PM</span>
 						</div>
 					</div>
 					<div class="test-contents d-none">
 						<div class="detail-head">
 							<div class="p-v-10 d-inline-block">
 								<div class="info">
-									<h5 class="test-status text-pass">smke_exmple</h5>
-									<span class='badge badge-success'>08.14.2020 23:55:56</span>
-									<span class='badge badge-danger'>08.14.2020 23:56:43</span>
-									<span class='badge badge-default'>0h 0m 47s+278ms</span>
+									<h5 class="test-status text-fail">smke_exmple</h5>
+									<span class='badge badge-success'>09.10.2020 22:28:02</span>
+									<span class='badge badge-danger'>09.10.2020 22:28:34</span>
+									<span class='badge badge-default'>0h 0m 31s+895ms</span>
 								</div>
 								<div class="m-t-10 m-l-5">
 									
@@ -282,14 +250,164 @@ Under $10] but found [All Departments]
 	</tr></thead>
 	<tbody>
 			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>11:56:43 PM</td>
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>10:28:34 PM</td>
 				<td>
-						Passed
+						Failed
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>10:28:34 PM</td>
+				<td>
+						<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//i[@class='a-icon a-icon-next-rounded']"}
+  (Session info: chrome=85.0.4183.83)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ANAR', ip: '10.229.9.163', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.83, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\salma\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62968}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 99f129b3c7e556f3fa5fb10d5af9cbb7
+*** Element info: {Using=xpath, value=//i[@class='a-icon a-icon-next-rounded']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.business.Tests.Group_tests.smke_exmple(Group_tests.java:29)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</textarea>
 				</td>
 			</tr>
 	</tbody>
 </table>
+</div>
+<div class="detail-foot">
+	<ul class="attachments">
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\salma\IdeaProjects\My_TestNG-project/test-output/screenshots/smke_exmple-2020-09-10-22-28.png' src='C:\Users\salma\IdeaProjects\My_TestNG-project/test-output/screenshots/smke_exmple-2020-09-10-22-28.png'>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class="test-item"  status="fail" test-id="2"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar fail-bg">
+						<i class="fa fa-times text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">doubleClick_RightClick</p>
+							<p class="duration text-sm">0h 0m 31s+912ms</p>
+							<span class="datetime">22:28:02 PM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-fail">doubleClick_RightClick</h5>
+									<span class='badge badge-success'>09.10.2020 22:28:02</span>
+									<span class='badge badge-danger'>09.10.2020 22:28:34</span>
+									<span class='badge badge-default'>0h 0m 31s+912ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>10:28:34 PM</td>
+				<td>
+						Failed
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>10:28:34 PM</td>
+				<td>
+						<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//i[@class='a-icon a-icon-next-rounded']"}
+  (Session info: chrome=85.0.4183.83)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ANAR', ip: '10.229.9.163', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.83, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\salma\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62966}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 0caaa11382f500cd7b8682fe216641d5
+*** Element info: {Using=xpath, value=//i[@class='a-icon a-icon-next-rounded']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.business.Tests.Actions_mouse.doubleClick_RightClick(Actions_mouse.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</textarea>
+				</td>
+			</tr>
+	</tbody>
+</table>
+</div>
+<div class="detail-foot">
+	<ul class="attachments">
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\salma\IdeaProjects\My_TestNG-project/test-output/screenshots/doubleClick_RightClick-2020-09-10-22-28.png' src='C:\Users\salma\IdeaProjects\My_TestNG-project/test-output/screenshots/doubleClick_RightClick-2020-09-10-22-28.png'>
+	</ul>
 </div>
 					</div>
 				</li>
@@ -302,19 +420,19 @@ Under $10] but found [All Departments]
 					</div>
 					<div class="open-test">
 						<div class="test-detail">
-							<p class="name">verifyBlankUsrName</p>
-							<p class="duration text-sm">0h 0m 3s+200ms</p>
-							<span class="datetime">23:56:43 PM</span>
+							<p class="name">spiceJetE2E</p>
+							<p class="duration text-sm">0h 1m 9s+421ms</p>
+							<span class="datetime">22:28:43 PM</span>
 						</div>
 					</div>
 					<div class="test-contents d-none">
 						<div class="detail-head">
 							<div class="p-v-10 d-inline-block">
 								<div class="info">
-									<h5 class="test-status text-pass">verifyBlankUsrName</h5>
-									<span class='badge badge-success'>08.14.2020 23:56:43</span>
-									<span class='badge badge-danger'>08.14.2020 23:56:46</span>
-									<span class='badge badge-default'>0h 0m 3s+200ms</span>
+									<h5 class="test-status text-pass">spiceJetE2E</h5>
+									<span class='badge badge-success'>09.10.2020 22:28:43</span>
+									<span class='badge badge-danger'>09.10.2020 22:29:52</span>
+									<span class='badge badge-default'>0h 1m 9s+421ms</span>
 								</div>
 								<div class="m-t-10 m-l-5">
 									
@@ -331,7 +449,7 @@ Under $10] but found [All Departments]
 	<tbody>
 			<tr class="event-row">
 				<td><i class="fa fa-check text-pass"></i></td>
-				<td>11:56:46 PM</td>
+				<td>10:29:52 PM</td>
 				<td>
 						Passed
 				</td>
@@ -341,28 +459,28 @@ Under $10] but found [All Departments]
 </div>
 					</div>
 				</li>
-				<li class="test-item"  status="pass" test-id="5"
+				<li class="test-item"  status="fail" test-id="5"
 					author=""
 					tag=""
 					device="">
-					<div class="status-avatar pass-bg">
-						<i class="fa fa-check text-white"></i>
+					<div class="status-avatar fail-bg">
+						<i class="fa fa-times text-white"></i>
 					</div>
 					<div class="open-test">
 						<div class="test-detail">
-							<p class="name">verifyWrongLogin</p>
-							<p class="duration text-sm">0h 0m 2s+266ms</p>
-							<span class="datetime">23:56:46 PM</span>
+							<p class="name">verifyBlankUsrName</p>
+							<p class="duration text-sm">0h 1m 5s+40ms</p>
+							<span class="datetime">22:28:43 PM</span>
 						</div>
 					</div>
 					<div class="test-contents d-none">
 						<div class="detail-head">
 							<div class="p-v-10 d-inline-block">
 								<div class="info">
-									<h5 class="test-status text-pass">verifyWrongLogin</h5>
-									<span class='badge badge-success'>08.14.2020 23:56:46</span>
-									<span class='badge badge-danger'>08.14.2020 23:56:49</span>
-									<span class='badge badge-default'>0h 0m 2s+266ms</span>
+									<h5 class="test-status text-fail">verifyBlankUsrName</h5>
+									<span class='badge badge-success'>09.10.2020 22:28:43</span>
+									<span class='badge badge-danger'>09.10.2020 22:29:48</span>
+									<span class='badge badge-default'>0h 1m 5s+40ms</span>
 								</div>
 								<div class="m-t-10 m-l-5">
 									
@@ -378,14 +496,69 @@ Under $10] but found [All Departments]
 	</tr></thead>
 	<tbody>
 			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>11:56:49 PM</td>
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>10:29:48 PM</td>
 				<td>
-						Passed
+						Failed
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>10:29:48 PM</td>
+				<td>
+						<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#ctl00_MainContent_username"}
+  (Session info: chrome=85.0.4183.83)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ANAR', ip: '10.229.9.163', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.83, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\salma\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63051}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 51d369e54a605822416743630898b932
+*** Element info: {Using=id, value=ctl00_MainContent_username}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy27.sendKeys(Unknown Source)
+	at com.business.Pages.HomePage.login(HomePage.java:31)
+	at com.business.Tests.Group_tests.verifyBlankUsrName(Group_tests.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</textarea>
 				</td>
 			</tr>
 	</tbody>
 </table>
+</div>
+<div class="detail-foot">
+	<ul class="attachments">
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\salma\IdeaProjects\My_TestNG-project/test-output/screenshots/verifyBlankUsrName-2020-09-10-22-29.png' src='C:\Users\salma\IdeaProjects\My_TestNG-project/test-output/screenshots/verifyBlankUsrName-2020-09-10-22-29.png'>
+	</ul>
 </div>
 					</div>
 				</li>
@@ -398,43 +571,25 @@ Under $10] but found [All Departments]
 					</div>
 					<div class="open-test">
 						<div class="test-detail">
-							<p class="name">spiceJetE2E</p>
-							<p class="duration text-sm">0h 0m 18s+813ms</p>
-							<span class="datetime">23:56:53 PM</span>
+							<p class="name">verifyWrongLogin</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">22:29:52 PM</span>
 						</div>
 					</div>
 					<div class="test-contents d-none">
 						<div class="detail-head">
 							<div class="p-v-10 d-inline-block">
 								<div class="info">
-									<h5 class="test-status text-pass">spiceJetE2E</h5>
-									<span class='badge badge-success'>08.14.2020 23:56:53</span>
-									<span class='badge badge-danger'>08.14.2020 23:57:12</span>
-									<span class='badge badge-default'>0h 0m 18s+813ms</span>
+									<h5 class="test-status text-pass">verifyWrongLogin</h5>
+									<span class='badge badge-success'>09.10.2020 22:29:52</span>
+									<span class='badge badge-danger'>09.10.2020 22:29:52</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
 								</div>
 								<div class="m-t-10 m-l-5">
 									
 								</div>
 							</div>
 						</div>
-<div class="detail-body mt-4">                                              
-<table class="table table-sm">
-	<thead><tr>
-		<th class="status-col">Status</th>
-		<th class="timestamp-col">Timestamp</th>
-		<th class="details-col">Details</th>
-	</tr></thead>
-	<tbody>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>11:57:12 PM</td>
-				<td>
-						Passed
-				</td>
-			</tr>
-	</tbody>
-</table>
-</div>
 					</div>
 				</li>
 			</ul>
@@ -477,13 +632,13 @@ Under $10] but found [All Departments]
 				<li class="test-item">
 					<div class="open-test">
 						<div class="test-detail">
-							<p class="name">java.lang.AssertionError</p>
-							<p class="duration text-sm">1 tests</p>
+							<p class="name">org.openqa.selenium.NoSuchElementException</p>
+							<p class="duration text-sm">4 tests</p>
 						</div>
 					</div>
 					<div class="test-contents d-none">
 						<div class="info">
-							<h4>java.lang.AssertionError</h4>
+							<h4>org.openqa.selenium.NoSuchElementException</h4>
 						</div>
 						<table class='table table-sm mt-4'>
 							<thead>
@@ -500,9 +655,42 @@ Under $10] but found [All Departments]
 											<i class="fa fa-times text-white"></i>
 										</div>
 									</td>
-									<td>23:55:56 PM</td>
-									<td class='linked' test-id='2'>
+									<td>22:28:02 PM</td>
+									<td class='linked' test-id='1'>
 										verifyOptionsAreAlphaBethical
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class='status-avatar fail-bg'>
+											<i class="fa fa-times text-white"></i>
+										</div>
+									</td>
+									<td>22:28:02 PM</td>
+									<td class='linked' test-id='3'>
+										smke_exmple
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class='status-avatar fail-bg'>
+											<i class="fa fa-times text-white"></i>
+										</div>
+									</td>
+									<td>22:28:02 PM</td>
+									<td class='linked' test-id='2'>
+										doubleClick_RightClick
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class='status-avatar fail-bg'>
+											<i class="fa fa-times text-white"></i>
+										</div>
+									</td>
+									<td>22:28:43 PM</td>
+									<td class='linked' test-id='5'>
+										verifyBlankUsrName
 									</td>
 								</tr>
 							</tbody>
@@ -540,12 +728,12 @@ Under $10] but found [All Departments]
 					</div>
 				</div>
 				<div class="card-footer">
-					<div><small data-tooltip='83.333%'>
-						<b>5</b> tests passed
+					<div><small data-tooltip='33.333%'>
+						<b>2</b> tests passed
 						</small>
 					</div>
 					<div>
-						<small data-tooltip='16.667%'><b>1</b> tests failed, 
+						<small data-tooltip='66.667%'><b>4</b> tests failed, 
 						<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 						</small>
 					</div>
@@ -563,9 +751,9 @@ Under $10] but found [All Departments]
 					</div>
 				</div>
 				<div class="card-footer">
-					<div><small data-tooltip='71.429%'><b>5</b> events passed</small></div>
+					<div><small data-tooltip='11.111%'><b>1</b> events passed</small></div>
 					<div>
-						<small data-tooltip='28.571%'><b>2</b> events failed, 
+						<small data-tooltip='88.889%'><b>8</b> events failed, 
 						<b data-tooltip='0%'>0</b> others
 						</small>
 					</div>
@@ -583,7 +771,7 @@ Under $10] but found [All Departments]
 							<h2 class="font-size-28 font-weight-light mt-3">6</h2>
 							<span class="text-semibold text-success font-size-15">
 							<i class="ti-arrow-up font-size-11"></i> 
-							<span>83.33%</span>
+							<span>33.33%</span>
 							</span>
 						</div>
 						<div class="align-self-end">
@@ -599,7 +787,7 @@ Under $10] but found [All Departments]
 					<div class="media justify-content-between">
 						<div class="card-header">
 							<h6 class="card-title">Start</h6>
-							<h4 class="font-weight-light mt-4">Aug 14, 2020 11:55:41 PM</h4>
+							<h4 class="font-weight-light mt-4">Sep 10, 2020 10:27:53 PM</h4>
 							<span class="text-semibold text-success font-size-15">
 						</div>
 						<div class="align-self-end">
@@ -615,7 +803,7 @@ Under $10] but found [All Departments]
 					<div class="media justify-content-between">
 						<div class="card-header">
 							<h6 class="card-title">Duration</h6>
-							<h4 class="font-weight-light mt-4">0h 1m 32s+144ms</h4>
+							<h4 class="font-weight-light mt-4">0h 2m 48s+329ms</h4>
 							<span class="text-semibold font-size-15">
 						</div>
 						<div class="align-self-end">
@@ -681,13 +869,13 @@ Under $10] but found [All Departments]
 <script>
 	var statusGroup = {
 	    parentCount: 6,
-		passParent: 5,
-		failParent: 1,
+		passParent: 2,
+		failParent: 4,
 		fatalParent: 0,
 		errorParent: 0,
 		warningParent: 0,
 		skipParent: 0,
-		exceptionsParent: 1,
+		exceptionsParent: 4,
 		childCount: 0,
 		passChild: 0,
 		failChild: 0,
@@ -708,9 +896,9 @@ Under $10] but found [All Departments]
 		infoGrandChild: 0,
 		debugGrandChild: 0,
 		exceptionsGrandChild: 0,
-		eventsCount: 7,
-		passEvents: 5,
-		failEvents: 2,
+		eventsCount: 9,
+		passEvents: 1,
+		failEvents: 8,
 		fatalEvents: 0,
 		errorEvents: 0,
 		warningEvents: 0,
@@ -722,7 +910,7 @@ Under $10] but found [All Departments]
 </script>
 <script>
 	var timeline = {
-	        "doubleClick_RightClick":47.288,"verifyOptionsAreAlphaBethical":55.396,"smke_exmple":47.278,"verifyBlankUsrName":3.2,"verifyWrongLogin":2.266,"spiceJetE2E":18.813
+	        "verifyOptionsAreAlphaBethical":31.924,"smke_exmple":31.895,"doubleClick_RightClick":31.912,"spiceJetE2E":69.421,"verifyBlankUsrName":65.04,"verifyWrongLogin":0
 	};
 </script>
                 </div>

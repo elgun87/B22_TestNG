@@ -5,10 +5,7 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class ExtentReportUtil {
-    /**
-     * Reason of using this class is avoid using extent report object in each test
-     * This class will connected to Listener class and in test execution it will generate reports automatically.
-     */
+
     public static ExtentReports extentReports;
 
     public static ExtentReports extentReportGenerator() {
