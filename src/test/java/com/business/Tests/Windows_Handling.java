@@ -10,7 +10,7 @@ import java.util.Set;
 
 public class Windows_Handling extends Base {
 
-    @Test
+    @Test(enabled =false)
     public void handle_Windows() {
         driver.get("https://the-internet.herokuapp.com/windows");
         String parentTitle = driver.getTitle();
