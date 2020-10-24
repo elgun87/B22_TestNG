@@ -9,10 +9,11 @@ public class HomePage {
 
     /**
      * All page object classes must have the special constructor and inside that constructor using PageFactory
-     * we will  pass the driver object.
+     * we will pass the driver object.
      * <p>
-     * "@FindBy" annotation comes form testNg used for store located element.
-     * If there is some common actions which are repeated lots of time, then in page class we can create a method
+     * "@FindBy" annotation comes form TestNG used for store located element.
+     * If there is some common actions which are repeated lots of time,
+     * then in page class we can create a method
      * for the repeated actions (for example: login);
      */
 

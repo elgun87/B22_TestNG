@@ -549,3 +549,7 @@
 07:15:11.548 [TestNG-test=Regression-2] INFO  com.business.Utilities.Base - chrome-headless launched
 07:15:13.528 [TestNG-test=Regression-2] INFO  com.business.Utilities.Base - browser closed
 07:15:15.712 [TestNG-test=Regression-1] INFO  com.business.Utilities.Base - browser closed
+07:51:12.435 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+07:51:21.639 [main] INFO  com.business.Utilities.Base - browser closed
+21:55:23.087 [main] INFO  com.business.Utilities.Base - chrome-headless launched
+21:55:23.218 [main] INFO  com.business.Utilities.Base - browser closed

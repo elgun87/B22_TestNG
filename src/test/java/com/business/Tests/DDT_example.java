@@ -15,11 +15,11 @@ import java.util.Map;
 public class DDT_example extends Base {
 
 
-    ExcelUtil excelUtil = new ExcelUtil("src/test/resources/login.xlsx", "details");
 
 
     @DataProvider(name = "loginData")
     public Object[][] testData() {
+        ExcelUtil excelUtil = new ExcelUtil("src/test/resources/login.xlsx", "details");
         Object[][] detailsFromExcel = excelUtil.getDataArray();
         return detailsFromExcel;
     }
@@ -45,6 +45,7 @@ public class DDT_example extends Base {
 
     @Test
     public void dataDrivenTestWithMaps() {
+        ExcelUtil excelUtil =new ExcelUtil("src/test/resources/login.xlsx", "details");
         List<Map<String, String>> dataList = excelUtil.getDataListOfMap();
         for (int i = 0; i < dataList.size(); i++) {
             driver.get("https://the-internet.herokuapp.com/login");

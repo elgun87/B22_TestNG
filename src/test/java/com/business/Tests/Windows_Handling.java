@@ -10,7 +10,7 @@ import java.util.Set;
 
 public class Windows_Handling extends Base {
 
-    @Test(enabled =false)
+    @Test
     public void handle_Windows() {
         driver.get("https://the-internet.herokuapp.com/windows");
         String parentTitle = driver.getTitle();
@@ -31,6 +31,7 @@ public class Windows_Handling extends Base {
 
 
     }
+
 
 
 }
