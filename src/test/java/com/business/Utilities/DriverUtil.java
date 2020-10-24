@@ -1,6 +1,7 @@
 package com.business.Utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,7 +18,7 @@ import java.net.URL;
 import java.util.HashMap;
 
 /**
- * We use Singleton design pattern in order to have one browser instance at the same time
+ * We use Singleton design pattern in order to have one driver instance at the same time
  */
 
 public class DriverUtil {
@@ -26,7 +27,6 @@ public class DriverUtil {
     private static final ThreadLocal<WebDriver> driverPool = new ThreadLocal<>();
 
     private DriverUtil() {
-
     }
 
     public static WebDriver getDriver() {
@@ -60,6 +60,7 @@ public class DriverUtil {
                         URL url = new URL("http://localhost:4444/wd/hub");
                         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
                         desiredCapabilities.setBrowserName("chrome");
+                        desiredCapabilities.setPlatform(Platform.WINDOWS);
                         driverPool.set(new RemoteWebDriver(url, desiredCapabilities));
                     } catch (Exception e) {
                         e.printStackTrace();
@@ -70,6 +71,7 @@ public class DriverUtil {
                         URL url = new URL("http://localhost:4444/wd/hub");
                         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
                         desiredCapabilities.setBrowserName("firefox");
+                        desiredCapabilities.setPlatform(Platform.WINDOWS);
                         driverPool.set(new RemoteWebDriver(url, desiredCapabilities));
                     } catch (Exception e) {
                         e.printStackTrace();
@@ -107,6 +109,7 @@ public class DriverUtil {
     public static void closeDriver() {
         driverPool.get().close();
     }
+
     public static void quitDriver() {
         driverPool.get().quit();
         driverPool.remove();

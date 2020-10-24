@@ -9,11 +9,12 @@ import java.util.concurrent.TimeUnit;
 public class First_pure_class {
 
     @Test
-    public void verifyGoogle(){
+    public void verifyGoogle() {
         // WebDriverManager.chromedriver().setup();
         // In project use / slash in comp use \\ slashes  , path from repository root
         System.setProperty("webdriver.chrome.driver", "src/test/resources/browser/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
+        // WebDriver driver = new InternetExplorerDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("https://www.google.com/");
