@@ -21,8 +21,8 @@ public class Shadow_DOM extends Base {
         WebElement shadowHost = driver.findElement(By.tagName("book-app"));
 //        JavascriptExecutor js = (JavascriptExecutor) driver;
 //        WebElement shadowDOM = (WebElement) js.executeScript("return arguments[0].shadowRoot", shadowHost);
-        WebElement shadowDOM = JSUtil.getShadowDOM(shadowHost);
-        WebElement appHeader = shadowDOM.findElement(By.tagName("app-header"));
+        WebElement shadowRoot = JSUtil.getShadowRoot(shadowHost);
+        WebElement appHeader = shadowRoot.findElement(By.tagName("app-header"));
         //Note: After entering to Shadow DOM we can locate elements only with CSS.
         WebElement appToolBar = appHeader.findElement(By.cssSelector("app-toolbar.toolbar-bottom"));
         WebElement book_input_decorator = appToolBar.findElement(By.tagName("book-input-decorator"));

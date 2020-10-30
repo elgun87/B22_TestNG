@@ -16,7 +16,7 @@ import java.awt.event.KeyEvent;
 
 public class Actions_mouse extends Base {
 
-    private static Logger log = LogManager.getLogger(Actions_mouse.class.getName());
+    private static final Logger log = LogManager.getLogger(Actions_mouse.class.getName());
 
     @Test(groups = {"smoke", "regression"})
     public void doubleClick_RightClick() throws AWTException {
@@ -53,6 +53,7 @@ public class Actions_mouse extends Base {
 
     @Test
     public void scrollDown_scrollUP() throws InterruptedException {
+        log.info("scrool down with alert class");
         driver.get("https://www.airtelxstream.in/");
         int i = 0;
         int j = 0;
@@ -61,6 +62,7 @@ public class Actions_mouse extends Base {
             i++;
         }
         Thread.sleep(2000);
+        log.info("scrool up with alert class");
         while (j < 300) {
             actions.sendKeys(Keys.PAGE_UP).build().perform();
             j++;

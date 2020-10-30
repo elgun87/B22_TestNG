@@ -18,11 +18,12 @@ public class HiddenElements extends Base {
         WebElement textFrame = driver.findElement(By.id("myDIV"));
         Assert.assertTrue(textFrame.isDisplayed());
         driver.findElement(By.xpath("//button[contains(text(),'Toggle Hide and Show')]")).click();
-        if (textFrame.isDisplayed()) {
-            Assert.fail();
-        } else {
-            log.info("Element does not exist in the page");
-        }
+        Assert.assertFalse(textFrame.isDisplayed());
+//        if (textFrame.isDisplayed()) {
+//            Assert.fail();
+//        } else {
+//            log.info("Element does not exist in the page");
+//        }
 
     }
 }
