@@ -46,7 +46,7 @@ public class JSUtil {
         js.executeScript("history.go(0)");
     }
 
-    public static WebElement getShadowDOM(WebElement element) {
+    public static WebElement getShadowRoot(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) DriverUtil.getDriver();
         return (WebElement) js.executeScript("return arguments[0].shadowRoot", element);
     }

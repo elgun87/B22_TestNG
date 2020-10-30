@@ -29,6 +29,7 @@ public class Tables_Static extends Base {
      * th
      * th
      */
+
     private static final Logger log = LogManager.getLogger(Tables_Static.class.getName());
 
 
@@ -61,10 +62,10 @@ public class Tables_Static extends Base {
         for (WebElement row : allRows) {
             log.info(row.getText());  // will print all cell in a row
         }
-        // Find  3rd row in a table with it's cells
+        // Find  3rd row in a table with all cells ,
         log.info(allRows.get(2).getText());
         String expected = "Doe Jason jdoe@hotmail.com $100.00 http://www.jdoe.com edit delete";
-        Assert.assertTrue(allRows.get(2).getText().equalsIgnoreCase(expected));
+        Assert.assertEquals(allRows.get(2).getText(),expected);
     }
 
     @Test  // Note each row is a WebElement as row (not WebElements)
@@ -80,9 +81,9 @@ public class Tables_Static extends Base {
     public void allCells_In_Certain_Row() {
         driver.get("https://the-internet.herokuapp.com/tables");
         //Get values of all cells in table
-        List<WebElement> allCellsInRow_2 = driver.findElements(By.xpath("//table[@id='table1']/tbody/tr[2]/td"));
-        for (WebElement cell : allCellsInRow_2) {
-            // log.info(cell.getText());
+        List<WebElement> allCellsInRow_3 = driver.findElements(By.xpath("//table[@id='table1']/tbody/tr[3]/td"));
+        for (WebElement cell : allCellsInRow_3) {
+            System.out.print(cell.getText() + " "); //Doe Jason jdoe@hotmail.com $100.00 http://www.jdoe.com edit delete
             log.info(cell.getText());
         }
     }
@@ -114,6 +115,7 @@ public class Tables_Static extends Base {
         //FInd all cells of Column 2 in table
         List<WebElement> column2Values = driver.findElements(By.xpath("//table[@id='table1']/tbody/tr/td[2]"));
         for (WebElement value : column2Values) {
+            System.out.print(value.getText()+ " "); //John Frank Jason Tim
             log.info(value.getText());
         }
     }

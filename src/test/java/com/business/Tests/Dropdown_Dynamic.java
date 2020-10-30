@@ -21,8 +21,9 @@ public class Dropdown_Dynamic extends Base {
      * (//a[@value='DEL'])[2]  -> (first xpath inside parentheses)[2] ,index 2 means in second table
      */
 
-    @Test(enabled = false) // not run with headless
+    @Test // not run with headless
     public void dynamicDropdownCalendarType() {
+        log.info("Dynamic Dropdown testing");
         driver.get("https://www.spicejet.com");
         driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_1")).click();
         BrowserUtil.wait(1);
@@ -40,6 +41,7 @@ public class Dropdown_Dynamic extends Base {
         BrowserUtil.wait(1);
         log.info(to.getAttribute("value"));
         Assert.assertTrue(to.getAttribute("value").equalsIgnoreCase("Delhi (DEL)"));
+        log.info("test passed");
 
         // -------- or for each table we can use //parent //child xpath (space in the middle)------
         //driver.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='MAA']")).click();
