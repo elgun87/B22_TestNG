@@ -25,6 +25,9 @@ public abstract class Base {
     public void setup() {
         driver = DriverUtil.getDriver();
         log.info(ConfigReader.getProperty("browser") + " launched");
+        driver.manage().window().maximize();
+        driver.manage().deleteAllCookies();
+        driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         softAssert = new SoftAssert();
         actions = new Actions(driver);
@@ -42,7 +45,6 @@ public abstract class Base {
         log.info("browser closed");
         DriverUtil.quitDriver();
     }
-
 
 
 }
