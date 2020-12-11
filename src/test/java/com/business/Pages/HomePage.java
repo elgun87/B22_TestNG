@@ -31,7 +31,7 @@ public class HomePage {
     public void login(String login, String pass) {
         username.sendKeys(login);
         passWord.sendKeys(pass);
-        this.submitBtn.click();
+        submitBtn.click();
     }
 
 
