@@ -12,7 +12,6 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.safari.SafariDriver;
 
 import java.net.URL;
 import java.util.HashMap;
@@ -37,7 +36,7 @@ public class DriverUtil {
                     WebDriverManager.chromedriver().setup();
                     HashMap<String, Object> chromePrefs = new HashMap<>();
                     chromePrefs.put("profile.default_content_settings.popups", 0);
-                    chromePrefs.put("download.default_directory", "user.dir");
+                    chromePrefs.put("download.default_directory", System.getProperty("user.dir"));
                     driverPool.set(new ChromeDriver(new ChromeOptions().setExperimentalOption("prefs", chromePrefs)));
                     break;
                 case "firefox":
@@ -46,9 +45,9 @@ public class DriverUtil {
                     break;
                 case "chrome-headless":
                     WebDriverManager.chromedriver().setup();
-                    HashMap<String, Object> chromePrefHeadless = new HashMap<>();
+                    HashMap<String, Object> chromePrefHeadless = new HashMap<String, Object>();
                     chromePrefHeadless.put("profile.default_content_settings.popups", 0);
-                    chromePrefHeadless.put("download.default_directory", "user.dir");
+                    chromePrefHeadless.put("download.default_directory", System.getProperty("user.dir"));
                     driverPool.set(new ChromeDriver(new ChromeOptions().setHeadless(true).setExperimentalOption("prefs", chromePrefHeadless)));
                     break;
                 case "firefox-headless":
@@ -92,12 +91,22 @@ public class DriverUtil {
                     WebDriverManager.edgedriver().setup();
                     driverPool.set(new EdgeDriver());
                     break;
-                case "safari":
-                    if (!System.getProperty("os.name").toLowerCase().contains("mac")) {
-                        throw new WebDriverException("Your OS doesn't support Safari");
+                case "safari": // forwarding to saucelabs
+//                    if (!System.getProperty("os.name").toLowerCase().contains("mac")) {
+//                        throw new WebDriverException("Your OS doesn't support Safari");
+//                    }
+//                    WebDriverManager.getInstance(SafariDriver.class).setup();
+//                    driverPool.set(new SafariDriver());
+                    try {
+                        URL url = new URL("https://Xose1:af4c088f-4075-4f97-b1bd-6d2fd7210e19@ondemand.us-west-1.saucelabs.com:443/wd/hub");
+                        DesiredCapabilities caps = new DesiredCapabilities();
+                        caps.setPlatform(Platform.MAC);
+                        caps.setBrowserName("Safari");
+                        caps.setVersion("latest");
+                        driverPool.set(new RemoteWebDriver(url, caps));
+                    } catch (Exception e) {
+                        e.printStackTrace();
                     }
-                    WebDriverManager.getInstance(SafariDriver.class).setup();
-                    driverPool.set(new SafariDriver());
                     break;
                 default:
                     throw new RuntimeException("Invalid browser name!");

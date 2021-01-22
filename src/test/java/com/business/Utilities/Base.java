@@ -9,6 +9,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.asserts.SoftAssert;
 
+import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
 
@@ -22,7 +23,7 @@ public abstract class Base {
 
 
     @BeforeMethod(alwaysRun = true)
-    public void setup() {
+    public void setup() throws MalformedURLException {
         driver = DriverUtil.getDriver();
         log.info(ConfigReader.getProperty("browser") + " launched");
         driver.manage().window().maximize();
