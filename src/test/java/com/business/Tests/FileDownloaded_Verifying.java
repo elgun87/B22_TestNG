@@ -25,14 +25,17 @@ public class FileDownloaded_Verifying extends Base {
     @Test
     public void verifyFileExistInProjectDirectory() {
         driver.get("https://the-internet.herokuapp.com/download");
-        WebElement file = driver.findElement(By.linkText("text.txt"));
+        WebElement file = driver.findElement(By.linkText("some-file.txt"));
         //store in File object in the project with name to be loaded file
-        File filePath = new File(System.getProperty("user.dir") + "/text.txt");
+        File filePath = new File(System.getProperty("user.dir") + "/" + "some-file.txt");
         if (!filePath.exists()) {
             file.click();
         }
-        BrowserUtil.wait(1);
+        BrowserUtil.wait(2);
         Assert.assertTrue(filePath.exists()); // Used to verify weather any file exist or not.
+        BrowserUtil.wait(2);
+        filePath.delete();
+        Assert.assertFalse(filePath.exists());
     }
 
 
