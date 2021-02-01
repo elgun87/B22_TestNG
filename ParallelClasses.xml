@@ -5,9 +5,9 @@
     </listeners>
     <test name="Parallel classes">
         <classes>
-            <class name="com.business.Tests.Tables_Static"></class>
-            <class name="com.business.Tests.RadioButtons"></class>
-            <class name="com.business.Tests.Popup_HTML"></class>
+            <class name="com.business.Tests.Tables_Static"/>
+            <class name="com.business.Tests.RadioButtons"/>
+            <class name="com.business.Tests.Popup_HTML"/>
         </classes>
     </test>
 
