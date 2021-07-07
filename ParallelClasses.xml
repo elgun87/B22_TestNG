@@ -9,6 +9,6 @@
             <class name="com.business.Tests.RadioButtons"/>
             <class name="com.business.Tests.Popup_HTML"/>
         </classes>
-    </test>
+    </test> 
 
 </suite>
