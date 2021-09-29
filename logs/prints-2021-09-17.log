@@ -1,0 +1,8 @@
+22:44:34.977 [TestNG-test=group Smoke-1] INFO  com.business.Utilities.Base - chrome-headless launched
+22:44:35.002 [TestNG-test=group Smoke-2] INFO  com.business.Utilities.Base - chrome-headless launched
+22:44:42.175 [TestNG-test=group Smoke-2] INFO  com.business.Utilities.Base - browser closed
+22:44:42.900 [TestNG-test=group Smoke-2] INFO  com.business.Utilities.Base - chrome-headless launched
+22:44:43.448 [TestNG-test=group Smoke-2] INFO  com.business.Utilities.Base - browser closed
+22:44:44.111 [TestNG-test=group Smoke-2] INFO  com.business.Utilities.Base - chrome-headless launched
+22:44:44.756 [TestNG-test=group Smoke-2] INFO  com.business.Utilities.Base - browser closed
+22:44:45.621 [TestNG-test=group Smoke-1] INFO  com.business.Utilities.Base - browser closed
